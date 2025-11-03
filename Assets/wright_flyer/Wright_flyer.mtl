@@ -1,0 +1,167 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5.7 5.7.3.4950 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Gray
+Ka 0 0 0
+Kd 0.501961 0.501961 0.501961
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SaddleBr
+Ka 0 0 0
+Kd 0.545098 0.270588 0.0745098
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl WhiteSmo
+Ka 0 0 0
+Kd 0.882353 0.882353 0.882353
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Charcoal
+Ka 0 0 0
+Kd 0.137255 0.137255 0.137255
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Explorer_Default
+Ka 0.117647 0.117647 0.117647
+Kd 0.752941 0.752941 0.752941
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Silver
+Ka 0 0 0
+Kd 0.752941 0.752941 0.752941
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Peru
+Ka 0 0 0
+Kd 0.803922 0.521569 0.247059
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl FrontColor
+Ka 0 0 0
+Kd 0.882353 0.882353 0.784314
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Brown
+Ka 0 0 0
+Kd 0.615686 0.454902 0.282353
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Gray_Gla
+Ka 0 0 0
+Kd 0.501961 0.501961 0.501961
+Ks 0.329412 0.329412 0.329412
+illum 2
+Ns 2
+d 0.5
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 

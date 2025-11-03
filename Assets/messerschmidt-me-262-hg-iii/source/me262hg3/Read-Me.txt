@@ -1,0 +1,13 @@
+Messerschmitt Me-262 HG III
+---------------------------
+
+Author : BARANGER Emmanuel (helijah)
+tools  : Blender 2.77 and The Gimp 2.8
+Use    : For FlightGear
+
+This files are GPL.
+
+--------
+BARANGER Emmanuel
+http://helijah.free.fr
+http://embaranger.free.fr
