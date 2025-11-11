@@ -1,7 +1,9 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerRelocator : MonoBehaviour
 {
+    
     void Start()
     {
         // 1. Obtiene el nombre del destino almacenado por el menú

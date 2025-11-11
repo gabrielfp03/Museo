@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class SceneDataTransfer : MonoBehaviour
 {
     // 1. Singleton: Permite acceder a esta instancia desde cualquier script.
@@ -20,9 +20,10 @@ public class SceneDataTransfer : MonoBehaviour
 
         // Esta es la única instancia válida.
         Instance = this;
-        
+
+
         // ¡Crucial! Evita que este objeto se elimine al cargar una nueva escena.
-        DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     // Función para el menú: establece el destino y carga la escena
