@@ -55,20 +55,20 @@ public class UIPointerCursor : MonoBehaviour
 
         currentButton = hovered;
 
-        // Detectar pinch
-        bool isPinching = hand.PinchStrength > pinchThreshold;
+        // // Detectar pinch
+        // bool isPinching = hand.PinchStrength > pinchThreshold;
 
-        if (currentButton != null)
-        {
-            // Visual feedback opcional: Select()
-            currentButton.GetComponent<Button>().Select();
+        // if (currentButton != null)
+        // {
+        //     // Visual feedback opcional: Select()
+        //     currentButton.GetComponent<Button>().Select();
 
-            if (isPinching && !wasPinching)
-            {
-                currentButton.GetComponent<Button>().onClick.Invoke();
-            }
-        }
+        //     if (isPinching && !wasPinching)
+        //     {
+        //         currentButton.GetComponent<Button>().onClick.Invoke();
+        //     }
+        // }
 
-        wasPinching = isPinching;
+        // wasPinching = isPinching;
     }
 }

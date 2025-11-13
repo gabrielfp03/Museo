@@ -63,13 +63,13 @@ public class LeapCursor : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject); // <-- Esto hace que el cursor persista entre escenas
+        // DontDestroyOnLoad(gameObject); // <-- Esto hace que el cursor persista entre escenas
 
-        if (mainCamera == null)
-            mainCamera = Camera.main;
+        // if (mainCamera == null)
+        //     mainCamera = Camera.main;
 
-        if (leapProvider == null)
-            leapProvider = FindAnyObjectByType<LeapServiceProvider>();
+        // if (leapProvider == null)
+        //     leapProvider = FindAnyObjectByType<LeapServiceProvider>();
  
     }
 
