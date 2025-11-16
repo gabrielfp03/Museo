@@ -12,11 +12,13 @@ public class GrabObject : MonoBehaviour
     private Rigidbody grabbedRb;
     private bool hadGravity;
     private RigidbodyConstraints previousConstraints;
+    private Transform originalParent;
     private Quaternion rotationOffset;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private Vector3 originalScale;
     private Vector3 currentVelocity;
+    private GameObject handle;
 
 
 
@@ -62,30 +64,13 @@ public class GrabObject : MonoBehaviour
             if (hit.transform.CompareTag("Grabbable"))
             {
                 grabbedRb = hit.rigidbody;
-
-                
-                Debug.Log(grabbedRb.transform.localPosition);
-
-                // Convertir localPosition en (0, 0, 0)
-                //localPosition = grabbedRb.transform.localPosition;
-                //grabbedRb.transform.localPosition = new Vector3(0, 0, 0);
-
-                // Desacoplar del padre
-                //originalParent = grabbedRb.transform.parent;
-                //grabbedRb.transform.parent = null;
-
-                // Recordar la posición y orientación originales
-                originalPosition = grabbedRb.transform.position;
-                originalRotation = grabbedRb.transform.rotation;
-
-                // Recordar la escala original y normalizar el tamaño
-                originalScale = grabbedRb.transform.localScale;
-
                 Collider col = grabbedRb.GetComponent<Collider>();
-                Vector3 size = col.bounds.size; // dimensiones actuales del objeto
-                float maxDimension = Mathf.Max(size.x, size.y, size.z);
-                float baseScaleFactor = 1f / maxDimension; // Escala para que la dimensión más grande sea 1
-                grabbedRb.transform.localScale = grabbedRb.transform.localScale * baseScaleFactor * scaleFactor;
+
+
+
+                // Valores para restaurar el objeto al soltarlo
+                // Recordar el padre
+                originalParent = grabbedRb.transform.parent;
 
                 // Recordar si tenia gravedad y quitarsela
                 hadGravity = grabbedRb.useGravity;
@@ -93,19 +78,49 @@ public class GrabObject : MonoBehaviour
 
                 // Recordar si tenia constraints y ponerle FreezeRotation
                 previousConstraints = grabbedRb.constraints;
+                grabbedRb.constraints = RigidbodyConstraints.FreezePosition;
                 grabbedRb.constraints = RigidbodyConstraints.FreezeRotation;
 
-                // Recordar el offset en la rotación del objeto
+                // Recordar la posición, orientación y escala originales
+                originalPosition = grabbedRb.transform.position;
+                originalRotation = grabbedRb.transform.rotation;
+                originalScale = grabbedRb.transform.localScale;
+
+
+
+                // Normalizar el tamaño
+                Vector3 size = col.bounds.size; // dimensiones actuales del objeto
+                float maxDimension = Mathf.Max(size.x, size.y, size.z);
+                float baseScaleFactor = 1f / maxDimension; // Escala para que la dimensión más grande sea 1
+                grabbedRb.transform.localScale *= baseScaleFactor * scaleFactor;
+
+                // Guardar el offset en la rotación del objeto
                 rotationOffset = Quaternion.Inverse(cam.transform.rotation) * grabbedRb.transform.rotation;
+
+
+
+                // Crear un handle para centrar el objeto en la vista de la camara
+                // 1. Create empty handle
+                handle = new GameObject("GrabHandle");
+
+                // 2. Calculate visual center of the object (including children)
+                Renderer[] renderers = grabbedRb.GetComponentsInChildren<Renderer>();
+                Bounds bounds = renderers[0].bounds;
+                for (int i = 1; i < renderers.Length; i++)
+                    bounds.Encapsulate(renderers[i].bounds);
+
+                // 3. Place the handle at the center of bounds
+                handle.transform.position = bounds.center;
+                handle.transform.rotation = grabbedRb.transform.rotation;
+
+                // 4. Parent the object to the handle while keeping world position
+                grabbedRb.transform.SetParent(handle.transform, true);
             }
         }
     }
 
     void Drop()
     {
-        // Restaurar la escala original
-        grabbedRb.transform.localScale = originalScale;
-        
         // Restaurar posición y rotación originales
         grabbedRb.transform.position = originalPosition;
         grabbedRb.transform.rotation = originalRotation;
@@ -114,8 +129,14 @@ public class GrabObject : MonoBehaviour
         grabbedRb.useGravity = hadGravity;
         grabbedRb.constraints = previousConstraints;
 
-        // Lo volvemos a colocar en su jerarquía original
-        //grabbedRb.transform.parent = originalParent;
+        // Restaurar al padre original
+        grabbedRb.transform.SetParent(originalParent, true);
+
+        // Restaurar la escala original
+        grabbedRb.transform.localScale = originalScale;
+        
+        // Destruir el handle
+        Destroy(handle);
 
         grabbedRb = null;
     }
@@ -123,8 +144,8 @@ public class GrabObject : MonoBehaviour
     void MoveObject()
     {
         Vector3 targetPos = cam.transform.position + cam.transform.forward * distanceToCam;
-        grabbedRb.transform.position = Vector3.SmoothDamp(grabbedRb.transform.position, targetPos, ref currentVelocity, moveSpeed);
-        grabbedRb.transform.rotation = cam.transform.rotation * rotationOffset;
+        handle.transform.position = Vector3.SmoothDamp(handle.transform.position, targetPos, ref currentVelocity, moveSpeed);
+        handle.transform.rotation = cam.transform.rotation * rotationOffset;
     }
 
     void RotateObject()
