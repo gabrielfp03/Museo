@@ -162,6 +162,133 @@ CapsuleCollider:
   m_Height: 0.6161311
   m_Direction: 1
   m_Center: {x: 0.00046080345, y: 0.00000007450581, z: 0.33760002}
+--- !u!1 &22982549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 22982550}
+  - component: {fileID: 22982554}
+  - component: {fileID: 22982553}
+  - component: {fileID: 22982552}
+  - component: {fileID: 22982551}
+  m_Layer: 0
+  m_Name: Token_Messerschmidt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &22982550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22982549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -79, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1889176395}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22982551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22982549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 530886674}
+--- !u!136 &22982552
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22982549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &22982553
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22982549}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &22982554
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22982549}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &47663254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1585,13 +1712,191 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 8134837689134937748, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 407686681}
   m_SourcePrefab: {fileID: 100100000, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
 --- !u!4 &407686679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
   m_PrefabInstance: {fileID: 407686678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &407686680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
+  m_PrefabInstance: {fileID: 407686678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &407686681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407686680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Sopwith Camel
+  "descripcion_es_ni\xF1o": "El Sopwith Camel era un avi\xF3n peque\xF1ito de la
+    Primera Guerra Mundial. Era muy r\xE1pido y pod\xEDa girar de golpe gracias a
+    su motor especial. Muchos pilotos lo usaron porque era fuerte y pod\xEDa pelear
+    muy bien en el aire."
+  descripcion_es_casual: "El Sopwith Camel fue uno de los cazas brit\xE1nicos m\xE1s
+    famosos de la Primera Guerra Mundial. Su motor rotativo le daba una gran capacidad
+    para girar, aunque tambi\xE9n lo hac\xEDa dif\xEDcil de manejar para pilotos
+    sin experiencia. Fue uno de los aviones m\xE1s efectivos del conflicto y se convirti\xF3
+    en un s\xEDmbolo de la aviaci\xF3n brit\xE1nica de la \xE9poca."
+  descripcion_es_experto: "El Sopwith Camel, equipado con un motor rotativo Clerget,
+    Bentley o Le Rh\xF4ne, explotaba el fuerte par girosc\xF3pico y el momento angular
+    del motor para obtener una agilidad excepcional hacia un lado, aunque a costa
+    de un manejo exigente. Con doble ametralladora sincronizada Vickers, fuselaje
+    compacto y centro de gravedad adelantado, ofrec\xEDa una combinaci\xF3n de alta
+    maniobrabilidad y letalidad que lo convirti\xF3 en uno de los cazas con mayor
+    n\xFAmero de victorias confirmadas de la Primera Guerra Mundial."
+  "descripcion_en_ni\xF1o": The Sopwith Camel was a small airplane from World War
+    I. It was very fast and could turn quickly because of its special spinning engine.
+    Many pilots flew it because it was strong and very good in air battles.
+  descripcion_en_casual: The Sopwith Camel was one of the most famous British fighter
+    planes of World War I. Its rotary engine gave it excellent turning ability, though
+    it also made it tricky for inexperienced pilots. It became one of the most effective
+    fighters of the war and a symbol of early British aviation.
+  descripcion_en_experto: "The Sopwith Camel, powered by Clerget, Bentley, or Le
+    Rh\xF4ne rotary engines, leveraged substantial gyroscopic torque and angular
+    momentum to achieve exceptional turn performance\u2014particularly to one side\u2014at
+    the cost of demanding handling characteristics. Its twin synchronized Vickers
+    machine guns, compact airframe, and forward center of gravity produced a highly
+    maneuverable and deadly platform, making it one of the highest-scoring Allied
+    fighters of World War I."
+--- !u!1 &428498269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428498270}
+  - component: {fileID: 428498274}
+  - component: {fileID: 428498273}
+  - component: {fileID: 428498272}
+  - component: {fileID: 428498271}
+  m_Layer: 0
+  m_Name: Token_Parachute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428498270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428498269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 239, y: 0, z: -301}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685026131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428498271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428498269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 565479682}
+--- !u!136 &428498272
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428498269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &428498273
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428498269}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &428498274
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428498269}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &437917339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,13 +2164,67 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530886674}
   m_SourcePrefab: {fileID: 100100000, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
 --- !u!4 &530886672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
   m_PrefabInstance: {fileID: 530886671}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &530886673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+  m_PrefabInstance: {fileID: 530886671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &530886674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530886673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Messerschmitt Bf 109
+  "descripcion_es_ni\xF1o": "El Messerschmitt Bf 109 era un avi\xF3n muy r\xE1pido
+    que se usaba hace muchos a\xF1os. Ten\xEDa alas finas y un motor fuerte, y pod\xEDa
+    volar muy alto. Era un avi\xF3n de combate, pero hoy se estudia para aprender
+    c\xF3mo volaban los aviones antiguos."
+  descripcion_es_casual: "El Messerschmitt Bf 109 fue uno de los cazas m\xE1s importantes
+    de la Segunda Guerra Mundial. Dise\xF1ado en Alemania, era ligero, r\xE1pido
+    y muy maniobrable. Con diferentes versiones a lo largo de los a\xF1os, el Bf
+    109 se convirti\xF3 en uno de los aviones militares m\xE1s producidos de la historia,
+    influyendo en el dise\xF1o de cazas posteriores."
+  descripcion_es_experto: "El Messerschmitt Bf 109, dise\xF1ado por Willy Messerschmitt
+    y Robert Lusser, incorporaba un fuselaje monocasco ligero, alas de peque\xF1o
+    alargamiento y un tren de aterrizaje estrecho caracter\xEDstico. Equipado con
+    motores Daimler-Benz invertidos (series DB 600/601/605), ofrec\xEDa excelente
+    relaci\xF3n potencia\u2013peso y rendimiento a gran altitud, especialmente con
+    compresores de dos etapas. Su continua evoluci\xF3n (series B\u2013K) lo convirti\xF3
+    en un referente en aerodin\xE1mica de alto rendimiento y uno de los cazas m\xE1s
+    influyentes en la ingenier\xEDa aeron\xE1utica del periodo."
+  "descripcion_en_ni\xF1o": The Messerschmitt Bf 109 was a very fast airplane used
+    a long time ago. It had thin wings and a strong engine, and it could fly very
+    high. It was a fighter plane, but today people study it to learn how old airplanes
+    worked.
+  descripcion_en_casual: The Messerschmitt Bf 109 was one of the most important fighter
+    aircraft of World War II. Designed in Germany, it was light, fast, and highly
+    maneuverable. With many upgraded versions over the years, it became one of the
+    most widely produced military aircraft in history and influenced later fighter
+    designs.
+  descripcion_en_experto: The Messerschmitt Bf 109, developed by Willy Messerschmitt
+    and Robert Lusser, featured a lightweight monocoque fuselage, low-aspect-ratio
+    wings, and a narrow-track landing gear. Powered by inverted Daimler-Benz engines
+    (DB 600/601/605 series), it achieved excellent power-to-weight ratios and high-altitude
+    performance, aided by advanced supercharger systems. Its iterative development
+    (B through K variants) made it a benchmark for high-performance aerodynamics
+    and a pivotal aircraft in the evolution of fighter engineering.
 --- !u!1001 &538215839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1985,8 +2344,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1757127864}
   m_SourcePrefab: {fileID: 100100000, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
+--- !u!1 &538215840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
+  m_PrefabInstance: {fileID: 538215839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565479679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2070,13 +2437,67 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4322016253451328438, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565479682}
   m_SourcePrefab: {fileID: 100100000, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
 --- !u!4 &565479680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8437173700326698348, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
   m_PrefabInstance: {fileID: 565479679}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &565479681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4322016253451328438, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
+  m_PrefabInstance: {fileID: 565479679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &565479682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565479681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: "Paraca\xEDcas"
+  "descripcion_es_ni\xF1o": "Un paraca\xEDdas es como una gran tela que se abre en
+    el aire para frenar la ca\xEDda. Gracias a \xE9l, las personas pueden bajar despacio
+    desde muy alto sin hacerse da\xF1o. \xA1Es como un gran paraguas que te ayuda
+    a aterrizar suave!"
+  descripcion_es_casual: "El paraca\xEDdas es un dispositivo que se abre durante
+    una ca\xEDda para crear resistencia al aire y reducir la velocidad. Se usa en
+    saltos desde aviones, emergencias e incluso en exploraci\xF3n espacial, y permite
+    descensos controlados y seguros. Su dise\xF1o ha evolucionado desde simples telas
+    circulares hasta formas m\xE1s eficientes como los paraca\xEDdas rectangulares
+    modernos."
+  descripcion_es_experto: "El paraca\xEDdas funciona aumentando dr\xE1sticamente
+    el coeficiente de arrastre mediante superficies textiles desplegables que estabilizan
+    y desaceleran al usuario u objeto. Los dise\xF1os actuales incluyen paraca\xEDdas
+    tipo \u201Cc\xFApula\u201D y \u201Cparaglider\u201D, optimizados para una alta
+    relaci\xF3n sustentaci\xF3n/arrastre, maniobrabilidad y estabilidad direccional.
+    Su desarrollo integra an\xE1lisis de din\xE1mica de fluidos, materiales de alta
+    resistencia y sistemas de despliegue secuencial para garantizar aperturas seguras
+    a diversas velocidades y altitudes."
+  "descripcion_en_ni\xF1o": "A parachute is a big piece of fabric that opens in the
+    sky to slow you down when you fall. It lets people come down gently from very
+    high places without getting hurt. It\u2019s like a giant umbrella that helps
+    you land softly!"
+  descripcion_en_casual: "A parachute is a device that opens during a fall to create
+    air resistance and reduce speed. It\u2019s used in skydiving, emergencies, and
+    even space missions, allowing safe and controlled descents. Its design has evolved
+    from simple round canopies to modern rectangular, steerable parachutes."
+  descripcion_en_experto: "A parachute operates by significantly increasing aerodynamic
+    drag through deployable textile surfaces that stabilize and decelerate a falling
+    body. Modern systems include round canopies and ram-air \u201Cparaglider\u201D
+    wings, optimized for lift-to-drag efficiency, maneuverability, and directional
+    stability. Their design involves fluid dynamics analysis, high-strength materials,
+    and multi-stage deployment mechanisms to ensure safe openings across diverse
+    speed and altitude regimes."
 --- !u!1001 &571039250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2299,6 +2720,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 590486814}
     - targetCorrespondingSourceObject: {fileID: -2377391915321999524, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1852368400}
@@ -2347,6 +2771,182 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
   m_PrefabInstance: {fileID: 590486811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &590486813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
+  m_PrefabInstance: {fileID: 590486811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &590486814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590486813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: "Fokker Dr.I (el de Bar\xF3n Rojo)"
+  "descripcion_es_ni\xF1o": "El Fokker Dr.I era un avi\xF3n con tres alas que usaba
+    el Bar\xF3n Rojo, un piloto muy famoso. Era peque\xF1o, \xE1gil y pod\xEDa girar
+    muy r\xE1pido. Por eso pod\xEDa hacer maniobras incre\xEDbles en el cielo."
+  descripcion_es_casual: "El Fokker Dr.I fue un triplano alem\xE1n de la Primera
+    Guerra Mundial, conocido por ser el avi\xF3n del Bar\xF3n Rojo, Manfred von Richthofen.
+    Sus tres alas le daban gran maniobrabilidad y capacidad para girar en espacios
+    muy reducidos, aunque no era tan r\xE1pido como otros aviones. A pesar de fabricarse
+    en pocas unidades, se convirti\xF3 en un icono de la aviaci\xF3n de combate temprana."
+  descripcion_es_experto: "El Fokker Dr.I, derivado de las investigaciones de Fokker
+    y Platz tras observar el Sopwith Triplane, incorporaba un dise\xF1o triplano
+    de alta sustentaci\xF3n a baja velocidad, estructura semimonocasco y un motor
+    rotativo Oberursel UR.II. Su elevada tasa de alabeo y maniobrabilidad extrema
+    proven\xEDan del gran momento de sustentaci\xF3n distribuido en sus tres planos
+    y del bajo peso del fuselaje. Sus limitaciones inclu\xEDan menor velocidad punta
+    y problemas estructurales iniciales en las alas, posteriormente corregidos. Pese
+    a su producci\xF3n limitada, su impacto t\xE1ctico y simb\xF3lico fue notable."
+  "descripcion_en_ni\xF1o": "The Fokker Dr.I was a plane with three wings used by
+    the famous pilot known as the Red Baron. It was small, very agile, and could
+    turn super fast. That\u2019s why it could do amazing tricks in the sky!"
+  descripcion_en_casual: "The Fokker Dr.I was a German triplane from World War I,
+    best known as the aircraft flown by the Red Baron, Manfred von Richthofen. Its
+    three wings gave it excellent maneuverability and very tight turning ability,
+    though it wasn\u2019t as fast as other fighters. Even with limited production,
+    it became one of the most iconic early combat aircraft."
+  descripcion_en_experto: The Fokker Dr.I, developed by Fokker and Platz after analyzing
+    the Sopwith Triplane, employed a high-lift triplane configuration, semi-monocoque
+    construction, and an Oberursel UR.II rotary engine. Its exceptional roll rate
+    and maneuverability resulted from high lift coefficients at low speeds and minimal
+    structural mass. However, it suffered from limited top speed and early structural
+    failures in the wings, later corrected. Despite modest production numbers, it
+    had significant tactical relevance and enduring historical prominence.
+--- !u!1 &603270294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603270295}
+  - component: {fileID: 603270299}
+  - component: {fileID: 603270298}
+  - component: {fileID: 603270297}
+  - component: {fileID: 603270296}
+  m_Layer: 0
+  m_Name: Token_DaVinci
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603270295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603270294}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 425, y: 0, z: 261.2}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685026131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603270296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603270294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 1840613869}
+--- !u!136 &603270297
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603270294}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &603270298
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603270294}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &603270299
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603270294}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &626488717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +3262,10 @@ Transform:
   - {fileID: 1587303525}
   - {fileID: 565479680}
   - {fileID: 1052435853}
+  - {fileID: 1461919099}
+  - {fileID: 603270295}
+  - {fileID: 833109971}
+  - {fileID: 428498270}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &688069058 stripped
@@ -2963,6 +3567,133 @@ MonoBehaviour:
   "descripcion_en_ni\xF1o": Prueba
   descripcion_en_casual: Prueba
   descripcion_en_experto: Prueba
+--- !u!1 &772854597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772854598}
+  - component: {fileID: 772854602}
+  - component: {fileID: 772854601}
+  - component: {fileID: 772854600}
+  - component: {fileID: 772854599}
+  m_Layer: 0
+  m_Name: Token_SopwithCamel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772854598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772854597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -64, y: 0, z: -267}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1889176395}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &772854599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772854597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 407686681}
+--- !u!136 &772854600
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772854597}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &772854601
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772854597}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &772854602
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772854597}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &826734552
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,6 +3805,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826734552}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &833109970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833109971}
+  - component: {fileID: 833109975}
+  - component: {fileID: 833109974}
+  - component: {fileID: 833109973}
+  - component: {fileID: 833109972}
+  m_Layer: 0
+  m_Name: Token_DumontDemoiselle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833109971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833109970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 308, y: 0, z: -97}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685026131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833109972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833109970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 1587303527}
+--- !u!136 &833109973
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833109970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &833109974
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833109970}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &833109975
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833109970}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &859992932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,13 +4258,68 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 889633828}
   m_SourcePrefab: {fileID: 100100000, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
 --- !u!4 &889633826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
   m_PrefabInstance: {fileID: 889633825}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &889633827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
+  m_PrefabInstance: {fileID: 889633825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &889633828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889633827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Boeing B-17
+  "descripcion_es_ni\xF1o": "El Boeing B-17 era un avi\xF3n enorme con muchas ventanas
+    y torretas donde iban los tripulantes. Pod\xEDa volar muy lejos y llevar muchas
+    bombas. Era tan resistente que lo llamaban \u201CFortaleza Volante\u201D porque
+    aguantaba mucho da\xF1o y segu\xEDa volando."
+  descripcion_es_casual: "El Boeing B-17 fue un bombardero pesado estadounidense
+    de la Segunda Guerra Mundial, famoso por su resistencia y capacidad para seguir
+    en vuelo pese a sufrir impactos graves. Con varias torretas defensivas, una larga
+    autonom\xEDa y la capacidad de realizar bombardeos de precisi\xF3n a gran altitud,
+    se convirti\xF3 en uno de los aviones m\xE1s emblem\xE1ticos del esfuerzo a\xE9reo
+    aliado en Europa."
+  descripcion_es_experto: "El Boeing B-17 Flying Fortress, dise\xF1ado en la d\xE9cada
+    de 1930, integraba una estructura semimonocasco de aluminio, motores radiales
+    Wright R-1820 y una configuraci\xF3n defensiva con m\xFAltiples torretas (nariz,
+    dorsal, ventral, cintura y cola). Optimizado para bombardeo estrat\xE9gico a
+    gran altitud, explotaba formaciones en \u201Ccombat box\u201D para maximizar
+    fuego cruzado defensivo. Su robustez estructural, aerodin\xE1mica estable y redundancia
+    en sistemas lo convirtieron en un pilar de la ofensiva de bombardeo diurno de
+    la 8\xAA Fuerza A\xE9rea sobre Europa."
+  "descripcion_en_ni\xF1o": "The Boeing B-17 was a huge airplane with lots of windows
+    and gun turrets for the crew. It could fly very far and carry many bombs. It
+    was so tough that people called it the \u201CFlying Fortress\u201D because it
+    could take a lot of damage and still keep flying."
+  descripcion_en_casual: The Boeing B-17 was a heavy American bomber used in World
+    War II, famous for its durability and ability to stay airborne even after major
+    damage. With multiple defensive gun positions, long range, and the ability to
+    perform high-altitude precision bombing, it became one of the most iconic aircraft
+    of the Allied air campaign in Europe.
+  descripcion_en_experto: "The Boeing B-17 Flying Fortress, developed in the 1930s,
+    featured an aluminum semimonocoque airframe, Wright R-1820 radial engines, and
+    an extensive defensive layout including nose, dorsal, ventral, waist, and tail
+    gun stations. Designed for high-altitude strategic bombing, it relied on \u201Ccombat
+    box\u201D formations to create overlapping defensive fire. Its structural resilience,
+    aerodynamic stability, and system redundancy made it a cornerstone of the U.S.
+    Eighth Air Force\u2019s daylight bombing operations over Europe."
 --- !u!1 &894691415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,6 +5315,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1188725419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1188725420}
+  - component: {fileID: 1188725424}
+  - component: {fileID: 1188725423}
+  - component: {fileID: 1188725422}
+  - component: {fileID: 1188725421}
+  m_Layer: 0
+  m_Name: Token_RedBaron
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1188725420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188725419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 62, y: 0, z: -86}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1889176395}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1188725421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188725419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 590486814}
+--- !u!136 &1188725422
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188725419}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1188725423
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188725419}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1188725424
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188725419}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1189923866
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,6 +5676,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 685026131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1461919098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461919099}
+  - component: {fileID: 1461919103}
+  - component: {fileID: 1461919102}
+  - component: {fileID: 1461919101}
+  - component: {fileID: 1461919100}
+  m_Layer: 0
+  m_Name: Token_HotAirBalloon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461919099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461919098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 444.1, y: 0, z: -297}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685026131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1461919100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461919098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 1757127864}
+--- !u!136 &1461919101
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461919098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1461919102
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461919098}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1461919103
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461919098}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1462028521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5290,13 +6457,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587303527}
   m_SourcePrefab: {fileID: 100100000, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
 --- !u!4 &1587303525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
   m_PrefabInstance: {fileID: 1587303524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1587303526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
+  m_PrefabInstance: {fileID: 1587303524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587303527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587303526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Santos-Dumont Demoiselle
+  "descripcion_es_ni\xF1o": "El Demoiselle era un avioncito muy ligero que Santos-Dumont
+    construy\xF3 hace m\xE1s de cien a\xF1os. Era tan peque\xF1o que parec\xEDa una
+    lib\xE9lula. Volaba con un motorcito y ayud\xF3 a que m\xE1s personas pudieran
+    aprender a volar."
+  descripcion_es_casual: "El Demoiselle fue un avi\xF3n ultraligero creado por Alberto
+    Santos-Dumont entre 1907 y 1909. Su estructura simple, hecha de bamb\xFA y tela,
+    lo convert\xEDa en uno de los aviones m\xE1s peque\xF1os y manejables de la \xE9poca.
+    Fue tan exitoso que Santos-Dumont liber\xF3 sus planos para que cualquiera pudiera
+    construirlo, impulsando el desarrollo temprano de la aviaci\xF3n."
+  descripcion_es_experto: "El Santos-Dumont Demoiselle (modelos 19\u201321) represent\xF3
+    una de las primeras aeronaves ultraligeras con configuraci\xF3n tractor, empleando
+    fuselaje de bamb\xFA, alas enteladas de gran alargamiento y motores de entre
+    20 y 35 hp. Su dise\xF1o buscaba optimizar la relaci\xF3n peso-potencia y facilitar
+    la fabricaci\xF3n modular. La decisi\xF3n de Santos-Dumont de publicar los planos
+    libremente contribuy\xF3 decisivamente a la estandarizaci\xF3n temprana de pr\xE1cticas
+    constructivas y al acceso p\xFAblico a la aeron\xE1utica experimental."
+  "descripcion_en_ni\xF1o": The Demoiselle was a tiny, very light airplane built
+    by Santos-Dumont more than a hundred years ago. It was so small it looked like
+    a dragonfly. It had a little engine and helped more people learn how to fly.
+  descripcion_en_casual: The Demoiselle was an ultralight airplane designed by Alberto
+    Santos-Dumont between 1907 and 1909. Made mostly of bamboo and fabric, it was
+    one of the smallest and easiest-to-handle aircraft of its time. It became so
+    popular that Santos-Dumont released its plans for free, encouraging many early
+    aviation enthusiasts to build their own.
+  descripcion_en_experto: "The Santos-Dumont Demoiselle (models 19\u201321) was among
+    the earliest ultralight, tractor-configuration aircraft, featuring a bamboo fuselage,
+    high-aspect-ratio fabric wings, and engines ranging from 20 to 35 hp. Its design
+    emphasized weight\u2013power efficiency and manufacturability. Santos-Dumont\u2019s
+    decision to publish its construction plans openly played a key role in disseminating
+    early aeronautical engineering practices and enabling broader public participation
+    in experimental flight."
 --- !u!1 &1685407836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,6 +6632,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
   m_PrefabInstance: {fileID: 538215839}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757127864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538215840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: "Montgolfier Balloon (Globo Aerost\xE1tico 1783)"
+  "descripcion_es_ni\xF1o": "Antes solo hab\xEDa globos que sub\xEDan sin poder manejarse.
+    Luego lleg\xF3 Lilienthal y cre\xF3 planeadores que s\xED se pod\xEDan controlar
+    un poco. M\xE1s tarde, los hermanos Wright a\xF1adieron un motor y una cola para
+    dirigir el vuelo. \xA1Y as\xED empez\xF3 el avi\xF3n moderno!"
+  descripcion_es_casual: "Los primeros globos permit\xEDan elevarse, pero no pod\xEDan
+    dirigirse. Lilienthal avanz\xF3 al dise\xF1ar planeadores con cierto control
+    y mejor aerodin\xE1mica. Los hermanos Wright completaron el progreso al incluir
+    un motor y superficies de control como el tim\xF3n, dando origen a la aviaci\xF3n
+    moderna."
+  descripcion_es_experto: "El globo aerost\xE1tico supuso el primer ascenso tripulado,
+    aunque carec\xEDa de capacidad de maniobra. Otto Lilienthal introdujo principios
+    de control activo y aerodin\xE1mica estable en sus planeadores experimentales.
+    Los hermanos Wright integraron control tridimensional mediante alabeo, tim\xF3n
+    y elevador, y a\xF1adieron un motor ligero, estableciendo los fundamentos t\xE9cnicos
+    del vuelo motorizado controlado que caracteriza a la aeron\xE1utica moderna."
+  "descripcion_en_ni\xF1o": "At first, people used balloons that went up but couldn\u2019t
+    really be steered. Then Lilienthal made gliders that you could control a little.
+    Later, the Wright brothers added a motor and a tail to guide the flight. That\u2019s
+    how the modern airplane began!"
+  descripcion_en_casual: "Early balloons allowed people to rise into the air but
+    didn\u2019t offer any real control. Lilienthal improved things by creating gliders
+    with some steering and better aerodynamics. The Wright brothers completed the
+    leap forward by adding an engine and control surfaces like the rudder, giving
+    birth to modern aviation."
+  descripcion_en_experto: "The hot-air balloon enabled the first manned ascents but
+    lacked directional control. Otto Lilienthal advanced flight by implementing active
+    control principles and stable aerodynamic designs in his experimental gliders.
+    The Wright brothers integrated three-axis control\u2014roll, yaw, and pitch\u2014via
+    wing-warping, rudder, and elevator, and added a lightweight engine, establishing
+    the technological foundations of controlled, powered flight in modern aeronautics."
 --- !u!1 &1784411620
 GameObject:
   m_ObjectHideFlags: 0
@@ -5716,6 +6978,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
   m_PrefabInstance: {fileID: 1788166571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1795053149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795053150}
+  - component: {fileID: 1795053154}
+  - component: {fileID: 1795053153}
+  - component: {fileID: 1795053152}
+  - component: {fileID: 1795053151}
+  m_Layer: 0
+  m_Name: Token_BoeingB17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795053150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795053149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 296}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1889176395}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1795053151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795053149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4395c1ac313a64fa925bc7437e1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoToken
+  infoParaMostrar: {fileID: 889633828}
+--- !u!136 &1795053152
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795053149}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1795053153
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795053149}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1795053154
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795053149}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1811165785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,8 +7223,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 976a018f8a31b436aaab4a7b460cec55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840613869}
   m_SourcePrefab: {fileID: 100100000, guid: 976a018f8a31b436aaab4a7b460cec55, type: 3}
+--- !u!1 &1840613868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 976a018f8a31b436aaab4a7b460cec55, type: 3}
+  m_PrefabInstance: {fileID: 1840613867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1840613869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840613868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Leonardo da Vinci aerial screw
+  "descripcion_es_ni\xF1o": "Leonardo da Vinci imagin\xF3 una m\xE1quina que parec\xEDa
+    un tornillo gigante hecho de tela. Pensaba que, si giraba muy r\xE1pido, pod\xEDa
+    levantarse en el aire, como un helic\xF3ptero. Aunque nunca se construy\xF3,
+    fue una idea muy adelantada a su tiempo."
+  descripcion_es_casual: "La \u201Ctornillo a\xE9reo\u201D de Leonardo da Vinci era
+    un dise\xF1o en forma de h\xE9lice grande hecha de lona y madera. Leonardo cre\xEDa
+    que, al girar, podr\xEDa generar suficiente fuerza para elevarse. Aunque no funcionaba
+    con la tecnolog\xEDa disponible en su \xE9poca, muestra c\xF3mo Leonardo pensaba
+    en principios que m\xE1s tarde se usar\xEDan en los helic\xF3pteros."
+  descripcion_es_experto: "El \u201Ctornillo a\xE9reo\u201D de Leonardo da Vinci
+    propon\xEDa un rotor helicoidal de tela sellada que, al girar, desplazar\xEDa
+    aire hacia abajo mediante un principio similar al de un tornillo penetrando un
+    medio fluido. Aunque el material, la potencia disponible y la comprensi\xF3n
+    aerodin\xE1mica del siglo XV imped\xEDan su funcionamiento real, el concepto
+    anticipa el uso de superficies helicoidales para generar sustentaci\xF3n vertical,
+    prefigurando aspectos te\xF3ricos de la helic\xF3pterodin\xE1mica moderna."
+  "descripcion_en_ni\xF1o": Leonardo da Vinci imagined a flying machine that looked
+    like a giant spinning screw made of cloth. He thought that if it turned fast
+    enough, it could rise into the air like a helicopter. It was never built, but
+    it was a very smart idea for his time.
+  descripcion_en_casual: "Leonardo\u2019s \u201Caerial screw\u201D was a spiral-shaped
+    design made of canvas and wood. He believed that, by spinning, it could push
+    air downward and lift itself up. While it couldn\u2019t work with the technology
+    of his era, it shows how Leonardo explored ideas that would later relate to helicopter
+    flight."
+  descripcion_en_experto: "Leonardo da Vinci\u2019s \u201Caerial screw\u201D envisioned
+    a helical rotor made of sealed linen that, when rotated, would drive air downward
+    using a screw-like interaction with the surrounding fluid. Although the materials,
+    power sources, and aerodynamic understanding of the 15th century made actual
+    flight impossible, the concept foreshadows vertical-lift mechanics and anticipates
+    theoretical elements later formalized in helicopter aerodynamics."
 --- !u!1 &1852368395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2377391915321999524, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
@@ -6063,6 +7504,10 @@ Transform:
   - {fileID: 590486812}
   - {fileID: 407686679}
   - {fileID: 889633826}
+  - {fileID: 22982550}
+  - {fileID: 1188725420}
+  - {fileID: 772854598}
+  - {fileID: 1795053150}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974304343
