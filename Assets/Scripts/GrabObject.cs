@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class GrabObject : MonoBehaviour
 {
-    public float pickUpDistance = 100f;
+    public float pickUpDistance = 200f;
     public float distanceToCam = 15f;
+    public float scaleFactor = 10f;
     public float moveSpeed = 0.1f;
     public float rotateSpeed = 1000f;
-    public float scaleFactor = 10f;
 
     private Camera cam;
     private Rigidbody grabbedRb;
@@ -25,21 +25,15 @@ public class GrabObject : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+
+        // Crear un handle para centrar el objeto en la vista de la camara
+        handle = new GameObject("GrabHandle");
     }
 
     void Update()
     {
-        // Debug
+        // Debug raycast visualization
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * pickUpDistance, Color.red);
-
-        if (Input.GetMouseButtonDown(0))
-        {
-                Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f));
-            if (Physics.Raycast(ray, out RaycastHit hit, pickUpDistance))
-                Debug.Log("Golpeó: " + hit.collider.name);
-            else
-                Debug.Log("No golpeó nada.");
-        }
 
 
         // Interacción
@@ -61,6 +55,8 @@ public class GrabObject : MonoBehaviour
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         if (Physics.Raycast(ray, out RaycastHit hit, pickUpDistance))
         {
+            Debug.Log("Raycast hit: " + hit.collider.name);
+
             if (hit.transform.CompareTag("Grabbable"))
             {
                 grabbedRb = hit.rigidbody;
@@ -76,10 +72,9 @@ public class GrabObject : MonoBehaviour
                 hadGravity = grabbedRb.useGravity;
                 grabbedRb.useGravity = false;
 
-                // Recordar si tenia constraints y ponerle FreezeRotation
+                // Recordar si tenia constraints y ponerle FreezeRotation y FreezePosition
                 previousConstraints = grabbedRb.constraints;
-                grabbedRb.constraints = RigidbodyConstraints.FreezePosition;
-                grabbedRb.constraints = RigidbodyConstraints.FreezeRotation;
+                grabbedRb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
 
                 // Recordar la posición, orientación y escala originales
                 originalPosition = grabbedRb.transform.position;
@@ -99,21 +94,18 @@ public class GrabObject : MonoBehaviour
 
 
 
-                // Crear un handle para centrar el objeto en la vista de la camara
-                // 1. Create empty handle
-                handle = new GameObject("GrabHandle");
-
-                // 2. Calculate visual center of the object (including children)
+                // Actualizar la posición y la rotación del handle para centrar el objeto en la vista de la camara
+                // Calculate visual center of the object (including children)
                 Renderer[] renderers = grabbedRb.GetComponentsInChildren<Renderer>();
                 Bounds bounds = renderers[0].bounds;
                 for (int i = 1; i < renderers.Length; i++)
                     bounds.Encapsulate(renderers[i].bounds);
 
-                // 3. Place the handle at the center of bounds
+                // Place the handle at the center of bounds
                 handle.transform.position = bounds.center;
                 handle.transform.rotation = grabbedRb.transform.rotation;
 
-                // 4. Parent the object to the handle while keeping world position
+                // Parent the object to the handle while keeping world position
                 grabbedRb.transform.SetParent(handle.transform, true);
             }
         }
@@ -121,6 +113,8 @@ public class GrabObject : MonoBehaviour
 
     void Drop()
     {
+        if (grabbedRb == null) return;
+
         // Restaurar posición y rotación originales
         grabbedRb.transform.position = originalPosition;
         grabbedRb.transform.rotation = originalRotation;
@@ -134,9 +128,6 @@ public class GrabObject : MonoBehaviour
 
         // Restaurar la escala original
         grabbedRb.transform.localScale = originalScale;
-        
-        // Destruir el handle
-        Destroy(handle);
 
         grabbedRb = null;
     }
@@ -153,7 +144,7 @@ public class GrabObject : MonoBehaviour
         if (Input.GetMouseButton(1)) // clic derecho para rotar
         {
             // Obtener movimiento del mouse
-            float rotX = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
+            float rotX = -Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
             float rotY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
 
             // Crear rotaciones incrementales
