@@ -146,7 +146,6 @@ public class LeapCursor : MonoBehaviour
         if (leapProvider == null)
             leapProvider = FindAnyObjectByType<LeapServiceProvider>();
         
-        // El zOffset fijo ya no es necesario aquí.
     }
 
     void Update()
