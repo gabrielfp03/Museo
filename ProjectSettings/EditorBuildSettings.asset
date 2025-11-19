@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Menu_Scene.unity
+    path: Assets/Scenes/Menu_Principal_Scene.unity
+    guid: a3bb4812808f98648b083c8c5664464b
+  - enabled: 1
+    path: Assets/Scenes/Catalog_Scene.unity
+    guid: 88bdb1e88cd810645b36a394a06cb572
+  - enabled: 1
+    path: Assets/Scenes/Museum_MainScene.unity
     guid: d8e00401c7b01434fb35d36557f5930d
+  - enabled: 1
+    path: Assets/Scenes/Map_Rooms_Scene.unity
+    guid: e1b011aad9769ff47b703643caa1ea4d
+  - enabled: 1
+    path: Assets/Scenes/Map_Services_Scene.unity
+    guid: b02f12c1f42324942ae907657cfab036
   - enabled: 1
     path: Assets/Scenes/Museo.unity
     guid: 4d42116948ddd466fa576ae122ccedd2

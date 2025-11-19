@@ -20,7 +20,7 @@ public class ChangeColorLogic : MonoBehaviour
                 if (hit.collider.GetComponent<ChangeColorObject>())
                 {
                     // Guardamos la referencia del objeto golpeado
-                    ChangeColorObject newChangeColorObject = hit.collider.GetComponent<ChangeColorObject>();
+                    changeColor newChangeColorObject = hit.collider.GetComponent<changeColor>();
 
                     // Lógica para alternar el color (similar al script anterior)
                     if (!newChangeColorObject.colorChanged)

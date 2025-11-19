@@ -136,7 +136,7 @@ public class RaycastButtonAction : MonoBehaviour
 
     [Header("Button Action")]
     public UnityEvent OnButtonPress = new UnityEvent();
-
+    public UnityEvent OnButtonRelease = new UnityEvent();
     private Image buttonImage;
     private bool isConfirmed = false; 
     private float pressTimer = 0f;    
@@ -167,7 +167,11 @@ public class RaycastButtonAction : MonoBehaviour
         }
     }
     public void OnRaycastExit()
-    {
+    {   
+        if (isHovering)
+        {
+            OnButtonRelease.Invoke();
+        }
         ResetButtonState();
     }
 
@@ -195,7 +199,7 @@ public class RaycastButtonAction : MonoBehaviour
     {
         yield return new WaitForSeconds(actionDelay);
         OnButtonPress.Invoke();
-        ResetButtonState();
+        //ResetButtonState();
     }
 
     private void ResetButtonState()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeColorObject : MonoBehaviour
+public class changeColor : MonoBehaviour
 {
     private Renderer renderObject;
     
