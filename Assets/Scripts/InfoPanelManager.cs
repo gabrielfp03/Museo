@@ -1,71 +1,59 @@
 using UnityEngine;
-using TMPro;       // Necesario para TextMeshPro
-using UnityEngine.UI; // Necesario para los componentes de UI estándar
+using TMPro;
+using UnityEngine.UI;
 
 public class InfoPanelManager : MonoBehaviour
 {
-    [Header("Referencias Visuales (Arrastra desde el Canvas)")]
+    [Header("UI References")]
     public GameObject panelContenedor;
     public TextMeshProUGUI tituloText;
     public TextMeshProUGUI descripcionText;
     public Button botonCerrar;
     
-    [Header("Controles de Interacción (Arrastra desde el Canvas)")]
-    public TMP_Dropdown dropdownIdioma; 
-    public TMP_Dropdown dropdownNivel;  
+    [Header("Controles")]
+    public TMP_Dropdown dropdownIdioma; // Opción 0=Español, 1=Inglés
+    public TMP_Dropdown dropdownNivel;  // Opción 0=Niño, 1=Casual, 2=Experto
     public Button botonAudio;
-
-    [Header("Audio (Arrastra el propio GAME_MANAGER aquí)")]
     public AudioSource fuenteAudio; 
 
-    // Variable privada para recordar qué avión estamos mirando
     private InfoObraMuseo infoActual; 
+    private CanvasGroup canvasGroup;
 
     void Start()
     {
-        // Aseguramos que el panel empiece cerrado
-        if(panelContenedor != null) 
-            panelContenedor.SetActive(false);
+        if(panelContenedor != null) panelContenedor.SetActive(false);
         
-        // Conectamos los eventos de los botones y dropdowns
-        if(botonCerrar != null)
-            botonCerrar.onClick.AddListener(CerrarPanel);
-        
-        if(dropdownIdioma != null)
-            dropdownIdioma.onValueChanged.AddListener(delegate { ActualizarContenido(); });
-            
-        if(dropdownNivel != null)
-            dropdownNivel.onValueChanged.AddListener(delegate { ActualizarContenido(); });
-        
-        if(botonAudio != null)
-            botonAudio.onClick.AddListener(ReproducirAudio);
+        // Conexiones automáticas de botones
+        botonCerrar.onClick.AddListener(CerrarPanel);
+        dropdownIdioma.onValueChanged.AddListener(delegate { ActualizarContenido(); });
+        dropdownNivel.onValueChanged.AddListener(delegate { ActualizarContenido(); });
+        botonAudio.onClick.AddListener(ReproducirAudio);
+
+        canvasGroup = panelContenedor.GetComponent<CanvasGroup>();
+        if(canvasGroup == null) canvasGroup = panelContenedor.AddComponent<CanvasGroup>();
     }
 
-    // Esta función la llama el Símbolo "i" al hacer clic
     public void AbrirPanel(InfoObraMuseo info)
     {
         infoActual = info;
-        if(tituloText != null) 
-            tituloText.text = info.nombreObjeto;
-            
-        if(panelContenedor != null) 
-            panelContenedor.SetActive(true);
+        tituloText.text = info.nombreObjeto;
+        panelContenedor.SetActive(true);
+        ActualizarContenido(); // Refrescar texto al abrir
         
-        // Refresca el texto inmediatamente
-        ActualizarContenido();
+        panelContenedor.SetActive(true);
+        canvasGroup.alpha = 0; // Empieza invisible
+        StopAllCoroutines();
+        StartCoroutine(AnimarEntrada());
     }
 
     void ActualizarContenido()
     {
         if (infoActual == null) return;
+        fuenteAudio.Stop(); // Parar audio anterior
 
-        // Paramos el audio si cambian las opciones para no mezclar sonidos
-        if(fuenteAudio != null) fuenteAudio.Stop();
+        int idioma = dropdownIdioma.value;
+        int nivel = dropdownNivel.value;
 
-        int idioma = dropdownIdioma.value; // 0=Español, 1=Inglés
-        int nivel = dropdownNivel.value;   // 0=Niño, 1=Casual, 2=Experto
-
-        // Lógica de selección de texto
         if (idioma == 0) // Español
         {
             if (nivel == 0) descripcionText.text = infoActual.textoES_Niño;
@@ -82,41 +70,45 @@ public class InfoPanelManager : MonoBehaviour
 
     void ReproducirAudio()
     {
-        if (infoActual == null || fuenteAudio == null) return;
+        if (infoActual == null) return;
         
         int idioma = dropdownIdioma.value;
         int nivel = dropdownNivel.value;
-        AudioClip clipA_Reproducir = null;
+        AudioClip clip = null;
 
-        // Lógica de selección de audio (idéntica a la del texto)
         if (idioma == 0) // Español
         {
-            if (nivel == 0) clipA_Reproducir = infoActual.audioES_Niño;
-            else if (nivel == 1) clipA_Reproducir = infoActual.audioES_Casual;
-            else clipA_Reproducir = infoActual.audioES_Experto;
+            if (nivel == 0) clip = infoActual.audioES_Niño;
+            else if (nivel == 1) clip = infoActual.audioES_Casual;
+            else clip = infoActual.audioES_Experto;
         }
         else // Inglés
         {
-            if (nivel == 0) clipA_Reproducir = infoActual.audioEN_Niño;
-            else if (nivel == 1) clipA_Reproducir = infoActual.audioEN_Casual;
-            else clipA_Reproducir = infoActual.audioEN_Experto;
+            if (nivel == 0) clip = infoActual.audioEN_Niño;
+            else if (nivel == 1) clip = infoActual.audioEN_Casual;
+            else clip = infoActual.audioEN_Experto;
         }
 
-        // Solo reproducimos si existe un archivo de audio asignado
-        if (clipA_Reproducir != null)
-        {
-            fuenteAudio.clip = clipA_Reproducir;
-            fuenteAudio.Play();
-        }
-        else
-        {
-            Debug.Log("No hay audio asignado para esta selección.");
-        }
+        if (clip != null) { fuenteAudio.clip = clip; fuenteAudio.Play(); }
     }
 
     public void CerrarPanel()
     {
-        if(fuenteAudio != null) fuenteAudio.Stop(); 
-        if(panelContenedor != null) panelContenedor.SetActive(false);
+        fuenteAudio.Stop();
+        panelContenedor.SetActive(false);
+    }
+
+    // Añade esta Corrutina al final del script
+    System.Collections.IEnumerator AnimarEntrada() {
+        float tiempo = 0;
+        while(tiempo < 0.3f) { // Duración 0.3 segundos
+            tiempo += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(0, 1, tiempo / 0.3f);
+            // Pequeño efecto de escala (pop-up)
+            panelContenedor.transform.localScale = Vector3.Lerp(Vector3.one * 0.8f, Vector3.one, tiempo / 0.3f);
+            yield return null;
+        }
+        canvasGroup.alpha = 1;
+        panelContenedor.transform.localScale = Vector3.one;
     }
 }
