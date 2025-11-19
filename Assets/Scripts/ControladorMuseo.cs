@@ -4,40 +4,74 @@ using UnityEngine.SceneManagement;
 public class ControladorMuseo : MonoBehaviour
 {
     [Header("Configuración")]
-    public Transform jugador;
-    public float velocidad = 2.0f; // Ajusta la velocidad aquí
+    public Transform jugador; // Arrastra aquí a tu FirstPersonController
+    public float velocidad = 3.0f;
 
-    // Variables "interruptor" para saber si debemos movernos
-    private bool avanzando = false;
-    private bool retrocediendo = false;
-    private bool izquierda = false;
-    private bool derecha = false;
+    // Variables privadas para saber si nos estamos moviendo
+    private bool moviendoAdelante = false;
+    private bool moviendoAtras = false;
+    private bool moviendoIzquierda = false;
+    private bool moviendoDerecha = false;
 
     void Update()
     {
+        // Si no hay jugador asignado, no hacemos nada
         if (jugador == null) return;
 
-        // Mientras los interruptores estén encendidos, movemos al jugador
-        if (avanzando)     jugador.Translate(Vector3.forward * velocidad * Time.deltaTime);
-        if (retrocediendo) jugador.Translate(Vector3.back * velocidad * Time.deltaTime);
-        if (izquierda)     jugador.Translate(Vector3.left * velocidad * Time.deltaTime);
-        if (derecha)       jugador.Translate(Vector3.right * velocidad * Time.deltaTime);
+        // Movemos al jugador según qué interruptor esté encendido
+        // Usamos Time.deltaTime para que el movimiento sea suave
+        if (moviendoAdelante)
+            jugador.Translate(Vector3.forward * velocidad * Time.deltaTime);
+        
+        if (moviendoAtras)
+            jugador.Translate(Vector3.back * velocidad * Time.deltaTime);
+        
+        if (moviendoIzquierda)
+            jugador.Translate(Vector3.left * velocidad * Time.deltaTime);
+        
+        if (moviendoDerecha)
+            jugador.Translate(Vector3.right * velocidad * Time.deltaTime);
     }
 
-    // --- FUNCIONES PARA CONECTAR AL PRESSED (Al tocar) ---
-    public void EmpezarAvanzar() { avanzando = true; }
-    public void EmpezarRetroceder() { retrocediendo = true; }
-    public void EmpezarIzquierda() { izquierda = true; }
-    public void EmpezarDerecha() { derecha = true; }
+    // --- FUNCIONES PARA LOS BOTONES UI (ON CLICK) ---
 
-    // --- FUNCIONES PARA CONECTAR AL UNPRESSED (Al soltar) ---
-    public void DetenerMovimiento() 
-    { 
-        // Apagamos todo por seguridad
-        avanzando = false;
-        retrocediendo = false;
-        izquierda = false;
-        derecha = false;
+    // Esta función apaga todos los movimientos. 
+    // La llamamos antes de activar uno nuevo para no movernos en diagonal por error.
+    public void DetenerTodo()
+    {
+        moviendoAdelante = false;
+        moviendoAtras = false;
+        moviendoIzquierda = false;
+        moviendoDerecha = false;
+    }
+
+    public void ToggleAdelante()
+    {
+        // Si ya nos movíamos hacia adelante, paramos. Si no, empezamos.
+        bool estadoActual = moviendoAdelante;
+        DetenerTodo(); // Primero reseteamos para que no se mezclen direcciones
+        moviendoAdelante = !estadoActual; // Invertimos el estado anterior
+    }
+
+    public void ToggleAtras()
+    {
+        bool estadoActual = moviendoAtras;
+        DetenerTodo();
+        moviendoAtras = !estadoActual;
+    }
+
+    public void ToggleIzquierda()
+    {
+        bool estadoActual = moviendoIzquierda;
+        DetenerTodo();
+        moviendoIzquierda = !estadoActual;
+    }
+
+    public void ToggleDerecha()
+    {
+        bool estadoActual = moviendoDerecha;
+        DetenerTodo();
+        moviendoDerecha = !estadoActual;
     }
 
     // --- MENU ---
