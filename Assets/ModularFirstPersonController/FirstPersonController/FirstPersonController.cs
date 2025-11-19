@@ -59,6 +59,13 @@ public class FirstPersonController : MonoBehaviour
     public float walkSpeed = 5f;
     public float maxVelocityChange = 10f;
 
+    // NUEVO
+    private bool isMovementActivatedByButton = false;
+    private float externalHorizontalInput = 0f;
+    private float externalVerticalInput = 0f;
+
+    ///
+
     // Internal Variables
     private bool isWalking = false;
 
@@ -370,8 +377,27 @@ public class FirstPersonController : MonoBehaviour
 
         if (playerCanMove)
         {
+            // NUEVOOO
+            float hInput, vInput;
+
+            if (isMovementActivatedByButton)
+            {
+                // Usar el input proporcionado por el script externo (botón)
+                hInput = externalHorizontalInput;
+                vInput = externalVerticalInput;
+            }
+            else
+            {
+                // Usar el input normal del teclado si el botón no está activo
+                hInput = Input.GetAxis("Horizontal");
+                vInput = Input.GetAxis("Vertical");
+            }
+            
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 targetVelocity = new Vector3(hInput, 0, vInput);
+
+            // Calculate how fast we should be moving
+            // Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
@@ -525,6 +551,19 @@ public class FirstPersonController : MonoBehaviour
             timer = 0;
             joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
         }
+    }
+    // NUEVO
+    public void SetMovementActive(bool isActive)
+    {
+        isMovementActivatedByButton = isActive;
+    }
+
+    // Función llamada por un script externo para indicar la dirección
+    // Los valores de input deberían ser 0 o 1 para un simple avance
+    public void SetExternalInput(float horizontal, float vertical)
+    {
+        externalHorizontalInput = horizontal;
+        externalVerticalInput = vertical;
     }
 }
 
