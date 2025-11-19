@@ -19,7 +19,7 @@ public class LeapCursor : MonoBehaviour
     public float depthOffset = 0.05f; // Un pequeño offset en metros
 
     public LayerMask UILayer; 
-    public float raycastDistance = 10f;
+    public float raycastDistance = 100f;
 
     private static LeapCursor instance;
     private RaycastButtonAction currentHoverButton = null;

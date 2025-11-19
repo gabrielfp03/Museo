@@ -311,6 +311,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &486106872
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +503,7 @@ MonoBehaviour:
   UILayer:
     serializedVersion: 2
     m_Bits: 32
-  raycastDistance: 30
+  raycastDistance: 70
 --- !u!212 &489016225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -746,6 +749,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &674250458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1075,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &696841162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1447,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &740221949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,6 +2200,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1249996669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,6 +3474,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
