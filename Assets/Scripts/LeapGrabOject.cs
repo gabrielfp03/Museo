@@ -245,15 +245,12 @@ public class LeapGrabObject : MonoBehaviour
     public float grabThreshold = 0.9f; 
     [Tooltip("Fuerza mínima de agarre para soltar un agarre fuerte.")]
     public float grabReleaseThreshold = 0.8f;
-    [Tooltip("Fuerza mínima de agarre para MANTENER el agarre.")]
-    public float releaseThreshold = 0.7f; 
+    
     [Tooltip("Radio para detectar objetos cercanos a la punta del índice.")]
     public float overlapRadius = 0.05f; 
 
     // === Grab Physics and Movement ===
     [Header("Grab Physics and Movement")]
-    [Tooltip("Velocidad de seguimiento. Valores bajos suavizan más.")]
-    public float moveSpeed = 0.1f;
     [Tooltip("Escala aplicada al objeto al agarrarlo para normalizar tamaños.")]
     public float scaleFactor = 5f; 
 
@@ -268,12 +265,10 @@ public class LeapGrabObject : MonoBehaviour
     private Transform originalParent;
     private Vector3 originalScale;
     private bool hadGravity;
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
 
     // Handle (punto de pivote) + offsets para alineación
     private GameObject grabHandle;
-    private Vector3 positionOffset;
+    private Vector3 positionOffset; // Offset: Distancia del objeto al punto de anclaje (dedo)
     private Quaternion rotationOffset;
 
     [Header("Pinch Settings")]
@@ -284,7 +279,6 @@ public class LeapGrabObject : MonoBehaviour
 
     void Start()
     {
-        // Buscar HandModelBase en el padre (mano generada por Leap)
         if (transform.parent != null)
             handModelBase = transform.parent.GetComponent<HandModelBase>(); 
         
@@ -313,18 +307,16 @@ public class LeapGrabObject : MonoBehaviour
         bool tryPinchGrab = pinchStrength > pinchThreshold;
         bool tryStrongGrab = grabStrength > grabThreshold;
 
-        // === Hysteresis para evitar parpadeos en el agarre ===
+        // === Hysteresis ===
         bool isCurrentlyGrabbing;
 
         if (isGrabbing)
         {
-            // Si ya agarramos, comprobamos si debemos soltar (umbral menor)
             float releaseT = isPinchingGrab ? pinchReleaseThreshold : grabReleaseThreshold;
             isCurrentlyGrabbing = (isPinchingGrab ? pinchStrength : grabStrength) > releaseT;
         }
         else
         {
-            // Prioridad: pinza > agarre fuerte > ninguno
             if (tryPinchGrab)
             {
                 isPinchingGrab = true;
@@ -344,18 +336,32 @@ public class LeapGrabObject : MonoBehaviour
         else if (!isCurrentlyGrabbing && isGrabbing)
             Drop();
 
-        // === Si hay objeto agarrado, seguir la mano ===
-        if (grabbedRb != null)
-        {
-            // Usar la punta del índice para una sensación más natural
-            Vector3 handPos = hand.Index.TipPosition;
-
-            grabHandle.transform.position = handPos + positionOffset;
-            grabHandle.transform.rotation = hand.Rotation * rotationOffset;
-        }
-
         // Actualizar estado del frame anterior
         isGrabbing = isCurrentlyGrabbing;
+    }
+
+    void LateUpdate()
+    {
+        if (handModelBase == null || !handModelBase.IsTracked || grabbedRb == null)
+        {
+            return;
+        }
+
+        Hand hand = handModelBase.GetLeapHand();
+        if (hand == null) return;
+
+        // ANCLAJE DEDO: Usamos la punta del índice para el seguimiento 
+        Vector3 anchorPosition = hand.Index.TipPosition;
+
+        // Posición Objetivo del Handle: La posición del dedo más el offset (distancia)
+        Vector3 targetPos = anchorPosition + positionOffset;
+        
+        // Rotación Objetivo del Handle
+        Quaternion targetRot = hand.Rotation * rotationOffset;
+        
+        // Aplicar movimiento directo (1:1) al Handle
+        grabHandle.transform.position = targetPos;
+        grabHandle.transform.rotation = targetRot;
     }
 
     // ====================================================================
@@ -363,7 +369,8 @@ public class LeapGrabObject : MonoBehaviour
     // ====================================================================
     void TryGrab(Hand hand)
     {
-        Vector3 anchorPosition = hand.Index.TipPosition;
+        // PUNTA DEL DEDO: Anclamos el punto de detección al índice
+        Vector3 anchorPosition = hand.Index.TipPosition; 
 
         Collider[] colliders = Physics.OverlapSphere(anchorPosition, overlapRadius);
         Rigidbody hitRb = null;
@@ -381,36 +388,44 @@ public class LeapGrabObject : MonoBehaviour
         if (hitRb == null || grabbedRb != null) return;
 
         grabbedRb = hitRb;
-        Collider colRef = grabbedRb.GetComponent<Collider>();
-
+        
         // Guardar datos originales
-        originalParent = grabbedRb.transform.parent;      // Guardar parent original primero
-        originalPosition = grabbedRb.transform.position;  // Guardar posición mundial real
-        originalRotation = grabbedRb.transform.rotation;  // Guardar rotación mundial real
-        originalScale = grabbedRb.transform.localScale;   // Guardar escala
-        hadGravity = grabbedRb.useGravity;                // Guardar gravedad
-        previousConstraints = grabbedRb.constraints;      // Guardar restricciones
-
-        // Offset inicial desde la mano al objeto
-        positionOffset = grabbedRb.transform.position - anchorPosition;
-        rotationOffset = Quaternion.Inverse(hand.Rotation) * grabbedRb.transform.rotation;
-
-        // Configurar física
-        grabbedRb.useGravity = false;
-        grabbedRb.constraints = RigidbodyConstraints.FreezeRotation;
-
-        // Normalizar escala según el tamaño del objeto
-        Vector3 size = colRef.bounds.size;
-        float maxSize = Mathf.Max(size.x, size.y, size.z);
-        float normalizedScale = 1f / maxSize;
-        grabbedRb.transform.localScale = originalScale * normalizedScale * scaleFactor;
+        originalParent = grabbedRb.transform.parent;      
+        originalScale = grabbedRb.transform.localScale;   
+        hadGravity = grabbedRb.useGravity;                
+        previousConstraints = grabbedRb.constraints;      
 
         // Crear handle y convertirlo en pivote
         grabHandle = new GameObject("LeapGrabHandle");
-        grabHandle.transform.position = colRef.bounds.center;
-        grabHandle.transform.rotation = grabbedRb.transform.rotation;
+        
+        // HANDLE POSITION: Creamos el handle EN LA POSICIÓN DEL DEDO (anchor)
+        grabHandle.transform.position = anchorPosition; 
+        grabHandle.transform.rotation = hand.Rotation;
 
         grabHandle.transform.SetParent(this.transform.parent, true);
+
+        // OFFSET CRÍTICO: Cálculo de la distancia del OBJETO al DEDO
+        positionOffset = grabbedRb.transform.position - anchorPosition;
+        rotationOffset = Quaternion.Inverse(hand.Rotation) * grabbedRb.transform.rotation;
+
+        grabbedRb.transform.localScale = originalScale * scaleFactor;
+
+        // Collider colRef = grabbedRb.GetComponent<Collider>();
+        // if (colRef != null)
+        // {
+        //     // Normalizar escala
+        //     Vector3 size = colRef.bounds.size;
+        //     float maxDimension = Mathf.Max(size.x, size.y, size.z);
+        //     float baseScaleFactor = 1f / maxDimension; 
+        //     grabbedRb.transform.localScale = originalScale * baseScaleFactor * scaleFactor;
+        // }
+
+        // Configurar física
+        grabbedRb.isKinematic = true; 
+        grabbedRb.useGravity = false;
+        grabbedRb.constraints = RigidbodyConstraints.None;
+
+        // Hacer el objeto agarrado HIJO del handle
         grabbedRb.transform.SetParent(grabHandle.transform, true);
     }
 
@@ -420,23 +435,38 @@ public class LeapGrabObject : MonoBehaviour
     void Drop()
     {
         if (grabbedRb == null) return;
-        
-        // Restaurar jerarquía
+                
+        Collider grabbedCollider = grabbedRb.GetComponent<Collider>();
+
+        // 1. Restaurar jerarquía (El objeto vuelve a su padre original)
         grabbedRb.transform.SetParent(originalParent, true);
-        grabbedRb.transform.position = originalPosition;
-        grabbedRb.transform.rotation = originalRotation;
 
-        // Restaurar física
+        // 2. Restaurar física (CRÍTICO)
+        grabbedRb.isKinematic = false; 
+        grabbedRb.constraints = previousConstraints;         
         grabbedRb.useGravity = hadGravity;
-        grabbedRb.constraints = previousConstraints;
+        
+        // 3. Limpieza de velocidad
+        grabbedRb.linearVelocity = Vector3.zero;
+        grabbedRb.angularVelocity = Vector3.zero;
 
-        // Restaurar escala original
+        // 4. Solución al bug de caer a través (Forzar la re-evaluación de colisión)
+        if (grabbedCollider != null)
+        {
+            grabbedCollider.enabled = false;
+            grabbedCollider.enabled = true;
+        }
+
+        // 5. Restaurar escala original
         grabbedRb.transform.localScale = originalScale;
 
-        // Limpiar handle
-        Destroy(grabHandle);
+        // 6. Limpiar handle
+        if (grabHandle != null)
+        {
+            Destroy(grabHandle);
+        }
 
-        // Reset flags
+        // 7. Reset flags
         grabbedRb = null;
         isPinchingGrab = false;
     }
