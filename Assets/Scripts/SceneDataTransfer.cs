@@ -62,4 +62,29 @@ public class SceneDataTransfer : MonoBehaviour
     {
         SetDestinationAndLoad("Checkpoint_Salida", "Museo");
     }
+
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene("Menu_Principal_Scene");
+    }
+
+        public void LoadCatalogoScene()
+    {
+        SceneManager.LoadScene("Catalogo_Scene");
+    }
+
+    public void LoadMuseumMainScene()
+    {
+        SceneManager.LoadScene("Museum_MainScene");
+    }
+
+    public void LoadMapRoomsScene()
+    {
+        SceneManager.LoadScene("Map_Rooms_Scene");
+    }
+
+    public void LoadMapServicesScene()
+    {
+        SceneManager.LoadScene("Map_Services_Scene");
+    }
 }
