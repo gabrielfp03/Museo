@@ -5,20 +5,16 @@ public class GrabObject : MonoBehaviour
     public float pickUpDistance = 200f;
     public float distanceToCam = 15f;
     public float scaleFactor = 10f;
-    public float moveSpeed = 0.1f;
     public float rotateSpeed = 1000f;
 
     private Camera cam;
+    private Transform grabbedObject;
     private Rigidbody grabbedRb;
-    private bool hadGravity;
-    private RigidbodyConstraints previousConstraints;
+    private bool wasKinematic;
     private Transform originalParent;
-    private Quaternion rotationOffset;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private Vector3 originalScale;
-    private Vector3 currentVelocity;
-    private GameObject handle;
 
 
 
@@ -26,8 +22,8 @@ public class GrabObject : MonoBehaviour
     {
         cam = Camera.main;
 
-        // Crear un handle para centrar el objeto en la vista de la camara
-        handle = new GameObject("GrabHandle");
+        // Poner el handle en frente de la camara
+        transform.position = cam.transform.position + cam.transform.forward * distanceToCam;
     }
 
     void Update()
@@ -39,13 +35,12 @@ public class GrabObject : MonoBehaviour
         // Interacción
         if (Input.GetMouseButtonDown(0))  // clic izquierdo para agarrar/soltar
         {
-            if (grabbedRb == null) TryGrab();
+            if (grabbedObject == null) TryGrab();
             else Drop();
         }
 
-        if (grabbedRb != null)
+        if (grabbedObject != null && Input.GetMouseButton(1)) // clic derecho para rotar
         {
-            MoveObject();
             RotateObject();
         }
     }
@@ -57,102 +52,88 @@ public class GrabObject : MonoBehaviour
         {
             Debug.Log("Raycast hit: " + hit.collider.name);
 
-            if (hit.transform.CompareTag("Grabbable"))
+            if (hit.collider.CompareTag("Grabbable"))
             {
-                grabbedRb = hit.rigidbody;
-                Collider col = grabbedRb.GetComponent<Collider>();
+                Debug.Log("Object grabbed!");
 
+                grabbedObject = hit.collider.transform;
+                grabbedRb = hit.collider.gameObject.GetComponent<Rigidbody>(); // could be null
 
+                // Si tiene físicas se desactivan
+                if (grabbedRb != null)
+                {
+                    wasKinematic = grabbedRb.isKinematic;
+                    grabbedRb.isKinematic = true;
+                }
 
-                // Valores para restaurar el objeto al soltarlo
-                // Recordar el padre
-                originalParent = grabbedRb.transform.parent;
-
-                // Recordar si tenia gravedad y quitarsela
-                hadGravity = grabbedRb.useGravity;
-                grabbedRb.useGravity = false;
-
-                // Recordar si tenia constraints y ponerle FreezeRotation y FreezePosition
-                previousConstraints = grabbedRb.constraints;
-                grabbedRb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
-
-                // Recordar la posición, orientación y escala originales
-                originalPosition = grabbedRb.transform.position;
-                originalRotation = grabbedRb.transform.rotation;
-                originalScale = grabbedRb.transform.localScale;
+                // Recordar valores para restaurar el objeto al soltarlo
+                originalParent = grabbedObject.parent;
+                originalPosition = grabbedObject.position;
+                originalRotation = grabbedObject.rotation;
+                originalScale = grabbedObject.localScale;
 
 
 
                 // Normalizar el tamaño
-                Vector3 size = col.bounds.size; // dimensiones actuales del objeto
+                Vector3 size = hit.collider.bounds.size; // dimensiones actuales del objeto (sin incluir hijos)
                 float maxDimension = Mathf.Max(size.x, size.y, size.z);
                 float baseScaleFactor = 1f / maxDimension; // Escala para que la dimensión más grande sea 1
-                grabbedRb.transform.localScale *= baseScaleFactor * scaleFactor;
+                grabbedObject.localScale *= baseScaleFactor * scaleFactor;
 
-                // Guardar el offset en la rotación del objeto
-                rotationOffset = Quaternion.Inverse(cam.transform.rotation) * grabbedRb.transform.rotation;
-
-
-
-                // Actualizar la posición y la rotación del handle para centrar el objeto en la vista de la camara
-                // Calculate visual center of the object (including children)
-                Renderer[] renderers = grabbedRb.GetComponentsInChildren<Renderer>();
+                // Calcular el centro visual del objeto (incluyendo hijos)
+                Renderer[] renderers = grabbedObject.GetComponentsInChildren<Renderer>();
                 Bounds bounds = renderers[0].bounds;
                 for (int i = 1; i < renderers.Length; i++)
                     bounds.Encapsulate(renderers[i].bounds);
 
-                // Place the handle at the center of bounds
-                handle.transform.position = bounds.center;
-                handle.transform.rotation = grabbedRb.transform.rotation;
+                // Mover el objeto para que su centro visual coincida con el centro del handle
+                Vector3 offset = bounds.center - grabbedObject.position;
+                grabbedObject.position = transform.position - offset;
 
-                // Parent the object to the handle while keeping world position
-                grabbedRb.transform.SetParent(handle.transform, true);
+                // Asignar el handle como padre
+                grabbedObject.SetParent(transform, true);
             }
         }
     }
 
     void Drop()
     {
-        if (grabbedRb == null) return;
+        if (grabbedObject == null) return;
 
         // Restaurar posición y rotación originales
-        grabbedRb.transform.position = originalPosition;
-        grabbedRb.transform.rotation = originalRotation;
+        grabbedObject.position = originalPosition;
+        grabbedObject.rotation = originalRotation;
 
-        // Restaurar la gravedad y los constraints
-        grabbedRb.useGravity = hadGravity;
-        grabbedRb.constraints = previousConstraints;
+        // Restaurar las físicas
+        if (grabbedRb != null)
+        {
+            grabbedRb.isKinematic = wasKinematic;
+            grabbedRb = null;
+        }
 
         // Restaurar al padre original
-        grabbedRb.transform.SetParent(originalParent, true);
+        grabbedObject.SetParent(originalParent, true);
 
         // Restaurar la escala original
-        grabbedRb.transform.localScale = originalScale;
+        grabbedObject.localScale = originalScale;
 
-        grabbedRb = null;
-    }
+        // Resetear la rotación del handle
+        transform.localRotation = Quaternion.identity;
 
-    void MoveObject()
-    {
-        Vector3 targetPos = cam.transform.position + cam.transform.forward * distanceToCam;
-        handle.transform.position = Vector3.SmoothDamp(handle.transform.position, targetPos, ref currentVelocity, moveSpeed);
-        handle.transform.rotation = cam.transform.rotation * rotationOffset;
+        grabbedObject = null;
     }
 
     void RotateObject()
     {
-        if (Input.GetMouseButton(1)) // clic derecho para rotar
-        {
-            // Obtener movimiento del mouse
-            float rotX = -Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
-            float rotY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
+        // Obtener movimiento del mouse
+        float rotX = -Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
+        float rotY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
 
-            // Crear rotaciones incrementales
-            Quaternion rotXQuat = Quaternion.AngleAxis(rotX, Vector3.up);   // rotación horizontal
-            Quaternion rotYQuat = Quaternion.AngleAxis(rotY, Vector3.right); // rotación vertical
+        // Crear rotaciones incrementales
+        Quaternion rotXQuat = Quaternion.AngleAxis(rotX, Vector3.up);   // rotación horizontal
+        Quaternion rotYQuat = Quaternion.AngleAxis(rotY, Vector3.right); // rotación vertical
 
-            // Aplicarlas sobre el offset acumulado
-            rotationOffset = rotXQuat * rotYQuat * rotationOffset;
-        }
+        // Aplicar las rotaciones
+        transform.localRotation = rotXQuat * rotYQuat * transform.localRotation;
     }
 }
