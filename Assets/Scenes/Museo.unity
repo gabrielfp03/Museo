@@ -716,6 +716,12 @@ PrefabInstance:
       addedObject: {fileID: 47663257}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 47663260}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 47663259}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 47663258}
   m_SourcePrefab: {fileID: 100100000, guid: 168b1b672225144e9a32b86fff767901, type: 3}
 --- !u!4 &47663255 stripped
@@ -772,8 +778,8 @@ MonoBehaviour:
     or IAE V2500 engines, and optimized fuselage allow reliable, fuel-efficient operation
     on regional and medium-range routes, making it an industry standard."
   audioEN_Experto: {fileID: 0}
---- !u!64 &47663258
-MeshCollider:
+--- !u!65 &47663258
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -790,10 +796,51 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 16, y: 1, z: 10}
+  m_Center: {x: -10, y: 15, z: 0}
+--- !u!65 &47663259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47663256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16, y: 1, z: 10}
+  m_Center: {x: 10, y: 15, z: 0}
+--- !u!65 &47663260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47663256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 10, z: 37}
+  m_Center: {x: 0, y: 15, z: 0}
 --- !u!1001 &48979893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,6 +1134,9 @@ PrefabInstance:
       addedObject: {fileID: 48979896}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 48979898}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 48979897}
   m_SourcePrefab: {fileID: 100100000, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
 --- !u!4 &48979894 stripped
@@ -1142,8 +1192,8 @@ MonoBehaviour:
     versatility\u2014from passenger service to cargo and military roles as the C-47\u2014made
     it one of the most influential and long-lived aircraft ever built."
   audioEN_Experto: {fileID: 0}
---- !u!64 &48979897
-MeshCollider:
+--- !u!65 &48979897
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1160,10 +1210,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 20, y: 5, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &48979898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48979895}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 5, z: 27}
+  m_Center: {x: 2, y: 0, z: 1}
 --- !u!1001 &88693430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3384,35 +3454,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 889633826}
+    m_TransformParent: {fileID: 1889176395}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 0.14999999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14625.515
+      value: 13.5000305
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -500.00003
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21189.68
+      value: -386.00024
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9063078
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3420,7 +3490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.42261836
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3486,6 +3556,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 407686681}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 407686682}
   m_SourcePrefab: {fileID: 100100000, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
 --- !u!4 &407686679 stripped
 Transform:
@@ -3547,6 +3620,27 @@ MonoBehaviour:
     making it deadly in tight dogfights. Its combat achievements rank it among the
     most influential Allied fighters of the war.'
   audioEN_Experto: {fileID: 0}
+--- !u!65 &407686682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407686680}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1000, y: 500, z: 1300}
+  m_Center: {x: 0, y: 250, z: 0}
 --- !u!1 &413083688
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,6 +4378,18 @@ PrefabInstance:
       addedObject: {fileID: 530886674}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 530886679}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530886678}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530886677}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530886676}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 530886675}
   m_SourcePrefab: {fileID: 100100000, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
 --- !u!4 &530886672 stripped
@@ -4346,8 +4452,8 @@ MonoBehaviour:
     in the 21st century proved the design functional, though heavy and inefficient
     compared with today\u2019s flexible-canopy parachutes."
   audioEN_Experto: {fileID: 0}
---- !u!64 &530886675
-MeshCollider:
+--- !u!65 &530886675
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4364,10 +4470,93 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 3.5, y: 1, z: 2}
+  m_Center: {x: -2.5, y: -1, z: -4}
+--- !u!65 &530886676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530886673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5, y: 1, z: 2}
+  m_Center: {x: -2.5, y: -1, z: 4}
+--- !u!65 &530886677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530886673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1, z: 2}
+  m_Center: {x: 0, y: -1, z: -2}
+--- !u!65 &530886678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530886673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1, z: 2}
+  m_Center: {x: 0, y: -1, z: 2}
+--- !u!65 &530886679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530886673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13, y: 3, z: 2}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1001 &538215839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4911,7 +5100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
       propertyPath: m_LocalScale.z
@@ -4974,6 +5163,9 @@ PrefabInstance:
       addedObject: {fileID: 571039253}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 571039255}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 571039254}
   m_SourcePrefab: {fileID: 100100000, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
 --- !u!4 &571039251 stripped
@@ -5026,8 +5218,8 @@ MonoBehaviour:
     operations. Its simple, lightweight structure allows low operating costs and
     high availability, making it a global standard among single-engine utility helicopters.
   audioEN_Experto: {fileID: 0}
---- !u!64 &571039254
-MeshCollider:
+--- !u!65 &571039254
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5044,10 +5236,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 12, y: 1, z: 2}
+  m_Center: {x: 0, y: 3.3, z: 0}
+--- !u!65 &571039255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571039252}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 3, z: 12}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &572046982
 GameObject:
   m_ObjectHideFlags: 0
@@ -5520,9 +5732,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 590486814}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 590486815}
     - targetCorrespondingSourceObject: {fileID: -2377391915321999524, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1852368400}
@@ -5620,28 +5829,6 @@ MonoBehaviour:
     ideal for vertical maneuvers and tight turns, which is why Manfred von Richthofen
     used it so effectively, cementing its place in aviation history.
   audioEN_Experto: {fileID: 0}
---- !u!64 &590486815
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590486813}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &599832048
 GameObject:
   m_ObjectHideFlags: 0
@@ -9085,14 +9272,14 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8f79396b7dd6b4734ac82e000f19bea2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 407686679}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
       insertIndex: -1
       addedObject: {fileID: 889633828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 889633830}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
       insertIndex: -1
       addedObject: {fileID: 889633829}
@@ -9154,8 +9341,8 @@ MonoBehaviour:
     fewer bombs than later designs, its accuracy and reliability cemented its reputation
     as one of the war\u2019s most influential bombers."
   audioEN_Experto: {fileID: 0}
---- !u!64 &889633829
-MeshCollider:
+--- !u!65 &889633829
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9172,10 +9359,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 6000, y: 1000, z: 1000}
+  m_Center: {x: 100, y: 0, z: 800}
+--- !u!65 &889633830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889633827}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1000, y: 1000, z: 5000}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &894691415
 GameObject:
   m_ObjectHideFlags: 0
@@ -13333,13 +13540,42 @@ PrefabInstance:
     - {fileID: -3105723478338179951, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
     - {fileID: -746053911367722754, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1452743969}
   m_SourcePrefab: {fileID: 100100000, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
 --- !u!4 &1452743967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
   m_PrefabInstance: {fileID: 1452743966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1452743968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
+  m_PrefabInstance: {fileID: 1452743966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1452743969
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452743968}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9, y: 7, z: 10}
+  m_Center: {x: 1, y: 3.5, z: -1}
 --- !u!1 &1461919098
 GameObject:
   m_ObjectHideFlags: 0
@@ -13539,6 +13775,12 @@ PrefabInstance:
       addedObject: {fileID: 1462028524}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1462028527}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1462028526}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1462028525}
   m_SourcePrefab: {fileID: 100100000, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
 --- !u!4 &1462028522 stripped
@@ -13598,8 +13840,8 @@ MonoBehaviour:
     feature. For decades, it served as the backbone of global routes, setting new
     standards for efficiency and reliability in large airliners."
   audioEN_Experto: {fileID: 0}
---- !u!64 &1462028525
-MeshCollider:
+--- !u!65 &1462028525
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -13616,10 +13858,51 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 8, y: 1, z: 12}
+  m_Center: {x: 9, y: 2, z: -12}
+--- !u!65 &1462028526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462028523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 1, z: 12}
+  m_Center: {x: -9, y: 2, z: -12}
+--- !u!65 &1462028527
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462028523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 5, z: 27}
+  m_Center: {x: 0, y: 1, z: -11}
 --- !u!1 &1474935026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1209462237904467641, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
@@ -14339,6 +14622,9 @@ PrefabInstance:
       addedObject: {fileID: 1578909950}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1578909952}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1578909951}
   m_SourcePrefab: {fileID: 100100000, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
 --- !u!4 &1578909948 stripped
@@ -14397,8 +14683,8 @@ MonoBehaviour:
     enhances passenger comfort with lower cabin altitude, setting new standards for
     long-haul air travel.'
   audioEN_Experto: {fileID: 0}
---- !u!64 &1578909951
-MeshCollider:
+--- !u!65 &1578909951
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14415,10 +14701,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 50, y: 200, z: 50}
+  m_Center: {x: -20, y: 0, z: 20}
+--- !u!65 &1578909952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578909949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 150, y: 50, z: 10}
+  m_Center: {x: -10, y: 10, z: 20}
 --- !u!1 &1585674565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3386553121241536846, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
@@ -15357,6 +15663,9 @@ PrefabInstance:
       addedObject: {fileID: 1785200578}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1785200580}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1785200579}
   m_SourcePrefab: {fileID: 100100000, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
 --- !u!4 &1785200576 stripped
@@ -15412,8 +15721,8 @@ MonoBehaviour:
     environments and tactical versatility made it a backbone of light air support
     aviation for decades.
   audioEN_Experto: {fileID: 0}
---- !u!64 &1785200579
-MeshCollider:
+--- !u!65 &1785200579
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15430,10 +15739,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 75, y: 5, z: 15}
+  m_Center: {x: 1005, y: 20, z: -1970}
+--- !u!65 &1785200580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785200577}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15, y: 20, z: 100}
+  m_Center: {x: 1005, y: 15, z: -1980}
 --- !u!1 &1787287041
 GameObject:
   m_ObjectHideFlags: 0
@@ -15714,8 +16043,8 @@ MonoBehaviour:
     Hellfire missiles, and Hydra-70 rockets provides tactical versatility for attack,
     escort, and close air support missions."
   audioEN_Experto: {fileID: 0}
---- !u!64 &1788166575
-MeshCollider:
+--- !u!65 &1788166575
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15732,10 +16061,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 450, y: 500, z: 1500}
+  m_Center: {x: 0, y: 250, z: -300}
 --- !u!1 &1795053149
 GameObject:
   m_ObjectHideFlags: 0
@@ -16579,6 +16907,7 @@ Transform:
   - {fileID: 888514138}
   - {fileID: 1125281203}
   - {fileID: 590486812}
+  - {fileID: 407686679}
   - {fileID: 889633826}
   - {fileID: 22982550}
   - {fileID: 1188725420}
