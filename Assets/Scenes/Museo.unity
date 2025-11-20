@@ -710,13 +710,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 47663257}
   m_SourcePrefab: {fileID: 100100000, guid: 168b1b672225144e9a32b86fff767901, type: 3}
 --- !u!4 &47663255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 168b1b672225144e9a32b86fff767901, type: 3}
   m_PrefabInstance: {fileID: 47663254}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &47663256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
+  m_PrefabInstance: {fileID: 47663254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &47663257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47663256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Airbus A320
+  "textoES_Ni\xF1o": "El Airbus A320 es un avi\xF3n moderno que lleva a mucha gente
+    de una ciudad a otra. Es r\xE1pido y c\xF3modo, y parece que vuela sobre una
+    carretera gigante en el cielo."
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El A320 revolucion\xF3 la aviaci\xF3n comercial con su cabina
+    de vuelo digital, eficiencia en consumo de combustible y facilidad de mantenimiento.
+    Es uno de los modelos m\xE1s usados en aerol\xEDneas de todo el mundo y base
+    de la familia A320 (A318, A319, A321)."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "El Airbus A320 introdujo la cabina \u201Cfly-by-wire\u201D en
+    aviones de pasillo \xFAnico, combinando controles electr\xF3nicos con sistemas
+    de protecci\xF3n de vuelo que optimizan seguridad y eficiencia. Su dise\xF1o
+    de ala avanzada, motores CFM56 o IAE V2500 y fuselaje optimizado le permiten
+    operar en rutas regionales y de medio alcance con alta fiabilidad y bajo consumo,
+    convirti\xE9ndolo en un est\xE1ndar industrial de transporte a\xE9reo."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": "The Airbus A320 is a modern plane that carries lots of people
+    from one city to another. It\u2019s fast and comfortable, flying like a giant
+    road in the sky."
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: "The A320 revolutionized commercial aviation with its digital cockpit,
+    fuel efficiency, and ease of maintenance. It\u2019s one of the most widely used
+    aircraft in airlines worldwide and forms the base of the A320 family (A318, A319,
+    A321)."
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: "The Airbus A320 introduced \u201Cfly-by-wire\u201D controls to
+    single-aisle airliners, combining electronic flight controls with flight envelope
+    protection for enhanced safety and efficiency. Its advanced wing design, CFM56
+    or IAE V2500 engines, and optimized fuselage allow reliable, fuel-efficient operation
+    on regional and medium-range routes, making it an industry standard."
+  audioEN_Experto: {fileID: 0}
 --- !u!1001 &48979893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1004,13 +1056,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 48979896}
   m_SourcePrefab: {fileID: 100100000, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
 --- !u!4 &48979894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
   m_PrefabInstance: {fileID: 48979893}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &48979895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
+  m_PrefabInstance: {fileID: 48979893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &48979896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48979895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Douglas DC-3
+  "textoES_Ni\xF1o": "El DC-3 era un avi\xF3n fuerte y muy confiable que pod\xEDa
+    volar largas distancias. Fue uno de los primeros en llevar pasajeros c\xF3modamente,
+    como si fuera un autob\xFAs del cielo, \xA1pero mucho m\xE1s r\xE1pido!"
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El Douglas DC-3 revolucion\xF3 el transporte a\xE9reo en los a\xF1os
+    30 y 40: econ\xF3mico, seguro y capaz de operar en casi cualquier condici\xF3n.
+    Su comodidad y autonom\xEDa hicieron que volar se volviera accesible y pr\xE1ctico
+    para miles de personas."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "El DC-3 combinaba una estructura totalmente met\xE1lica, alas
+    de dise\xF1o eficiente y motores radiales Pratt & Whitney que ofrec\xEDan fiabilidad
+    excepcional. Su capacidad STOL relativa y su robusto tren de aterrizaje le permitieron
+    operar en pistas cortas y no preparadas. Su versatilidad\u2014desde transporte
+    de pasajeros hasta carga y operaciones militares como el C-47\u2014lo convirti\xF3
+    en uno de los aviones m\xE1s influyentes y longevos de la historia."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": "The DC-3 was a strong, reliable airplane that could fly long
+    distances. It was one of the first to take passengers comfortably, like a bus
+    in the sky\u2014only much faster!"
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: 'The Douglas DC-3 revolutionized air travel in the 1930s and 40s:
+    efficient, safe, and able to operate almost anywhere. Its comfort and range helped
+    make flying accessible and practical for thousands of passengers.'
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: "The DC-3 featured an all-metal structure, efficient wing design,
+    and highly reliable Pratt & Whitney radial engines. Its relative STOL capability
+    and rugged landing gear allowed it to operate from short, rough runways. Its
+    versatility\u2014from passenger service to cargo and military roles as the C-47\u2014made
+    it one of the most influential and long-lived aircraft ever built."
+  audioEN_Experto: {fileID: 0}
 --- !u!1001 &88693430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1738,10 +1841,10 @@ RectTransform:
   - {fileID: 175527498}
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -125}
+  m_SizeDelta: {x: 940, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228411862
 MonoBehaviour:
@@ -2053,10 +2156,10 @@ RectTransform:
   - {fileID: 2022436646}
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -440}
+  m_SizeDelta: {x: 940, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287937804
 MonoBehaviour:
@@ -3008,47 +3111,47 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1889176395}
+    m_TransformParent: {fileID: 889633826}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: -14625.515
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -500.00003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -386
+      value: 21189.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.9063078
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.42261836
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11393209c2aaa4edcbd5ae7aea464f5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3134,17 +3237,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
   nombreObjeto: Sopwith Camel
-  "textoES_Ni\xF1o": 
+  "textoES_Ni\xF1o": "El Sopwith Camel era un caza muy r\xE1pido y juguet\xF3n que
+    los pilotos usaban en la Primera Guerra Mundial. Ten\xEDa una \u201Cjorobita\u201D
+    delante, por eso lo llamaron Camel (\u201Ccamello\u201D). Giraba tan r\xE1pido
+    que parec\xEDa un p\xE1jaro travieso en el cielo."
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "El caza m\xE1s famoso de la aviaci\xF3n brit\xE1nica de la Primera
+    Guerra Mundial.\nEl Sopwith Camel destac\xF3 por su potencia, su agilidad y su
+    caracter\xEDstico \u201Cjorobado\u201D que cubr\xEDa las ametralladoras. Era
+    dif\xEDcil de pilotar, pero en manos expertas se convert\xEDa en un avi\xF3n
+    extremadamente maniobrable. Sus victorias lo convirtieron en uno de los cazas
+    m\xE1s emblem\xE1ticos de su \xE9poca."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "El Sopwith Camel montaba un motor rotativo de fuerte par girosc\xF3pico,
+    lo que lo hac\xEDa extremadamente sensible en maniobras: pod\xEDa girar a la
+    derecha con una rapidez excepcional, pero requer\xEDa gran pericia para volarlo
+    con seguridad. Su dise\xF1o compacto, con la masa concentrada alrededor del centro
+    de gravedad, mejoraba la aceleraci\xF3n en giros, convirti\xE9ndolo en un arma
+    eficaz en combates cerrados. Su historial de derribos lo posiciona como uno de
+    los cazas aliados m\xE1s influyentes de la guerra."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": "The Sopwith Camel was a fast, lively fighter used in World
+    War I. It had a little \u201Chump\u201D in front, which is why it was called
+    the Camel. It could turn so quickly that it looked like a mischievous bird in
+    the sky."
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: "The Sopwith Camel stood out for its power, agility, and its distinctive
+    \u201Chump\u201D that housed the machine guns. It was hard to fly, but in skilled
+    hands it became an incredibly maneuverable aircraft. Its combat record made it
+    one of the era\u2019s most iconic fighters."
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: 'The Sopwith Camel used a rotary engine with strong gyroscopic
+    torque, making it extremely responsive: it could roll and turn right with remarkable
+    speed, but required skilled pilots to avoid losing control. Its compact design,
+    with mass concentrated near the center of gravity, enhanced turn acceleration,
+    making it deadly in tight dogfights. Its combat achievements rank it among the
+    most influential Allied fighters of the war.'
   audioEN_Experto: {fileID: 0}
 --- !u!1 &413083688
 GameObject:
@@ -3183,9 +3311,9 @@ RectTransform:
   - {fileID: 384303153}
   m_Father: {fileID: 287937803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 470, y: -50}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413083690
@@ -3833,17 +3961,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
   nombreObjeto: Messerschmitt Bf 109
-  "textoES_Ni\xF1o": 
+  "textoES_Ni\xF1o": "\xA1El paraguas que te salva en el cielo!\nEl paraca\xEDdas
+    es una gran tela que se abre como un sombrero gigante para bajar despacito desde
+    las alturas. Leonardo da Vinci dibuj\xF3 uno hace m\xE1s de 500 a\xF1os. Gracias
+    a \xE9l, la gente puede caer del cielo\u2026 \xA1sin hacerse da\xF1o!"
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "El primer sue\xF1o de descender con seguridad.\nLeonardo da Vinci
+    dise\xF1\xF3 un paraca\xEDdas piramidal hecho de lino y madera, pensado para
+    permitir que una persona descendiera suavemente desde gran altura. Aunque no
+    se construy\xF3 en su \xE9poca, su forma b\xE1sica anticipa el principio moderno
+    del paraca\xEDdas: aumentar la resistencia del aire para frenar la ca\xEDda."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "Un antecedente clave en la historia de la aerodin\xE1mica.\nEl
+    paraca\xEDdas conceptual de Leonardo, descrito en 1485, consist\xEDa en una estructura
+    piramidal con un \xE1ngulo estable que generaba una gran superficie de arrastre.
+    Su objetivo era reducir la velocidad terminal mediante resistencia aerodin\xE1mica,
+    mucho antes de que estos conceptos fueran formalizados. Versiones modernas probadas
+    en el siglo XXI demostraron que su dise\xF1o era funcional, aunque pesado y poco
+    pr\xE1ctico frente a los paraca\xEDdas de capota flexible actuales."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": "The umbrella that saves you in the sky!\nA parachute is a big
+    piece of fabric that opens like a giant hat to bring you down slowly from high
+    up. Leonardo da Vinci drew one over 500 years ago. Thanks to this idea, people
+    can fall from the sky\u2026 safely!"
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: "The first dream of a safe descent.\nLeonardo da Vinci designed
+    a pyramidal parachute made of linen and wood, intended to let a person descend
+    gently from great heights. Although it wasn\u2019t built in his time, its basic
+    concept foreshadows the modern parachute principle: increasing air resistance
+    to slow the fall."
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: "A foundational concept in aerodynamic history.\nLeonardo\u2019s
+    1485 parachute concept featured a pyramidal frame providing a large drag surface.
+    Its purpose was to reduce terminal velocity through aerodynamic resistance, centuries
+    before the underlying physics was formally described. Modern reconstructions
+    in the 21st century proved the design functional, though heavy and inefficient
+    compared with today\u2019s flexible-canopy parachutes."
   audioEN_Experto: {fileID: 0}
 --- !u!1001 &538215839
 PrefabInstance:
@@ -4305,18 +4458,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
-  nombreObjeto: "Paraca\xEDcas"
-  "textoES_Ni\xF1o": 
+  nombreObjeto: "Paraca\xEDdas"
+  "textoES_Ni\xF1o": "\xA1El paraguas que te salva en el cielo!\nEl paraca\xEDdas
+    es una gran tela que se abre como un sombrero gigante para bajar despacito desde
+    las alturas. Leonardo da Vinci dibuj\xF3 uno hace m\xE1s de 500 a\xF1os. Gracias
+    a \xE9l, la gente puede caer del cielo\u2026 \xA1sin hacerse da\xF1o!"
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "El primer sue\xF1o de descender con seguridad.\nLeonardo da Vinci
+    dise\xF1\xF3 un paraca\xEDdas piramidal hecho de lino y madera, pensado para
+    permitir que una persona descendiera suavemente desde gran altura. Aunque no
+    se construy\xF3 en su \xE9poca, su forma b\xE1sica anticipa el principio moderno
+    del paraca\xEDdas: aumentar la resistencia del aire para frenar la ca\xEDda."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "Un antecedente clave en la historia de la aerodin\xE1mica.\nEl
+    paraca\xEDdas conceptual de Leonardo, descrito en 1485, consist\xEDa en una estructura
+    piramidal con un \xE1ngulo estable que generaba una gran superficie de arrastre.
+    Su objetivo era reducir la velocidad terminal mediante resistencia aerodin\xE1mica,
+    mucho antes de que estos conceptos fueran formalizados. Versiones modernas probadas
+    en el siglo XXI demostraron que su dise\xF1o era funcional, aunque pesado y poco
+    pr\xE1ctico frente a los paraca\xEDdas de capota flexible actuales."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": "The umbrella that saves you in the sky!\nA parachute is a big
+    piece of fabric that opens like a giant hat to bring you down slowly from high
+    up. Leonardo da Vinci drew one over 500 years ago. Thanks to this idea, people
+    can fall from the sky\u2026 safely!"
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: "The first dream of a safe descent.\nLeonardo da Vinci designed
+    a pyramidal parachute made of linen and wood, intended to let a person descend
+    gently from great heights. Although it wasn\u2019t built in his time, its basic
+    concept foreshadows the modern parachute principle: increasing air resistance
+    to slow the fall."
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: "A foundational concept in aerodynamic history.\nLeonardo\u2019s
+    1485 parachute concept featured a pyramidal frame providing a large drag surface.
+    Its purpose was to reduce terminal velocity through aerodynamic resistance, centuries
+    before the underlying physics was formally described. Modern reconstructions
+    in the 21st century proved the design functional, though heavy and inefficient
+    compared with today\u2019s flexible-canopy parachutes."
   audioEN_Experto: {fileID: 0}
 --- !u!1001 &571039250
 PrefabInstance:
@@ -4389,13 +4567,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571039253}
   m_SourcePrefab: {fileID: 100100000, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
 --- !u!4 &571039251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
   m_PrefabInstance: {fileID: 571039250}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &571039252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
+  m_PrefabInstance: {fileID: 571039250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &571039253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571039252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Bell 206 JetRanger
+  "textoES_Ni\xF1o": "El Bell 206 es un helic\xF3ptero \xE1gil que puede volar bajo
+    y r\xE1pido, como un p\xE1jaro. Se usa para viajar, explorar y divertirse en
+    el cielo."
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El Bell 206 JetRanger se ha usado ampliamente en transporte civil,
+    patrulla, filmaci\xF3n a\xE9rea y entrenamiento. Su dise\xF1o confiable, cabina
+    espaciosa y facilidad de mantenimiento lo hicieron uno de los helic\xF3pteros
+    m\xE1s populares del mundo."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "El Bell 206 combina un rotor principal de dos palas, motor turboshaft
+    y tren de aterrizaje triciclo, ofreciendo maniobrabilidad y eficiencia en operaciones
+    civiles y paramilitares. Su estructura simple y ligera permite costos de operaci\xF3n
+    bajos y alta disponibilidad, lo que lo convierte en un est\xE1ndar global en
+    helic\xF3pteros utilitarios de un solo motor."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": "The Bell 206 is an agile helicopter that can fly low and fast,
+    like a bird. It\u2019s used for traveling, exploring, and having fun in the sky."
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: "The Bell 206 JetRanger has been widely used for civil transport,
+    patrol, aerial filming, and training. Its reliable design, spacious cabin, and
+    ease of maintenance make it one of the world\u2019s most popular helicopters."
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: The Bell 206 features a two-blade main rotor, turboshaft engine,
+    and tricycle landing gear, providing agility and efficiency for civil and paramilitary
+    operations. Its simple, lightweight structure allows low operating costs and
+    high availability, making it a global standard among single-engine utility helicopters.
+  audioEN_Experto: {fileID: 0}
 --- !u!1 &572046982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,17 +5082,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
   nombreObjeto: "Fokker Dr.I (el de Bar\xF3n Rojo)"
-  "textoES_Ni\xF1o": 
+  "textoES_Ni\xF1o": "Este triplano lo pilotaba el Bar\xF3n Rojo, un aviador que
+    se hizo legendario por lo bien que maniobraba en el cielo. Sus tres alas le ayudaban
+    a girar r\xE1pido, como si estuviera jugando entre las nubes."
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "El Fokker Dr.I fue uno de los cazas m\xE1s \xE1giles de la Primera
+    Guerra Mundial gracias a sus tres alas y su estructura ligera. Aunque no era
+    el m\xE1s r\xE1pido, su maniobrabilidad lo convirti\xF3 en un arma efectiva en
+    combates cerrados. Su pintura roja lo hizo inconfundible en el cielo."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "El Fokker Dr.I utilizaba tres alas de alta sustentaci\xF3n y
+    un fuselaje extremadamente ligero, lo que le daba una tasa de giro sobresaliente.
+    Su motor rotativo Oberursel, aunque limitado en potencia, permit\xEDa r\xE1pidas
+    respuestas de control. Estas caracter\xEDsticas lo hac\xEDan ideal para combates
+    verticales y giros agresivos, raz\xF3n por la cual Manfred von Richthofen lo
+    emple\xF3 con tanto \xE9xito, consolidando su reputaci\xF3n hist\xF3rica."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": This triplane was flown by the Red Baron, a pilot who became
+    legendary for how easily he moved through the sky. Its three wings helped it
+    turn quickly, almost like playing among the clouds.
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: The Fokker Dr.I was one of the most agile fighters of World War
+    I, thanks to its three wings and lightweight frame. Though not the fastest, its
+    maneuverability made it deadly in close-range dogfights. Its bright red paint
+    made it instantly recognizable.
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: The Fokker Dr.I featured high-lift triple wings and an ultra-light
+    airframe, giving it exceptional turning performance. Its Oberursel rotary engine,
+    though modest in power, provided quick control response. These traits made it
+    ideal for vertical maneuvers and tight turns, which is why Manfred von Richthofen
+    used it so effectively, cementing its place in aviation history.
   audioEN_Experto: {fileID: 0}
 --- !u!1 &599832048
 GameObject:
@@ -6210,10 +6455,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -55}
+  m_SizeDelta: {x: 940, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703600313
 MonoBehaviour:
@@ -8065,7 +8310,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8f79396b7dd6b4734ac82e000f19bea2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 407686679}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
       insertIndex: -1
@@ -8094,17 +8342,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
   nombreObjeto: Boeing B-17
-  "textoES_Ni\xF1o": 
+  "textoES_Ni\xF1o": "El B-17 era un avi\xF3n enorme que llevaba muchas ventanas
+    y torretas para protegerse. Por eso lo llamaban \u201CFortaleza Volante\u201D.
+    Volaba muy lejos y muy alto, llevando a su tripulaci\xF3n como si fueran dentro
+    de un castillo en el cielo."
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "El Boeing B-17 se hizo famoso por su resistencia: pod\xEDa volver
+    a casa incluso con grandes da\xF1os. Utilizado principalmente en bombardeos de
+    largo alcance, su robustez y su impresionante defensa lo convirtieron en un s\xEDmbolo
+    del poder a\xE9reo aliado."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "El B-17 integraba estructura semimonocasco, motores radialmente
+    refrigerados y m\xFAltiples posiciones defensivas que le otorgaban una capacidad
+    excepcional para mantener vuelo tras recibir impactos. Su autonom\xEDa y su techo
+    operativo lo hicieron clave en las campa\xF1as de bombardeo diurno sobre Europa.
+    Aunque cargaba menos bombas que otros modelos posteriores, su precisi\xF3n y
+    fiabilidad lo consolidaron como uno de los bombarderos m\xE1s influyentes de
+    la guerra."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": "The B-17 was a huge airplane filled with windows and turrets
+    for protection. That\u2019s why they called it the \u201CFlying Fortress.\u201D
+    It flew far and high, carrying its crew as if they were inside a castle in the
+    sky."
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: 'The Boeing B-17 became famous for its toughness: it could return
+    home even after heavy damage. Used mainly for long-range bombing missions, its
+    durability and strong defensive armament made it a symbol of Allied air power.'
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: "The B-17 featured a semi-monocoque structure, air-cooled radial
+    engines, and extensive defensive gun positions, giving it exceptional ability
+    to stay airborne after sustaining damage. Its range and high operating ceiling
+    made it central to the daylight bombing campaigns over Europe. Although it carried
+    fewer bombs than later designs, its accuracy and reliability cemented its reputation
+    as one of the war\u2019s most influential bombers."
   audioEN_Experto: {fileID: 0}
 --- !u!1 &894691415
 GameObject:
@@ -10409,9 +10679,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1689313326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194827425
@@ -11445,13 +11715,68 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1462028524}
   m_SourcePrefab: {fileID: 100100000, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
 --- !u!4 &1462028522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
   m_PrefabInstance: {fileID: 1462028521}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1462028523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
+  m_PrefabInstance: {fileID: 1462028521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1462028524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462028523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Boeing 747
+  "textoES_Ni\xF1o": "El Boeing 747 es tan grande que parece un edificio con alas.
+    Gracias a su \u201Cjorobita\u201D en la parte de arriba, pod\xEDa llevar much\xEDsimos
+    pasajeros por todo el mundo. Para muchos, fue el primer avi\xF3n en el que volaron
+    muy lejos, \xA1como si fuera un crucero del cielo!"
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El 747 revolucion\xF3 los vuelos de larga distancia al permitir
+    transportar a cientos de pasajeros con comodidad y eficiencia. Su caracter\xEDstica
+    joroba superior y sus cuatro motores lo hicieron un icono del transporte a\xE9reo
+    internacional durante d\xE9cadas."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "El Boeing 747 introdujo el fuselaje de doble pasillo, combinando
+    cuatro motores de alto empuje con un ala avanzada de gran envergadura. Su dise\xF1o
+    le otorg\xF3 autonom\xEDa intercontinental y una capacidad sin precedentes. La
+    cubierta superior, fruto de requisitos de carga y dise\xF1o estructural, se convirti\xF3
+    en una firma est\xE9tica y funcional. Durante d\xE9cadas fue la columna vertebral
+    de las rutas globales, estableciendo nuevos est\xE1ndares de eficiencia y fiabilidad
+    en aviones de gran porte."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": "The Boeing 747 is so big it looks like a flying building. With
+    its little \u201Chump\u201D on top, it could carry lots and lots of passengers
+    around the world. For many people, it was the first airplane that took them really
+    far\u2014like a cruise ship in the sky!"
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: The 747 transformed long-haul travel by carrying hundreds of passengers
+    comfortably and efficiently. Its distinctive upper hump and four engines made
+    it an icon of international air travel for generations.
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: "The Boeing 747 introduced the wide-body layout, pairing high-thrust
+    four-engine power with a large, efficient wing. Its design gave it unmatched
+    range and passenger capacity for its time. The upper deck\u2014originally shaped
+    by cargo and structural requirements\u2014became both a functional and iconic
+    feature. For decades, it served as the backbone of global routes, setting new
+    standards for efficiency and reliability in large airliners."
+  audioEN_Experto: {fileID: 0}
 --- !u!1 &1474935026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1209462237904467641, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
@@ -11542,9 +11867,9 @@ RectTransform:
   - {fileID: 1195527835}
   m_Father: {fileID: 287937803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484614813
@@ -12346,13 +12671,67 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1578909950}
   m_SourcePrefab: {fileID: 100100000, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
 --- !u!4 &1578909948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
   m_PrefabInstance: {fileID: 1578909947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1578909949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
+  m_PrefabInstance: {fileID: 1578909947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578909950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578909949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: Boeing 787 Dreamliner
+  "textoES_Ni\xF1o": "El Boeing 787 es un avi\xF3n grande y r\xE1pido que puede volar
+    muy lejos. Sus alas se doblan suavemente y sus ventanas son enormes, \xA1como
+    mirar el cielo desde una nave espacial!"
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El 787 Dreamliner destaca por su eficiencia y comodidad. Fabricado
+    con materiales compuestos y equipado con motores modernos, reduce el consumo
+    de combustible y mejora la experiencia de vuelo con cabina presurizada y ventanas
+    m\xE1s grandes."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "Innovaci\xF3n aerodin\xE1mica y tecnol\xF3gica en vuelos intercontinentales.\nEl
+    Boeing 787 combina fuselaje y alas de materiales compuestos, motores turbofan
+    de \xFAltima generaci\xF3n y sistemas de avi\xF3nica avanzada. Su dise\xF1o optimizado
+    reduce peso y resistencia, mejora eficiencia de combustible hasta un 20% respecto
+    a modelos anteriores y ofrece mayor confort a altitudes de cabina m\xE1s bajas,
+    redefiniendo los est\xE1ndares de vuelos de largo alcance."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": The Boeing 787 is a big, fast plane that can fly very far. Its
+    wings bend smoothly, and its windows are huge like looking at the sky from a
+    spaceship!
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: The 787 Dreamliner stands out for efficiency and comfort. Made
+    with composite materials and modern engines, it reduces fuel consumption and
+    enhances the passenger experience with pressurized cabins and larger windows.
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: 'Aerodynamic and technological innovation for intercontinental
+    flights.
+
+    The Boeing 787 combines composite fuselage and wings, next-generation
+    turbofan engines, and advanced avionics. Its optimized design reduces weight
+    and drag, improves fuel efficiency by up to 20% compared to older models, and
+    enhances passenger comfort with lower cabin altitude, setting new standards for
+    long-haul air travel.'
+  audioEN_Experto: {fileID: 0}
 --- !u!1 &1585674565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3386553121241536846, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
@@ -12813,7 +13192,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1689313327
 MonoBehaviour:
@@ -12948,17 +13327,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
   nombreObjeto: "Montgolfier Balloon (Globo Aerost\xE1tico 1783)"
-  "textoES_Ni\xF1o": 
+  "textoES_Ni\xF1o": "\xA1El globo que hizo volar a la gente por primera vez!\nLos
+    hermanos Montgolfier construyeron este enorme globo de tela que sub\xEDa al cielo
+    gracias al aire caliente. En 1783, llev\xF3 a los primeros pasajeros: un pato,
+    una oveja y un gallo. \xA1Fue el comienzo de las aventuras en el cielo!"
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "El primer vuelo libre de la humanidad.\nEn 1783, los hermanos
+    Montgolfier presentaron su globo aerost\xE1tico, impulsado por aire caliente
+    generado con fuego. Tras pruebas con animales, lograron el primer ascenso tripulado.
+    El globo demostr\xF3 que el ser humano pod\xEDa elevarse por el aire mucho antes
+    de que existieran los aviones."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "Nacimiento de la aeron\xE1utica tripulada.\nEl globo Montgolfier
+    utilizaba una envoltura de tela y papel reforzado que conten\xEDa aire calentado
+    mediante una hoguera en un brasero. Este principio de flotabilidad un precursor
+    directo de la aerost\xE1tica moderna permiti\xF3 en 1783 el primer vuelo libre
+    con dos aeronautas, Pil\xE2tre de Rozier y el marqu\xE9s d\u2019Arlandes. Su
+    demostraci\xF3n p\xFAblica impuls\xF3 el estudio cient\xEDfico de la temperatura
+    del aire, la sustentaci\xF3n aerost\xE1tica y el dise\xF1o de envolturas resistentes
+    al calor."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": 'The balloon that helped people fly for the first time!
+
+    The
+    Montgolfier brothers built this giant fabric balloon that rose into the sky using
+    hot air. In 1783, it carried the very first passengers: a duck, a sheep, and
+    a rooster. It was the beginning of sky adventures!'
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: 'The first free human flight.
+
+    In 1783, the Montgolfier brothers
+    unveiled their hot-air balloon, lifted by heated air produced by fire. After
+    tests with animals, they achieved the first manned ascent. The balloon proved
+    that humans could rise into the air long before airplanes existed.'
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: "The birth of manned aeronautics.\nThe Montgolfier balloon used
+    a reinforced fabric-and-paper envelope filled with air heated by a fire in a
+    brazier. This buoyancy principle a direct precursor to modern aerostatics enabled
+    the first free human flight in 1783 with aeronauts Pil\xE2tre de Rozier and the
+    Marquis d\u2019Arlandes. Their public demonstration boosted scientific study
+    of air temperature, aerostatic lift, and heat-resistant envelope design."
   audioEN_Experto: {fileID: 0}
 --- !u!1 &1784411620
 GameObject:
@@ -13166,13 +13574,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1785200578}
   m_SourcePrefab: {fileID: 100100000, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
 --- !u!4 &1785200576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
   m_PrefabInstance: {fileID: 1785200575}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1785200577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
+  m_PrefabInstance: {fileID: 1785200575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1785200578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785200577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: "UH-1 \u201CHuey\u201D"
+  "textoES_Ni\xF1o": "El UH-1, llamado \u201CHuey\u201D, pod\xEDa volar muy r\xE1pido
+    y llevar personas o cosas. Su sonido \u201C\xA1huuu-ey!\u201D lo hac\xEDa f\xE1cil
+    de reconocer en el cielo."
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El Huey se hizo famoso durante la Guerra de Vietnam por su versatilidad.
+    Pod\xEDa transportar tropas, evacuar heridos y llevar armas ligeras. Su dise\xF1o
+    simple y confiable lo convirti\xF3 en un helic\xF3ptero legendario en operaciones
+    militares y de ayuda humanitaria."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "El UH-1 emplea un rotor principal de dos palas y motor turboshaft
+    Lycoming T53, optimizado para fiabilidad y mantenimiento sencillo. Su fuselaje
+    estrecho y espacioso permite transporte r\xE1pido de personal y carga. Gracias
+    a su capacidad de operar en entornos hostiles y su versatilidad t\xE1ctica, se
+    convirti\xF3 en la columna vertebral de la aviaci\xF3n de apoyo a\xE9reo ligero
+    durante d\xE9cadas."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": "The UH-1, nicknamed \u201CHuey,\u201D could fly fast and carry
+    people or cargo. Its \u201Chuuu-ey\u201D sound made it easy to spot in the sky."
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: The Huey became famous during the Vietnam War for its versatility.
+    It could carry troops, evacuate the wounded, and carry light weapons. Its simple
+    and reliable design made it a legendary helicopter in military and humanitarian
+    operations.
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: The UH-1 uses a two-blade main rotor and a Lycoming T53 turboshaft
+    engine, optimized for reliability and simple maintenance. Its narrow yet spacious
+    fuselage allows rapid troop and cargo transport. Its ability to operate in hostile
+    environments and tactical versatility made it a backbone of light air support
+    aviation for decades.
+  audioEN_Experto: {fileID: 0}
 --- !u!1 &1787287041
 GameObject:
   m_ObjectHideFlags: 0
@@ -13392,13 +13851,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1788166574}
   m_SourcePrefab: {fileID: 100100000, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
 --- !u!4 &1788166572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
   m_PrefabInstance: {fileID: 1788166571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1788166573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
+  m_PrefabInstance: {fileID: 1788166571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1788166574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788166573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc23b06f1c91bd4c847b7fc599d60ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
+  nombreObjeto: AH-64 Apache
+  "textoES_Ni\xF1o": "El AH-64 Apache es un helic\xF3ptero fuerte y r\xE1pido que
+    puede ver de noche y disparar sin aterrizar. Parece un robot gigante que protege
+    a la gente desde el cielo."
+  "audioES_Ni\xF1o": {fileID: 0}
+  textoES_Casual: "El Apache combina velocidad, maniobrabilidad y potencia de fuego.
+    Sus sensores avanzados permiten detectar objetivos d\xEDa y noche, mientras que
+    sus misiles Hellfire y ca\xF1\xF3n M230 lo convierten en un arma temible en combate
+    cercano y largo alcance."
+  audioES_Casual: {fileID: 0}
+  textoES_Experto: "El AH-64 cuenta con rotor principal de cuatro palas, fuselaje
+    blindado, avi\xF3nica avanzada y sistemas de navegaci\xF3n y punter\xEDa TADS/PNVS
+    que permiten operaciones nocturnas y en condiciones adversas. Su combinaci\xF3n
+    de ca\xF1\xF3n de 30\u202Fmm, misiles AGM-114 Hellfire y cohetes Hydra-70 le
+    confiere gran versatilidad t\xE1ctica en misiones de ataque, escolta y apoyo
+    a\xE9reo cercano."
+  audioES_Experto: {fileID: 0}
+  "textoEN_Ni\xF1o": The AH-64 Apache is a strong, fast helicopter that can see at
+    night and fire without landing. It looks like a giant robot protecting people
+    from the sky.
+  "audioEN_Ni\xF1o": {fileID: 0}
+  textoEN_Casual: The Apache combines speed, maneuverability, and firepower. Its
+    advanced sensors allow target detection day or night, while its Hellfire missiles
+    and M230 cannon make it a formidable weapon for both close and long-range combat.
+  audioEN_Casual: {fileID: 0}
+  textoEN_Experto: "The AH-64 features a four-blade main rotor, armored fuselage,
+    advanced avionics, and TADS/PNVS navigation and targeting systems enabling night
+    and adverse-condition operations. Its combination of 30\u202Fmm cannon, AGM-114
+    Hellfire missiles, and Hydra-70 rockets provides tactical versatility for attack,
+    escort, and close air support missions."
+  audioEN_Experto: {fileID: 0}
 --- !u!1 &1795053149
 GameObject:
   m_ObjectHideFlags: 0
@@ -13669,17 +14179,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoObraMuseo
   nombreObjeto: Leonardo da Vinci aerial screw
-  "textoES_Ni\xF1o": 
+  "textoES_Ni\xF1o": "\xA1El helic\xF3ptero que naci\xF3 en un dibujo!\nLeonardo
+    da Vinci imagin\xF3 esta m\xE1quina que parec\xEDa un gran tornillo gigante de
+    tela. Cre\xEDa que, si la girabas muy r\xE1pido, pod\xEDa subir por el aire como
+    un helic\xF3ptero. Aunque nunca se construy\xF3 en su \xE9poca, \xA1fue una idea
+    incre\xEDble adelantada a su tiempo!"
   "audioES_Ni\xF1o": {fileID: 0}
-  textoES_Casual: 
+  textoES_Casual: "Una visi\xF3n temprana del vuelo vertical.\nLa \u201Ctornillo
+    a\xE9reo\u201D de Leonardo fue dise\xF1ada alrededor de 1485. Era un concepto
+    que buscaba elevarse girando una espiral de tela y madera, similar a un helic\xF3ptero
+    moderno. Aunque no pod\xEDa volar realmente con los materiales de la \xE9poca,
+    demuestra la sorprendente imaginaci\xF3n t\xE9cnica de Leonardo y su estudio
+    del aire como un fluido."
   audioES_Casual: {fileID: 0}
-  textoES_Experto: 
+  textoES_Experto: "Un antecedente conceptual del rotor helicoidal.\nLa Aerial Screw
+    ilustra el inter\xE9s de Leonardo por las fuerzas de sustentaci\xF3n generadas
+    por superficies helicoidales. Su dise\xF1o propone una estructura de ca\xF1as
+    y lino recubierto en espiral, concebida para comprimir el aire y generar ascenso
+    mediante rotaci\xF3n. Aunque f\xEDsicamente inviable debido a su peso, a la resistencia
+    del material y a la ausencia de una fuente de potencia adecuada, el modelo es
+    un hito te\xF3rico que anticipa el principio aerodin\xE1mico del rotor de helic\xF3ptero
+    y el estudio del flujo helicoidal."
   audioES_Experto: {fileID: 0}
-  "textoEN_Ni\xF1o": 
+  "textoEN_Ni\xF1o": "The helicopter that was born from a drawing!\nLeonardo da Vinci
+    imagined this machine shaped like a huge cloth screw. He believed that if you
+    spun it fast enough, it could rise into the air like a helicopter. It wasn\u2019t
+    built in his time, but it was an amazing idea far ahead of its era!"
   "audioEN_Ni\xF1o": {fileID: 0}
-  textoEN_Casual: 
+  textoEN_Casual: "An early vision of vertical flight.\nLeonardo\u2019s \u201Caerial
+    screw,\u201D designed around 1485, attempted to rise by spinning a spiral of
+    cloth and wood\u2014much like a modern helicopter. It couldn\u2019t truly fly
+    with the materials available then, but it shows Leonardo\u2019s remarkable technical
+    imagination and his belief that air could be manipulated like a fluid."
   audioEN_Casual: {fileID: 0}
-  textoEN_Experto: 
+  textoEN_Experto: "A conceptual precursor to the helicoidal rotor.\nThe Aerial Screw
+    reflects Leonardo\u2019s interest in lift generated by helicoidal surfaces. Its
+    design features a spiral structure of reed and linen intended to compress the
+    air and produce upward force through rotation. Though impractical due to weight,
+    material limits, and lack of a power source, it stands as a theoretical milestone
+    foreshadowing helicopter rotor aerodynamics and helicoidal airflow studies."
   audioEN_Experto: {fileID: 0}
 --- !u!1 &1852368395 stripped
 GameObject:
@@ -14001,7 +14539,6 @@ Transform:
   - {fileID: 888514138}
   - {fileID: 1125281203}
   - {fileID: 590486812}
-  - {fileID: 407686679}
   - {fileID: 889633826}
   - {fileID: 22982550}
   - {fileID: 1188725420}
@@ -14677,9 +15214,9 @@ RectTransform:
   - {fileID: 309257802}
   m_Father: {fileID: 287937803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 790, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022436647
@@ -14872,10 +15409,10 @@ RectTransform:
   - {fileID: 622964632}
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 200}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -270}
+  m_SizeDelta: {x: 940, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029907966
 MonoBehaviour:
