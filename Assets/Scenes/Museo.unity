@@ -13993,7 +13993,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 971834739}
         m_TargetAssemblyTypeName: ControladorMuseo, Assembly-CSharp
-        m_MethodName: IrAlMenu
+        m_MethodName: LoadMuseumMainScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
