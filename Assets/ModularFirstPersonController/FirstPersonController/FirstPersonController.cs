@@ -59,6 +59,16 @@ public class FirstPersonController : MonoBehaviour
     public float walkSpeed = 5f;
     public float maxVelocityChange = 10f;
 
+    // NUEVO
+    private bool isMovementActivatedByButton = false;
+    private float externalHorizontalInput = 0f;
+    private float externalVerticalInput = 0f;
+    private bool isRotationActivatedByButton = false;
+    private float externalYawInput = 0f;  // Para girar el jugador (Eje Y)
+    private float externalPitchInput = 0f; // Para rotar la cámara (Eje X)
+    private float buttonRotationSpeed = 0.25f;
+    ///
+
     // Internal Variables
     private bool isWalking = false;
 
@@ -207,23 +217,53 @@ public class FirstPersonController : MonoBehaviour
         // Control camera movement
         if(cameraCanMove)
         {
-            yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
-
-            if (!invertCamera)
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+            if (isRotationActivatedByButton)
             {
-                pitch -= mouseSensitivity * Input.GetAxis("Mouse Y");
-            }
-            else
+                yaw = transform.localEulerAngles.y + externalYawInput * buttonRotationSpeed;
+                if (!invertCamera)
+                {
+                    pitch -= externalPitchInput * buttonRotationSpeed;
+                }
+                else
+                {
+                    // Inverted Y
+                    pitch += externalPitchInput * buttonRotationSpeed;
+                }
+            }else
             {
-                // Inverted Y
-                pitch += mouseSensitivity * Input.GetAxis("Mouse Y");
+                yaw = transform.localEulerAngles.y + mouseX * mouseSensitivity;
+                if (!invertCamera)
+                {
+                    pitch -= mouseY * mouseSensitivity;
+                }
+                else
+                {
+                    // Inverted Y
+                    pitch += mouseY * mouseSensitivity;
+                }
             }
-
-            // Clamp pitch between lookAngle
             pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
-
             transform.localEulerAngles = new Vector3(0, yaw, 0);
             playerCamera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
+            // yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
+
+            // if (!invertCamera)
+            // {
+            //     pitch -= mouseSensitivity * Input.GetAxis("Mouse Y");
+            // }
+            // else
+            // {
+            //     // Inverted Y
+            //     pitch += mouseSensitivity * Input.GetAxis("Mouse Y");
+            // }
+
+            // // Clamp pitch between lookAngle
+            // pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
+
+            // transform.localEulerAngles = new Vector3(0, yaw, 0);
+            // playerCamera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
         }
 
         #region Camera Zoom
@@ -370,8 +410,27 @@ public class FirstPersonController : MonoBehaviour
 
         if (playerCanMove)
         {
+            // NUEVOOO
+            float hInput, vInput;
+
+            if (isMovementActivatedByButton)
+            {
+                // Usar el input proporcionado por el script externo (botón)
+                hInput = externalHorizontalInput;
+                vInput = externalVerticalInput;
+            }
+            else
+            {
+                // Usar el input normal del teclado si el botón no está activo
+                hInput = Input.GetAxis("Horizontal");
+                vInput = Input.GetAxis("Vertical");
+            }
+            
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 targetVelocity = new Vector3(hInput, 0, vInput);
+
+            // Calculate how fast we should be moving
+            // Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
@@ -525,6 +584,89 @@ public class FirstPersonController : MonoBehaviour
             timer = 0;
             joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
         }
+    }
+    // NUEVO
+    // public void SetMovementActive(bool isActive)
+    // {
+    //     isMovementActivatedByButton = isActive;
+    // }
+
+    // // Función llamada por un script externo para indicar la dirección
+    // // Los valores de input deberían ser 0 o 1 para un simple avance
+    // public void SetExternalInput(float horizontal, float vertical)
+    // {
+    //     externalHorizontalInput = horizontal;
+    //     externalVerticalInput = vertical;
+    // }
+
+    public void StopMovement()
+    {
+        isMovementActivatedByButton = false;
+        externalHorizontalInput = 0f;
+        externalVerticalInput = 0f;
+    }
+
+    public void MoveForward()
+    {
+        isMovementActivatedByButton = true;
+        externalHorizontalInput = 0f;
+        externalVerticalInput = 1f;
+    }
+
+    public void MoveBackward()
+    {
+        isMovementActivatedByButton = true;
+        externalHorizontalInput = 0f;
+        externalVerticalInput = -1f;
+    }
+    public void MoveLeft()
+    {
+        isMovementActivatedByButton = true;
+        externalHorizontalInput = -1f;
+        externalVerticalInput = 0f;
+    }
+    public void MoveRight()
+    {
+        isMovementActivatedByButton = true;
+        externalHorizontalInput = 1f;
+        externalVerticalInput = 0f;
+    }
+    // Función para detener la rotación.
+    public void StopRotation()
+    {
+        isRotationActivatedByButton = false;
+        externalYawInput = 0f;
+        externalPitchInput = 0f;
+    }
+
+    // Gira el cuerpo del jugador (Yaw / Eje Y)
+    public void TurnRight()
+    {
+        isRotationActivatedByButton = true;
+        externalYawInput = 1f;
+        externalPitchInput = 0f;
+    }
+
+    public void TurnLeft()
+    {
+        isRotationActivatedByButton = true;
+        externalYawInput = -1f;
+        externalPitchInput = 0f;
+    }
+
+    // Rota la cámara (Pitch / Eje X)
+    public void LookUp()
+    {
+        isRotationActivatedByButton = true;
+        externalPitchInput = 1f; // Valor positivo para reducir pitch (mirar arriba)
+        externalYawInput = 0f;
+    }
+
+    public void LookDown()
+    {
+        isRotationActivatedByButton = true;
+        externalPitchInput = -1f; // Valor negativo para aumentar pitch (mirar abajo)
+        externalYawInput = 0f;
     }
 }
 
