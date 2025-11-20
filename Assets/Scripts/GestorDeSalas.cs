@@ -2,33 +2,62 @@ using UnityEngine;
 
 public class GestorDeSalas : MonoBehaviour
 {
-    // Aquí arrastraremos tus 4 paneles de información
+    [Header("Arrastra aquí tus 4 Paneles Info")]
     public GameObject[] panelesInfo; 
 
-    // Esta función la llamarán tus botones (1, 2, 3, 4)
-    public void AbrirInformacion(int numeroDeSala)
+    [Header("Opcional: Botón Volver")]
+    public GameObject botonVolverGeneral; 
+
+    private int indiceActual = 0;
+    private bool hayPanelAbierto = false; 
+
+    void Start()
     {
-        // Recorremos la lista de paneles
-        for (int i = 0; i < panelesInfo.Length; i++)
-        {
-            // Si el índice coincide con la sala que queremos ver...
-            if (i == numeroDeSala)
-            {
-                panelesInfo[i].SetActive(true); // ...lo encendemos
-            }
-            else
-            {
-                panelesInfo[i].SetActive(false); // ...y apagamos los demás para que no se solapen
-            }
-        }
+        CerrarTodo(); 
     }
 
-    // Función extra para un botón de "Cerrar" (si quieres poner una X en los paneles)
+    // --- FUNCIÓN PARA LOS BOTONES DEL MAPA (1, 2, 3, 4) ---
+    public void AbrirPanelEspecifico(int indiceSala)
+    {
+        indiceActual = indiceSala;
+        hayPanelAbierto = true;
+        ActualizarVisuales();
+    }
+
+    // --- FUNCIONES PARA EL LEAP MOTION (ESTAS SON LAS QUE FALTABAN) ---
+    
+    public void SiguienteSala() 
+    {
+        if (!hayPanelAbierto) return; 
+
+        indiceActual++;
+        if (indiceActual >= panelesInfo.Length) indiceActual = 0; 
+        ActualizarVisuales();
+    }
+
+    public void SalaAnterior()
+    {
+        if (!hayPanelAbierto) return;
+
+        indiceActual--;
+        if (indiceActual < 0) indiceActual = panelesInfo.Length - 1; 
+        ActualizarVisuales();
+    }
+
+    // --- RESTO DE LÓGICA ---
     public void CerrarTodo()
     {
-        foreach(GameObject panel in panelesInfo)
+        hayPanelAbierto = false;
+        foreach(GameObject p in panelesInfo) p.SetActive(false);
+        if(botonVolverGeneral != null) botonVolverGeneral.SetActive(false);
+    }
+
+    private void ActualizarVisuales()
+    {
+        for (int i = 0; i < panelesInfo.Length; i++)
         {
-            panel.SetActive(false);
+            panelesInfo[i].SetActive(i == indiceActual);
         }
+        if(botonVolverGeneral != null) botonVolverGeneral.SetActive(true);
     }
 }
