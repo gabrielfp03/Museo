@@ -70,7 +70,7 @@ public class SceneDataTransfer : MonoBehaviour
 
         public void LoadCatalogoScene()
     {
-        SceneManager.LoadScene("Catalogo_Scene");
+        SceneManager.LoadScene("Catalog_Scene");
     }
 
     public void LoadMuseumMainScene()
