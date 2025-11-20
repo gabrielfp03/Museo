@@ -38,6 +38,7 @@ public class LeapBalloonControl : MonoBehaviour
             }
         }
     }
+    
 
     void Update()
     {
@@ -49,7 +50,7 @@ public class LeapBalloonControl : MonoBehaviour
         Hand mano = frame.Hands[0];
 
         // Datos de la mano (Asumiendo Vector3 de Unity directo como en tu LeapCursor)
-        Vector3 puntaDedo = mano.Index.TipPosition;
+        Vector3 puntaDedo = mano.GetFinger(Finger.FingerType.INDEX).TipPosition;
         Vector3 velocidadPalma = mano.PalmVelocity;
 
         // --- A. LÓGICA INTERRUPTOR (Esfera) ---

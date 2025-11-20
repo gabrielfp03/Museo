@@ -19,7 +19,7 @@ public class ChangeColorLogic : MonoBehaviour
 
                 if (objeto != null)
                 {
-                    // Llamamos a la función nueva que controla la lista
+
                     objeto.SiguienteColor(); 
                 }
             }
