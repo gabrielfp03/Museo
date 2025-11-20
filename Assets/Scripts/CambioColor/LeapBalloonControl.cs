@@ -26,7 +26,7 @@ public class LeapBalloonControl : MonoBehaviour
     {
         // 1. Buscamos el Leap si está vacío
         if (leapProvider == null)
-            leapProvider = FindObjectOfType<LeapServiceProvider>();
+            leapProvider = FindAnyObjectByType<LeapServiceProvider>();
 
         // 2. Buscamos el script de color DENTRO del globo que has arrastrado
         if (globoObjeto != null)

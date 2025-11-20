@@ -10146,7 +10146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1171611657
 Transform:
   m_ObjectHideFlags: 0
@@ -10174,7 +10174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720b3a8111e027b4fa4f91ff6e24b880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeapBalloonControl
-  leapProvider: {fileID: 0}
+  leapProvider: {fileID: 962506406}
   esferaBoton: {fileID: 588779870}
   globoObjeto: {fileID: 20950997}
   distanciaToque: 0.15
