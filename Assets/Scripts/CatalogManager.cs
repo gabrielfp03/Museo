@@ -10,19 +10,11 @@ public class CatalogManager : MonoBehaviour
     public GameObject[] allAvions; // Array donde cargarás los 16 aviones
     public GameObject[] allInfoPanels; // Array donde cargarás los 16 InfoPanels
 
-    [Header("Referencias de UI")]
-    //public Image displayImage;   // La imagen central del avión
-    // public Text nameText;      // Ejemplo: si tienes un texto para el nombre
-    public GameObject infoPanelPrefab; // El panel de información que se desplegará
-
-    public GameObject modelPrefab;   // La imagen central del avión
-    
-    // A serialized List to hold various disabled UI elements (panels, pop-ups, etc.)
-    [SerializeField] 
-    private List<GameObject> allUIElements = new List<GameObject>();
 
     // --- Variables de Estado ---
     private int currentAvionIndex = 0;
+    private GameObject currentInfoPanel; // El panel de información que se desplegará
+    private GameObject currentAvion;   // La imagen central del avión
     
     // --- Métodos de Control ---
 
@@ -49,25 +41,14 @@ public class CatalogManager : MonoBehaviour
         {
             currentAvionIndex = 0; // Volver al inicio
         }
+
+        HideModel();
+        HideInfoPanel();
         
-        GameObject currentAvion = allAvions[currentAvionIndex];
-        GameObject currentInfoPannel = allInfoPanels[currentAvionIndex];
+        currentAvion = allAvions[currentAvionIndex];
+        currentInfoPanel = allInfoPanels[currentAvionIndex];
 
-        // 1. Actualiza el modelo
-        if (modelPrefab != null && currentAvion != null)
-        {
-            modelPrefab.SetActive(false);
-            HideInfoPanel();
-
-            modelPrefab = currentAvion;
-            infoPanelPrefab = currentInfoPannel;
-
-            modelPrefab.SetActive(true);
-
-        }
-
-        // 2. Aquí puedes actualizar otros textos si los tienes visibles
-        // if (nameText != null) nameText.text = currentData.modelName; 
+        ShowModel();
     }
 
     // --- Métodos llamados por las Flechas ---
@@ -79,7 +60,7 @@ public class CatalogManager : MonoBehaviour
     {
         currentAvionIndex++;
         UpdateCatalogView(currentAvionIndex);
-        Debug.Log("Next Avion: " + modelPrefab.name);
+        Debug.Log("Next Avion: " + currentAvion.name);
     }
 
     /// <summary>
@@ -89,23 +70,41 @@ public class CatalogManager : MonoBehaviour
     {
         currentAvionIndex--;
         UpdateCatalogView(currentAvionIndex);
-        Debug.Log("Previous Avion: " + modelPrefab.name);
+        Debug.Log("Previous Avion: " + currentAvion.name);
+    }
+
+
+
+
+    private void ShowModel()
+    {
+        if (currentAvion != null)
+        {
+            currentAvion.SetActive(true);
+        }
+    }
+    private void HideModel()
+    {
+        if (currentAvion != null)
+        {
+            currentAvion.SetActive(false);
+        }
     }
 
     // --- Método llamado por el botón 'Información' ---
 
     public void ShowInfoPanel()
     {
-        if (infoPanelPrefab != null)
+        if (currentInfoPanel != null)
         {
-            infoPanelPrefab.SetActive(true);
+            currentInfoPanel.SetActive(true);
         }
     }
     public void HideInfoPanel()
     {
-        if (infoPanelPrefab != null)
+        if (currentInfoPanel != null)
         {
-            infoPanelPrefab.SetActive(false);
+            currentInfoPanel.SetActive(false);
         }
     }
 }
