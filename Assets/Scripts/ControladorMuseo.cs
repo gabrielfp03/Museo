@@ -75,8 +75,8 @@ public class ControladorMuseo : MonoBehaviour
     }
 
     // --- MENU ---
-    public void IrAlMenu()
+    public void LoadMuseumMainScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Museum_MainScene");
     }
 }
