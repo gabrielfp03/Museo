@@ -2887,7 +2887,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 311836585}
         m_TargetAssemblyTypeName: FirstPersonController, Assembly-CSharp
-        m_MethodName: TurnLeft
+        m_MethodName: TurnRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6208,7 +6208,7 @@ MonoBehaviour:
   UILayer:
     serializedVersion: 2
     m_Bits: 32
-  raycastDistance: 20
+  raycastDistance: 5
 --- !u!1001 &622203236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18140,7 +18140,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 311836585}
         m_TargetAssemblyTypeName: FirstPersonController, Assembly-CSharp
-        m_MethodName: TurnRight
+        m_MethodName: TurnLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

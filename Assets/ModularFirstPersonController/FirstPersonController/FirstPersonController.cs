@@ -604,6 +604,7 @@ public class FirstPersonController : MonoBehaviour
         isMovementActivatedByButton = false;
         externalHorizontalInput = 0f;
         externalVerticalInput = 0f;
+        rb.linearVelocity = Vector3.zero;
     }
 
     public void MoveForward()
