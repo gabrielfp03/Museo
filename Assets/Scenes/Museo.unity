@@ -714,6 +714,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
       insertIndex: -1
       addedObject: {fileID: 47663257}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 168b1b672225144e9a32b86fff767901, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 47663258}
   m_SourcePrefab: {fileID: 100100000, guid: 168b1b672225144e9a32b86fff767901, type: 3}
 --- !u!4 &47663255 stripped
 Transform:
@@ -769,6 +772,28 @@ MonoBehaviour:
     or IAE V2500 engines, and optimized fuselage allow reliable, fuel-efficient operation
     on regional and medium-range routes, making it an industry standard."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &47663258
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47663256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &48979893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1060,6 +1085,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 48979896}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 48979897}
   m_SourcePrefab: {fileID: 100100000, guid: 31c96abf5370f4220b942cbbd5642fdc, type: 3}
 --- !u!4 &48979894 stripped
 Transform:
@@ -1114,6 +1142,28 @@ MonoBehaviour:
     versatility\u2014from passenger service to cargo and military roles as the C-47\u2014made
     it one of the most influential and long-lived aircraft ever built."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &48979897
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48979895}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &88693430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,8 +1271,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1538580728}
   m_SourcePrefab: {fileID: 100100000, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
+--- !u!1 &88693431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
+  m_PrefabInstance: {fileID: 88693430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &89843403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
@@ -3869,8 +3927,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433094991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.5}
-  m_LocalScale: {x: 0.0025, y: 0.0025, z: 0.0025}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalScale: {x: 0.0011, y: 0.0011, z: 0.0011}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1672594513}
@@ -4050,7 +4108,7 @@ GameObject:
   - component: {fileID: 529009123}
   - component: {fileID: 529009122}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4224,6 +4282,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
       insertIndex: -1
       addedObject: {fileID: 530886674}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530886675}
   m_SourcePrefab: {fileID: 100100000, guid: 9c6c03fc97d7b4bad8137303e13ed131, type: 3}
 --- !u!4 &530886672 stripped
 Transform:
@@ -4285,6 +4346,28 @@ MonoBehaviour:
     in the 21st century proved the design functional, though heavy and inefficient
     compared with today\u2019s flexible-canopy parachutes."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &530886675
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530886673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &538215839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4411,6 +4494,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1757127864}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1757127866}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1757127865}
   m_SourcePrefab: {fileID: 100100000, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
 --- !u!1 &538215840 stripped
 GameObject:
@@ -4722,6 +4811,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4322016253451328438, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
       insertIndex: -1
       addedObject: {fileID: 565479682}
+    - targetCorrespondingSourceObject: {fileID: 4322016253451328438, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565479683}
   m_SourcePrefab: {fileID: 100100000, guid: 7781b3b30cf6d2440868784314da3a63, type: 3}
 --- !u!4 &565479680 stripped
 Transform:
@@ -4783,6 +4875,28 @@ MonoBehaviour:
     in the 21st century proved the design functional, though heavy and inefficient
     compared with today\u2019s flexible-canopy parachutes."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &565479683
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565479681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &571039250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4858,6 +4972,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 571039253}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571039254}
   m_SourcePrefab: {fileID: 100100000, guid: d633fd53caea44fc08a2bbc5c3a16bcf, type: 3}
 --- !u!4 &571039251 stripped
 Transform:
@@ -4909,6 +5026,28 @@ MonoBehaviour:
     operations. Its simple, lightweight structure allows low operating costs and
     high availability, making it a global standard among single-engine utility helicopters.
   audioEN_Experto: {fileID: 0}
+--- !u!64 &571039254
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571039252}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &572046982
 GameObject:
   m_ObjectHideFlags: 0
@@ -5381,6 +5520,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 590486814}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 590486815}
     - targetCorrespondingSourceObject: {fileID: -2377391915321999524, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1852368400}
@@ -5478,6 +5620,28 @@ MonoBehaviour:
     ideal for vertical maneuvers and tight turns, which is why Manfred von Richthofen
     used it so effectively, cementing its place in aviation history.
   audioEN_Experto: {fileID: 0}
+--- !u!64 &590486815
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590486813}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &599832048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6281,6 +6445,8 @@ Transform:
   - {fileID: 894691416}
   - {fileID: 1361614094}
   - {fileID: 1143685261}
+  - {fileID: 1896609747}
+  - {fileID: 1446850498}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654967642
@@ -7154,6 +7320,7 @@ PrefabInstance:
     - {fileID: 7631355132152561819, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
     - {fileID: 4026910462641429011, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
     - {fileID: 7631355132152561818, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
+    - {fileID: 7631355132152561813, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7631355132152561814, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
@@ -7163,6 +7330,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7631355132152561815, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
       insertIndex: -1
       addedObject: {fileID: 722422094}
+    - targetCorrespondingSourceObject: {fileID: 7631355131765877361, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 722422096}
     - targetCorrespondingSourceObject: {fileID: 1209462237904467641, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1474935031}
@@ -7250,6 +7420,55 @@ MonoBehaviour:
     lift, and body-weight control, providing experimental data that directly influenced
     the Wright brothers and the evolution of scientific aviation.'
   audioEN_Experto: {fileID: 0}
+--- !u!1 &722422095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7631355131765877361, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
+  m_PrefabInstance: {fileID: 722422091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &722422096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722422095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &723495927
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,6 +9093,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
       insertIndex: -1
       addedObject: {fileID: 889633828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 889633829}
   m_SourcePrefab: {fileID: 100100000, guid: baa1ab9c8d69d447f886afc3e292d259, type: 3}
 --- !u!4 &889633826 stripped
 Transform:
@@ -8932,6 +9154,28 @@ MonoBehaviour:
     fewer bombs than later designs, its accuracy and reliability cemented its reputation
     as one of the war\u2019s most influential bombers."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &889633829
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889633827}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &894691415
 GameObject:
   m_ObjectHideFlags: 0
@@ -9364,6 +9608,10 @@ PrefabInstance:
     - target: {fileID: 9108764180275436946, guid: 252084bab20e347328346a19bc2441c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9108764180275436949, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9108764180275436958, guid: 252084bab20e347328346a19bc2441c9, type: 3}
       propertyPath: m_Name
@@ -11989,7 +12237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256134524}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1011.8799, y: 4.39587, z: 475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11999,7 +12247,7 @@ Transform:
   - {fileID: 1171855449}
   - {fileID: 576096250}
   - {fileID: 1882840318}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1272225686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272225685
 GameObject:
@@ -12030,6 +12278,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1452743967}
+  - {fileID: 1256134525}
   - {fileID: 975564856}
   - {fileID: 1282143312}
   - {fileID: 1827372055}
@@ -12994,12 +13244,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446850497}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 845, y: 23.82483, z: 148.26984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 646953279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1452743966
 PrefabInstance:
@@ -13007,7 +13257,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1272225686}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
       propertyPath: m_LocalScale.x
@@ -13039,7 +13289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
       propertyPath: m_LocalRotation.y
@@ -13047,7 +13297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13085,6 +13335,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
+--- !u!4 &1452743967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
+  m_PrefabInstance: {fileID: 1452743966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1461919098
 GameObject:
   m_ObjectHideFlags: 0
@@ -13282,6 +13537,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1462028524}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1462028525}
   m_SourcePrefab: {fileID: 100100000, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
 --- !u!4 &1462028522 stripped
 Transform:
@@ -13340,6 +13598,28 @@ MonoBehaviour:
     feature. For decades, it served as the backbone of global routes, setting new
     standards for efficiency and reliability in large airliners."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &1462028525
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462028523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1474935026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1209462237904467641, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
@@ -13779,6 +14059,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
   m_PrefabInstance: {fileID: 88693430}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1538580728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88693431}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12000, y: 3000, z: 5000}
+  m_Center: {x: -36000, y: 1000, z: 6000}
 --- !u!1 &1542829446
 GameObject:
   m_ObjectHideFlags: 0
@@ -14036,6 +14337,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1578909950}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1578909951}
   m_SourcePrefab: {fileID: 100100000, guid: 0ca8a8ba2bfa046e79a84e0bb6a74a83, type: 3}
 --- !u!4 &1578909948 stripped
 Transform:
@@ -14093,6 +14397,28 @@ MonoBehaviour:
     enhances passenger comfort with lower cabin altitude, setting new standards for
     long-haul air travel.'
   audioEN_Experto: {fileID: 0}
+--- !u!64 &1578909951
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578909949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1585674565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3386553121241536846, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
@@ -14220,6 +14546,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1587303527}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587303529}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587303528}
   m_SourcePrefab: {fileID: 100100000, guid: 49d383f0c2af8466e992d3e9c613564c, type: 3}
 --- !u!4 &1587303525 stripped
 Transform:
@@ -14288,6 +14620,48 @@ MonoBehaviour:
     lift. Its influence on the design of later aircraft was significant, foreshadowing
     advancements in aviation that would be realized in the 1910s.
   audioEN_Experto: {fileID: 0}
+--- !u!65 &1587303528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587303526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 2, z: 5}
+  m_Center: {x: 2, y: 0, z: 0}
+--- !u!65 &1587303529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587303526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 1, z: 1}
+  m_Center: {x: -1.2, y: 0, z: 0}
 --- !u!1 &1626633508
 GameObject:
   m_ObjectHideFlags: 0
@@ -14729,6 +15103,48 @@ MonoBehaviour:
     Marquis d\u2019Arlandes. Their public demonstration boosted scientific study
     of air temperature, aerostatic lift, and heat-resistant envelope design."
   audioEN_Experto: {fileID: 0}
+--- !u!65 &1757127865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538215840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0.55, z: 0}
+--- !u!65 &1757127866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538215840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1784411620
 GameObject:
   m_ObjectHideFlags: 0
@@ -14939,6 +15355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1785200578}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1785200579}
   m_SourcePrefab: {fileID: 100100000, guid: 28a84356c2706472ea5549ee5dc97cd3, type: 3}
 --- !u!4 &1785200576 stripped
 Transform:
@@ -14993,6 +15412,28 @@ MonoBehaviour:
     environments and tactical versatility made it a backbone of light air support
     aviation for decades.
   audioEN_Experto: {fileID: 0}
+--- !u!64 &1785200579
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785200577}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1787287041
 GameObject:
   m_ObjectHideFlags: 0
@@ -15216,6 +15657,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1788166574}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1788166575}
   m_SourcePrefab: {fileID: 100100000, guid: 3a72520ec6c5744d5b6c594003342e09, type: 3}
 --- !u!4 &1788166572 stripped
 Transform:
@@ -15270,6 +15714,28 @@ MonoBehaviour:
     Hellfire missiles, and Hydra-70 rockets provides tactical versatility for attack,
     escort, and close air support missions."
   audioEN_Experto: {fileID: 0}
+--- !u!64 &1788166575
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788166573}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1795053149
 GameObject:
   m_ObjectHideFlags: 0
@@ -15632,6 +16098,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 976a018f8a31b436aaab4a7b460cec55, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1840613869}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 976a018f8a31b436aaab4a7b460cec55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840613870}
   m_SourcePrefab: {fileID: 100100000, guid: 976a018f8a31b436aaab4a7b460cec55, type: 3}
 --- !u!1 &1840613868 stripped
 GameObject:
@@ -15691,6 +16160,27 @@ MonoBehaviour:
     material limits, and lack of a power source, it stands as a theoretical milestone
     foreshadowing helicopter rotor aerodynamics and helicoidal airflow studies."
   audioEN_Experto: {fileID: 0}
+--- !u!65 &1840613870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840613868}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6, y: 0.5, z: 0.6}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!1 &1852368395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2377391915321999524, guid: fe3d60d552aa243278dd317bb3f7f2f4, type: 3}
@@ -16120,7 +16610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896609746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 841.19116, y: 4.39587, z: 257.36792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16130,7 +16620,7 @@ Transform:
   - {fileID: 2042940519}
   - {fileID: 1345757151}
   - {fileID: 1386059578}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 646953279}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1911697817
 GameObject:
@@ -18137,7 +18627,3 @@ SceneRoots:
   - {fileID: 971834740}
   - {fileID: 104356858}
   - {fileID: 588779874}
-  - {fileID: 1452743966}
-  - {fileID: 1256134525}
-  - {fileID: 1896609747}
-  - {fileID: 1446850498}
