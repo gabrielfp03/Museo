@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI; // Necesario para Image y Button
 using System.Collections.Generic; // <--- ADD THIS LINE
+using TMPro;
 
 public class CatalogManager : MonoBehaviour
 {
@@ -8,13 +9,18 @@ public class CatalogManager : MonoBehaviour
     
     [Header("Datos del Catálogo")]
     public GameObject[] allAvions; // Array donde cargarás los 16 aviones
-    public GameObject[] allInfoPanels; // Array donde cargarás los 16 InfoPanels
+    public GameObject infoPanelTemplate; // Template de InfoPanel[Header("Referencias de Componentes de Texto")]
+    // Cada variable está ligada a un componente TMPro en el Inspector
+    public TextMeshProUGUI modelNameText;
+    public TextMeshProUGUI constructionDateText;
+    public TextMeshProUGUI roomLocationText;
+    public TextMeshProUGUI briefDescriptionText;
 
 
     // --- Variables de Estado ---
     private int currentAvionIndex = 0;
-    private GameObject currentInfoPanel; // El panel de información que se desplegará
-    private GameObject currentAvion;   // La imagen central del avión
+    private GameObject currentAvion;   // El avion actual
+    private AvionData currentAvionData; // Información del avión actual
     
     // --- Métodos de Control ---
 
@@ -37,7 +43,7 @@ public class CatalogManager : MonoBehaviour
         {
             currentAvionIndex = allAvions.Length - 1; // Volver al final
         }
-        else if (index >= allAvions.Length && index >= allInfoPanels.Length)
+        else if (index >= allAvions.Length)
         {
             currentAvionIndex = 0; // Volver al inicio
         }
@@ -46,8 +52,9 @@ public class CatalogManager : MonoBehaviour
         HideInfoPanel();
         
         currentAvion = allAvions[currentAvionIndex];
-        currentInfoPanel = allInfoPanels[currentAvionIndex];
+        currentAvionData = currentAvion.GetComponent<AvionData>();
 
+        UpdateInfoPanel();
         ShowModel();
     }
 
@@ -93,18 +100,38 @@ public class CatalogManager : MonoBehaviour
 
     // --- Método llamado por el botón 'Información' ---
 
+    private void UpdateInfoPanel()
+    {
+        if (infoPanelTemplate != null)
+        {
+            if (currentAvionData != null)
+            {
+                modelNameText.text = currentAvionData.modelName;
+                constructionDateText.text = currentAvionData.constructionDate;
+                roomLocationText.text = currentAvionData.roomLocation;
+                briefDescriptionText.text = currentAvionData.briefDescription;
+            } else
+            {
+                modelNameText.text = "N/A";
+                constructionDateText.text = "Fecha Desconocida";
+                roomLocationText.text = "Sala Desconocida";
+                briefDescriptionText.text = "No hay descripción disponible...";
+            }
+        }
+    }
+
     public void ShowInfoPanel()
     {
-        if (currentInfoPanel != null)
+        if (infoPanelTemplate != null)
         {
-            currentInfoPanel.SetActive(true);
+            infoPanelTemplate.SetActive(true);
         }
     }
     public void HideInfoPanel()
     {
-        if (currentInfoPanel != null)
+        if (infoPanelTemplate != null)
         {
-            currentInfoPanel.SetActive(false);
+            infoPanelTemplate.SetActive(false);
         }
     }
 }
