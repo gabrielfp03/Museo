@@ -58,6 +58,21 @@ public class SceneDataTransfer : MonoBehaviour
         SetDestinationAndLoad("Checkpoint_Helicopteros", "Museo");
     }
 
+    public void GoToCafeteria() // SIN PARÁMETROS
+    {
+        SetDestinationAndLoad("Checkpoint_Cafeteria", "Museo");
+    }
+
+    public void GoToAseos1() // SIN PARÁMETROS
+    {
+        SetDestinationAndLoad("Checkpoint_Aseo1", "Museo");
+    }
+
+    public void GoToAseos2() // SIN PARÁMETROS
+    {
+        SetDestinationAndLoad("Checkpoint_Aseo2", "Museo");
+    }
+
     public void GoToSalida() // SIN PARÁMETROS
     {
         SetDestinationAndLoad("Checkpoint_Salida", "Museo");
