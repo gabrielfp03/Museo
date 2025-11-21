@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64d1c1a0bcfb004992276b14291e1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeColorObject
+  coloresExtra: []
 --- !u!136 &20951002
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1748,6 +1749,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175527497}
   m_CullTransparentMesh: 1
+--- !u!54 &194163133
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383746921}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1 &212903385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,6 +3187,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &383746921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2635814883396770173, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+  m_PrefabInstance: {fileID: 962506402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &384303152
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,7 +4141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.7}
+  m_AnchoredPosition: {x: 0.32, y: 2.16}
   m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516019360
@@ -6042,7 +6075,7 @@ Transform:
   m_GameObject: {fileID: 614002136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -0, z: -0.99}
+  m_LocalPosition: {x: 0.0036, y: -0.0326, z: 0.0177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9389,6 +9422,38 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1985988882998418170, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_Radius
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985988882998418170, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985988882998418170, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_Center.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985988882998418170, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985988882998418170, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635814883396464527, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2219
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635814883396464527, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635814883396464527, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.296
+      objectReference: {fileID: 0}
     - target: {fileID: 3705590628584104196, guid: 252084bab20e347328346a19bc2441c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.014
@@ -9483,7 +9548,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2635814883396464527, guid: 252084bab20e347328346a19bc2441c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 614002137}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2635814883396770173, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 194163133}
   m_SourcePrefab: {fileID: 100100000, guid: 252084bab20e347328346a19bc2441c9, type: 3}
 --- !u!4 &962506403 stripped
 Transform:
@@ -16761,6 +16829,7 @@ GameObject:
   - component: {fileID: 2001291208}
   - component: {fileID: 2001291207}
   - component: {fileID: 2001291211}
+  - component: {fileID: 2001291212}
   m_Layer: 5
   m_Name: BTN_Abrir
   m_TagString: Untagged
@@ -16776,8 +16845,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001291205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -128}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 82743748}
@@ -16785,7 +16854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -471}
+  m_AnchoredPosition: {x: 0, y: -497}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001291207
@@ -16925,6 +16994,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 150, y: 20, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2001291212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001291205}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58e27aaf9b254d1ab9917f9085df1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThreeDPushButton
+  pressDepth: -0.1
+  movementSpeed: 0.5
+  requiredPressDuration: 0.5
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992937}
+        m_TargetAssemblyTypeName: CanvasToggle, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2008953372 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7862391691550088030, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
@@ -16942,6 +17044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64d1c1a0bcfb004992276b14291e1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeColorObject
+  coloresExtra: []
 --- !u!65 &2008953377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18269,6 +18372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64d1c1a0bcfb004992276b14291e1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeColorObject
+  coloresExtra: []
 --- !u!65 &2091883443
 BoxCollider:
   m_ObjectHideFlags: 0
