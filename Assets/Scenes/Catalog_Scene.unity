@@ -3076,7 +3076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Hot Air Balloon
-  constructionDate: Fecha Desconocida
+  constructionDate: 'Primer vuelo: 04-06-1783'
   roomLocation: Sala Desconocida
   briefDescription: "No hay descripci\xF3n disponible..."
 --- !u!1 &1051579857
@@ -5275,9 +5275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Glider
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 1893'
+  roomLocation: Planeadores
+  briefDescription: "Realiz\xF3 unos 2.000 vuelos cortos con varios dise\xF1os de
+    planeadores."
 --- !u!1 &1462458596
 GameObject:
   m_ObjectHideFlags: 0

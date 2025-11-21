@@ -76,7 +76,7 @@ public class InfoPanelManager : MonoBehaviour
         panelContenedor.SetActive(false);
 
         // 1. MOSTRAR FLECHAS ROJAS OTRA VEZ
-        if (interfazMovilRoja != null) interfazMovilRoja.SetActive(true);
+        //if (interfazMovilRoja != null) interfazMovilRoja.SetActive(true);
 
         // 2. REACTIVAR JUGADOR
         if (jugador != null)
