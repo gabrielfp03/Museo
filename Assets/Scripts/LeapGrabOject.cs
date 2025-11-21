@@ -386,7 +386,12 @@ public class LeapGrabObject : MonoBehaviour
         }
         
         if (hitRb == null || grabbedRb != null) return;
-
+        // Si se puede interactuar con ese objeto
+        InspectableObject inspectable = hitRb.GetComponent<InspectableObject>();
+        if (inspectable != null && !inspectable.IsInteractionActive())
+        {
+            return; 
+        }
         grabbedRb = hitRb;
         
         // Guardar datos originales
@@ -435,6 +440,7 @@ public class LeapGrabObject : MonoBehaviour
     void Drop()
     {
         if (grabbedRb == null) return;
+        InspectableObject inspectable = grabbedRb.GetComponent<InspectableObject>();
                 
         Collider grabbedCollider = grabbedRb.GetComponent<Collider>();
 
@@ -464,6 +470,12 @@ public class LeapGrabObject : MonoBehaviour
         if (grabHandle != null)
         {
             Destroy(grabHandle);
+        }
+
+        // Regresar el objeto a su posición inicial si es inspeccionable
+        if (inspectable != null)
+        {
+            inspectable.ReturnToInitialPosition();
         }
 
         // 7. Reset flags
