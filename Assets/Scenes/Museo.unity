@@ -2370,10 +2370,10 @@ RectTransform:
   - {fileID: 2022436646}
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -370}
-  m_SizeDelta: {x: 940, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287937804
 MonoBehaviour:
@@ -2440,7 +2440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &294439391
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3680,9 +3680,9 @@ RectTransform:
   - {fileID: 384303153}
   m_Father: {fileID: 287937803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 470, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413083690
@@ -7668,10 +7668,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -55}
-  m_SizeDelta: {x: 940, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703600313
 MonoBehaviour:
@@ -8071,35 +8071,35 @@ MonoBehaviour:
     uno de los primeros \u201Caviones\u201D del mundo. Otto Lilienthal se sujetaba
     a sus alas enormes y corr\xEDa cuesta abajo hasta elevarse por el aire. \xA1Fue
     uno de los primeros superh\xE9roes del vuelo!"
-  "audioES_Ni\xF1o": {fileID: 0}
+  "audioES_Ni\xF1o": {fileID: 8300000, guid: 65a9086c5380f5d4f831d9e1f07bdfe8, type: 3}
   textoES_Casual: "Una joya pionera de la aviaci\xF3n: este planeador represent\xF3
     el paso decisivo entre so\xF1ar con volar e intentarlo realmente. Con su dise\xF1o
     inspirado en las alas de las aves y un control corporal intuitivo, Lilienthal
     realiz\xF3 m\xE1s de 2.000 vuelos\u2014demostrando que el vuelo humano era posible."
-  audioES_Casual: {fileID: 0}
+  audioES_Casual: {fileID: 8300000, guid: e5a2bbbc92cc4e44f97e3f7b8f3c1a59, type: 3}
   textoES_Experto: "Este planeador es un hito fundamental en la aeron\xE1utica: su
     configuraci\xF3n monoplano de estructura de madera y envergadura arqueada sent\xF3
     las bases del an\xE1lisis aerodin\xE1mico moderno. Lilienthal introdujo principios
     de estabilidad, sustentaci\xF3n y control mediante desplazamiento del centro
     de masa, aportando datos experimentales que influir\xEDan directamente en los
     hermanos Wright y en el desarrollo de la aviaci\xF3n cient\xEDfica."
-  audioES_Experto: {fileID: 0}
+  audioES_Experto: {fileID: 8300000, guid: 000fad45cecb7b94092a39f1b684803f, type: 3}
   "textoEN_Ni\xF1o": "Imagine you could fly like a bird! This invention was one of
     the first \u201Cairplanes\u201D ever made. Otto Lilienthal held onto its big
     wings and ran down hills until he lifted into the sky. He was one of the very
     first flying superheroes!"
-  "audioEN_Ni\xF1o": {fileID: 0}
+  "audioEN_Ni\xF1o": {fileID: 8300000, guid: 0485752a4c9557e4792ccc500eb4a614, type: 3}
   textoEN_Casual: "A pioneering jewel of early aviation: this glider marked the bold
     leap from dreaming about flight to truly attempting it. With bird-inspired wings
     and body-weight control, Lilienthal completed over 2,000 flights\u2014proving
     human flight could become real."
-  audioEN_Casual: {fileID: 0}
+  audioEN_Casual: {fileID: 8300000, guid: 34bfad4f0a0e7fa46a9ef10828f36b96, type: 3}
   textoEN_Experto: 'This glider stands as a cornerstone of aeronautical history:
     its wooden monoplane frame and cambered wing geometry helped establish the foundations
     of modern aerodynamic analysis. Lilienthal introduced principles of stability,
     lift, and body-weight control, providing experimental data that directly influenced
     the Wright brothers and the evolution of scientific aviation.'
-  audioEN_Experto: {fileID: 0}
+  audioEN_Experto: {fileID: 8300000, guid: d4007a175705da14fbe7e90ff49f4e31, type: 3}
 --- !u!1 &722422095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7631355131765877361, guid: 7653487b444b1f045abe7c3f984a5445, type: 3}
@@ -12377,10 +12377,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1689313326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194827425
 MonoBehaviour:
@@ -14504,9 +14504,9 @@ RectTransform:
   - {fileID: 1195527835}
   m_Father: {fileID: 287937803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484614813
@@ -15554,14 +15554,14 @@ MonoBehaviour:
     para volar por el cielo. Aunque era peque\xF1o, \xA1este avi\xF3n vol\xF3 m\xE1s
     alto y m\xE1s r\xE1pido que muchos otros de su tiempo! \xA1Y todo gracias a la
     imaginaci\xF3n y la valent\xEDa de Dumont!"
-  "audioES_Ni\xF1o": {fileID: 0}
+  "audioES_Ni\xF1o": {fileID: 8300000, guid: eb5f03d92f6496f40a395d4c76cd361a, type: 3}
   textoES_Casual: "El Demoiselle de Santos Dumont es uno de los aviones m\xE1s emblem\xE1ticos
     de la aviaci\xF3n temprana. Construido en 1907, este monoplano ligero y de estructura
     tubular fue precursor de los aviones modernos, combinando innovaciones t\xE9cnicas
     como el uso de materiales livianos y el control en vuelo a trav\xE9s de superficies
     aerodin\xE1micas. Su dise\xF1o \xFAnico y su capacidad de vuelo estable marcaron
     un hito en la historia de la aviaci\xF3n."
-  audioES_Casual: {fileID: 0}
+  audioES_Casual: {fileID: 8300000, guid: 9e9c50b619d273443b0a635a3e5d1615, type: 3}
   textoES_Experto: "El Demoiselle, desarrollado por Santos Dumont entre 1906 y 1907,
     representa una de las primeras aplicaciones exitosas de principios aerodin\xE1micos
     en la aviaci\xF3n ligera. Su estructura, compuesta por un armaz\xF3n tubular
@@ -15571,19 +15571,19 @@ MonoBehaviour:
     direccional y en el control sobre la sustentaci\xF3n. Su influencia en el dise\xF1o
     de aviones posteriores fue considerable, anticipando los avances que se concretar\xEDan
     en la aviaci\xF3n en la d\xE9cada de 1910."
-  audioES_Experto: {fileID: 0}
+  audioES_Experto: {fileID: 8300000, guid: b156316d05c81bc44b2ce7f22af21c98, type: 3}
   "textoEN_Ni\xF1o": Did you know that the Demoiselle was like a "toy airplane" from
     more than 100 years ago? Santos Dumont, a very brave man, built it to fly in
     the sky. Even though it was small, this plane flew higher and faster than many
     others of its time! All thanks to Dumont's imagination and bravery!
-  "audioEN_Ni\xF1o": {fileID: 0}
+  "audioEN_Ni\xF1o": {fileID: 8300000, guid: ab4ff2761d8a5d940ad37e1df7d6640c, type: 3}
   textoEN_Casual: Santos Dumont's Demoiselle is one of the most iconic aircraft in
     early aviation. Built in 1907, this lightweight monoplane with a tubular frame
     was a precursor to modern aircraft, featuring innovations such as the use of
     lightweight materials and control in flight through aerodynamic surfaces. Its
     unique design and stable flight capabilities marked a significant milestone in
     aviation history.
-  audioEN_Casual: {fileID: 0}
+  audioEN_Casual: {fileID: 8300000, guid: f18cf77d4f14c1a42b91ed9f0df405b8, type: 3}
   textoEN_Experto: The Demoiselle, developed by Santos Dumont between 1906 and 1907,
     represents one of the earliest successful applications of aerodynamic principles
     in light aviation. Its structure, consisting of a tubular steel frame covered
@@ -15592,7 +15592,7 @@ MonoBehaviour:
     speeds of up to 70 km/h, excelling in directional stability and control over
     lift. Its influence on the design of later aircraft was significant, foreshadowing
     advancements in aviation that would be realized in the 1910s.
-  audioEN_Experto: {fileID: 0}
+  audioEN_Experto: {fileID: 8300000, guid: cd9e99843eb7e1c4ab61960c4d4e2fee, type: 3}
 --- !u!65 &1587303528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16321,7 +16321,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1689313328
 MonoBehaviour:
@@ -20020,9 +20020,9 @@ RectTransform:
   - {fileID: 309257802}
   m_Father: {fileID: 287937803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 790, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022436647
@@ -20215,10 +20215,10 @@ RectTransform:
   - {fileID: 622964632}
   m_Father: {fileID: 294439391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -200}
-  m_SizeDelta: {x: 940, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029907966
 MonoBehaviour:
