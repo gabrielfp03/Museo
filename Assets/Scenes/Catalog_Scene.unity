@@ -512,9 +512,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: DaVinci
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: "Dise\xF1o: 1487"
+  roomLocation: 'Sala 1: Planeadores'
+  briefDescription: "Un dise\xF1o visionario de Leonardo da Vinci considerado el
+    antepasado del helic\xF3ptero. Nunca lleg\xF3 a volar, pero inspir\xF3 la ingenier\xEDa
+    moderna."
 --- !u!1001 &263710282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,9 +616,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: AirBusA320
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 22 de febrero de 1987'
+  roomLocation: 'Sala 3: Aviones Comerciales'
+  briefDescription: "El primer avi\xF3n comercial con tecnolog\xEDa \"fly-by-wire\"
+    digital, donde las \xF3rdenes del piloto se transmiten por se\xF1ales electr\xF3nicas
+    en lugar de cables mec\xE1nicos."
 --- !u!1 &295747400
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,9 +935,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Sopwith-camel
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 22 de diciembre de 1916'
+  roomLocation: 'Sala 2: Aviones de Guerra'
+  briefDescription: "El caza brit\xE1nico m\xE1s exitoso de la Primera Guerra Mundial.
+    Dif\xEDcil de pilotar, pero letal en manos expertas, derrib\xF3 m\xE1s aviones
+    enemigos que ning\xFAn otro."
 --- !u!1001 &324700457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1113,9 +1119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: boeingb17
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 28 de julio de 1935'
+  roomLocation: 'Sala 2: Aviones de Guerra'
+  briefDescription: "Bombardero pesado estrat\xE9gico de los Aliados. Conocido como
+    la \"Fortaleza Volante\" por su capacidad para soportar graves da\xF1os y seguir
+    volando."
 --- !u!54 &333299786
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1291,9 +1299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: UH1Y
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 20 de diciembre de 2001'
+  roomLocation: 'Sala 4: Helicopteros'
+  briefDescription: "La versi\xF3n moderna y potente del legendario \"Huey\" de Vietnam.
+    Es el caballo de batalla del Cuerpo de Marines de los EE. UU."
 --- !u!1001 &396164975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1409,9 +1418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: AH-64
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 30 de septiembre de 1975'
+  roomLocation: 'Sala 4: Helicopteros'
+  briefDescription: "El helic\xF3ptero de ataque m\xE1s avanzado del mundo. Dise\xF1ado
+    para destruir tanques y operar de noche o en condiciones clim\xE1ticas adversas."
 --- !u!1 &486106872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,9 +1788,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: dumont-demoiselle
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 1907'
+  roomLocation: 'Sala 1: Planeadores'
+  briefDescription: "Dise\xF1ado por Santos-Dumont, fue el primer avi\xF3n \"ultraligero\"
+    del mundo. Era tan peque\xF1o y econ\xF3mico que se vend\xEDan los planos para
+    construirlo en casa."
 --- !u!1 &610399656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,9 +2483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: messerschmidt
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 29 de mayo de 1935'
+  roomLocation: 'Sala 2: Aviones de Guerra'
+  briefDescription: "La columna vertebral de la Luftwaffe alemana. Fue uno de los
+    cazas m\xE1s avanzados y temidos al inicio de la Segunda Guerra Mundial."
 --- !u!1 &961044359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,9 +3134,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Hot Air Balloon
-  constructionDate: 'Primer vuelo: 04-06-1783'
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 21 de noviembre de 1783'
+  roomLocation: 'Sala 1: Planeadores'
+  briefDescription: "El primer invento que permiti\xF3 al ser humano elevarse del
+    suelo. Funcionaba calentando el aire con fuego de paja y lana."
 --- !u!1 &1051579857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,9 +3330,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Parachute
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: "22 de octubre de 1797 (Andr\xE9-Jacques Garnerin)"
+  roomLocation: 'Sala 1: Planeadores'
+  briefDescription: "Dispositivo pionero de seguridad que utiliza la resistencia
+    del aire para frenar la ca\xEDda. Garnerin salt\xF3 desde un globo a 1.000 metros
+    de altura."
 --- !u!1001 &1108341007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3638,9 +3654,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: douglasdc3
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 17 de diciembre de 1935'
+  roomLocation: 'Sala 3: Aviones Comerciales'
+  briefDescription: "El avi\xF3n que revolucion\xF3 el transporte a\xE9reo en los
+    a\xF1os 30 y 40, haci\xE9ndolo rentable y popularizando los viajes de pasajeros."
 --- !u!1001 &1113100460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5321,7 +5338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Glider
   constructionDate: 'Primer vuelo: 1893'
-  roomLocation: Planeadores
+  roomLocation: 'Sala 1: Planeadores'
   briefDescription: "Realiz\xF3 unos 2.000 vuelos cortos con varios dise\xF1os de
     planeadores."
 --- !u!1 &1462458596
@@ -5660,9 +5677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: Bell 206 JetRanger
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 8 de diciembre de 1962'
+  roomLocation: 'Sala 4: Helicopteros'
+  briefDescription: "El helic\xF3ptero civil m\xE1s popular de la historia. Famoso
+    por su seguridad y versatilidad, usado por polic\xEDas, noticias y transporte
+    VIP en todo el mundo."
 --- !u!1001 &1634291045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5762,9 +5781,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: boeing787
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 15 de diciembre de 2009'
+  roomLocation: 'Sala 3: Aviones Comerciales'
+  briefDescription: "Pionero en el uso masivo de materiales compuestos (fibra de
+    carbono) en su fuselaje, lo que lo hace m\xE1s ligero, eficiente y c\xF3modo
+    para el pasajero."
 --- !u!1001 &1689229692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5944,9 +5965,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: boeing747
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 9 de febrero de 1969'
+  roomLocation: 'Sala 3: Aviones Comerciales'
+  briefDescription: "Conocido como la \"Reina de los Cielos\". Fue el primer avi\xF3n
+    de fuselaje ancho y duplic\xF3 la capacidad de pasajeros de la \xE9poca, democratizando
+    el turismo internacional."
 --- !u!1 &1784719216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6291,9 +6314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvionData
   modelName: redbaron
-  constructionDate: Fecha Desconocida
-  roomLocation: Sala Desconocida
-  briefDescription: "No hay descripci\xF3n disponible..."
+  constructionDate: 'Primer vuelo: 5 de julio de 1917'
+  roomLocation: 'Sala 2: Aviones de Guerra'
+  briefDescription: "El ic\xF3nico triplano pilotado por el \"Bar\xF3n Rojo\" (Manfred
+    von Richthofen). Famoso por su incre\xEDble maniobrabilidad en los combates de
+    la Gran Guerra."
 --- !u!54 &2010039090
 Rigidbody:
   m_ObjectHideFlags: 0
