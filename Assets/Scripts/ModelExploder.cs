@@ -47,13 +47,11 @@ public class ModelExploder : MonoBehaviour
                 Debug.LogWarning($"La pieza '{child.name}' no tiene Renderer y será ignorada para la explosión.");
             }
         }
-        Debug.Log("ModelExploder inicializado. Piezas detectadas con Renderer: " + parts.Count);
     }
 
     public void ToggleExplode()
     {
         isExploded = !isExploded;
-        Debug.Log("Estado cambiado. Desarmado: " + isExploded);
     }
 
     // void Update()

@@ -67,9 +67,6 @@ public class CloseCanvasOnFist : MonoBehaviour
     /// </summary>
     private void CloseCanvas()
     {
-        // 🛑 Importante: Puedes añadir una capa visual aquí (ej. un feedback visual)
-        
-        Debug.Log("Canvas cerrado por gesto de puño.");
         
         // Desactiva el GameObject raíz del Canvas
         gameObject.SetActive(false); 

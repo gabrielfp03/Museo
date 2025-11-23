@@ -127,20 +127,17 @@ public class UltraleapPinchToggle : MonoBehaviour
         {
             // 1. Calculamos la diferencia de rotación (Delta)
             Quaternion deltaRotation = Quaternion.Inverse(initialHandRotation) * currentHandRotation;
-            
             // 2. Aplicamos el Delta a la rotación inicial del modelo
             Quaternion fullRotation = initialModelRotation * deltaRotation;
-            
             // FILTRADO: Tomamos solo el eje Y de la rotación completa
             targetExploder.transform.rotation = Quaternion.Euler(
-                initialModelRotation.eulerAngles.x, // Mantenemos la rotación X inicial o 0
-                fullRotation.eulerAngles.y,         // APLICAMOS la rotación del eje Y del gesto
-                initialModelRotation.eulerAngles.z  // Mantenemos la rotación Z inicial o 0
+            initialModelRotation.eulerAngles.x, // Mantenemos la rotación X inicial o 0
+            fullRotation.eulerAngles.y, // APLICAMOS la rotación del eje Y del gesto
+            initialModelRotation.eulerAngles.z // Mantenemos la rotación Z inicial o 0
             );
         }
 
 
-        // 💥 Desensamblaje (Lógica invertida) 💥
         float rawPinch = hand.PinchStrength;
         float linearProgress = Mathf.InverseLerp(minPinchStart, maxPinchEnd, rawPinch);
         

@@ -16,9 +16,9 @@ public class InfoPanelManager : MonoBehaviour
     public Button botonAudio;
     public AudioSource fuenteAudio;
 
-    [Header("COSAS A DESACTIVAR (Arrastra aquí)")]
-    public GameObject interfazMovilRoja; // Arrastra el canvas de las flechas rojas
-    public GameObject jugador; // Arrastra tu objeto "FirstPersonController" o "PlayerCapsule"
+    // [Header("COSAS A DESACTIVAR (Arrastra aquí)")]
+    // public GameObject interfazMovilRoja; // Arrastra el canvas de las flechas rojas
+    // public GameObject jugador; // Arrastra tu objeto "FirstPersonController" o "PlayerCapsule"
 
     private InfoObraMuseo infoActual; 
     private MonoBehaviour[] scriptsJugador; // Para guardar los scripts del jugador
@@ -26,18 +26,18 @@ public class InfoPanelManager : MonoBehaviour
     void Start()
     {
         if(panelContenedor != null) panelContenedor.SetActive(false);
-        
+        Debug.Log("InfoPanelManager iniciado.");
         // Listeners
         if(botonCerrar != null) botonCerrar.onClick.AddListener(CerrarPanel);
         if(dropdownIdioma != null) dropdownIdioma.onValueChanged.AddListener(delegate { ActualizarContenido(); });
         if(dropdownNivel != null) dropdownNivel.onValueChanged.AddListener(delegate { ActualizarContenido(); });
         if(botonAudio != null) botonAudio.onClick.AddListener(ReproducirAudio);
 
-        // Buscamos los scripts del jugador al inicio para poder desactivarlos luego
-        if (jugador != null)
-        {
-            scriptsJugador = jugador.GetComponents<MonoBehaviour>();
-        }
+        // // Buscamos los scripts del jugador al inicio para poder desactivarlos luego
+        // if (jugador != null)
+        // {
+        //     scriptsJugador = jugador.GetComponents<MonoBehaviour>();
+        // }
     }
 
     public void AbrirPanel(InfoObraMuseo info)
@@ -48,24 +48,24 @@ public class InfoPanelManager : MonoBehaviour
         // 1. ABRIR PANEL
         panelContenedor.SetActive(true);
         
-        // 2. OCULTAR FLECHAS ROJAS (Para que no tapen los clicks)
-        if (interfazMovilRoja != null) interfazMovilRoja.SetActive(false);
+        // // 2. OCULTAR FLECHAS ROJAS (Para que no tapen los clicks)
+        // if (interfazMovilRoja != null) interfazMovilRoja.SetActive(false);
 
-        // 3. PARALIZAR JUGADOR (Para que el click no bloquee el ratón)
-        if (jugador != null)
-        {
-            // Desactivamos todos los scripts del jugador temporalmente
-            foreach (var script in scriptsJugador)
-            {
-                // OJO: No desactivamos ESTE script (InfoPanelManager) ni AudioSource
-                if (script != this && !(script is AudioSource)) 
-                    script.enabled = false;
-            }
-        }
+        // // 3. PARALIZAR JUGADOR (Para que el click no bloquee el ratón)
+        // if (jugador != null)
+        // {
+        //     // Desactivamos todos los scripts del jugador temporalmente
+        //     foreach (var script in scriptsJugador)
+        //     {
+        //         // OJO: No desactivamos ESTE script (InfoPanelManager) ni AudioSource
+        //         if (script != this && !(script is AudioSource)) 
+        //             script.enabled = false;
+        //     }
+        // }
 
-        // 4. LIBERAR RATÓN
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        // // 4. LIBERAR RATÓN
+        // Cursor.lockState = CursorLockMode.None;
+        // Cursor.visible = true;
 
         ActualizarContenido();
     }
@@ -79,18 +79,18 @@ public class InfoPanelManager : MonoBehaviour
         //if (interfazMovilRoja != null) interfazMovilRoja.SetActive(true);
 
         // 2. REACTIVAR JUGADOR
-        if (jugador != null)
-        {
-            foreach (var script in scriptsJugador)
-            {
-                if (script != this && !(script is AudioSource)) 
-                    script.enabled = true;
-            }
-        }
+        // if (jugador != null)
+        // {
+        //     foreach (var script in scriptsJugador)
+        //     {
+        //         if (script != this && !(script is AudioSource)) 
+        //             script.enabled = true;
+        //     }
+        // }
 
-        // 3. BLOQUEAR RATÓN PARA JUGAR
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // // 3. BLOQUEAR RATÓN PARA JUGAR
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
     }
 
     // ... (Mantén aquí tus funciones ActualizarContenido y ReproducirAudio igual que antes) ...
