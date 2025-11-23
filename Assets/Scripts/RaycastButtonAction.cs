@@ -37,6 +37,8 @@ public class RaycastButtonAction : MonoBehaviour
 
     public void OnRaycastEnter()
     {
+        if (!enabled) return;
+
         if (isHovering) return;
         
         isHovering = true;
@@ -51,6 +53,8 @@ public class RaycastButtonAction : MonoBehaviour
     }
     public void OnRaycastExit()
     {   
+        if (!enabled) return;
+
         if (isHovering)
         {
             OnButtonRelease.Invoke();
@@ -60,7 +64,9 @@ public class RaycastButtonAction : MonoBehaviour
 
     public void OnRaycastStay()
     {
-       if (isConfirmed) return;
+        if (!enabled) return;
+
+        if (isConfirmed) return;
 
         pressTimer += Time.deltaTime; // Incrementa el temporizador
 
@@ -85,7 +91,7 @@ public class RaycastButtonAction : MonoBehaviour
         //ResetButtonState();
     }
 
-    private void ResetButtonState()
+    public void ResetButtonState()
     {
         if (actionCoroutine != null)
         {

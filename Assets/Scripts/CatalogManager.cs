@@ -16,6 +16,9 @@ public class CatalogManager : MonoBehaviour
     public TextMeshProUGUI roomLocationText;
     public TextMeshProUGUI briefDescriptionText;
 
+    [Header("RaycastButtonAction de los botones a desactivar cuando se abra la info")]
+    public RaycastButtonAction[] buttonsToDisable; // The array holds references to the actual RaycastButtonAction components
+
 
     // --- Variables de Estado ---
     private int currentAvionIndex = 0;
@@ -120,18 +123,71 @@ public class CatalogManager : MonoBehaviour
         }
     }
 
-    public void ShowInfoPanel()
+    private bool ShowInfoPanel()
     {
         if (infoPanelTemplate != null)
         {
             infoPanelTemplate.SetActive(true);
+            return true;
         }
+
+        return false;
     }
-    public void HideInfoPanel()
+    private bool HideInfoPanel()
     {
         if (infoPanelTemplate != null)
         {
             infoPanelTemplate.SetActive(false);
+            return true;
         }
+
+        return false;
+    }
+
+    public void ShowInfoHideModel()
+    {
+        if (ShowInfoPanel())
+        {
+            HideModel();
+            DisableButtons();
+        }
+    }
+
+    public void HideInfoShowModel()
+    {
+        if (HideInfoPanel())
+        {
+            ShowModel();
+            EnableButtons();
+        }
+    }
+
+    public void DisableButtons()
+    {
+        // Loop through every RaycastButtonAction component in the array
+        foreach (RaycastButtonAction script in buttonsToDisable)
+        {
+            if (script != null)
+            {
+                // Disable the component directly
+                script.ResetButtonState();
+                script.enabled = false;
+            }
+        }
+        Debug.Log($"Successfully disabled all RaycastButtonAction components in the array.");
+    }
+
+    public void EnableButtons()
+    {
+        // Loop through every RaycastButtonAction component in the array
+        foreach (RaycastButtonAction script in buttonsToDisable)
+        {
+            if (script != null)
+            {
+                // Enable the component directly
+                script.enabled = true;
+            }
+        }
+        Debug.Log($"Successfully enabled all RaycastButtonAction components in the array.");
     }
 }
