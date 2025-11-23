@@ -3189,6 +3189,11 @@ MonoBehaviour:
   constructionDateText: {fileID: 1196934664}
   roomLocationText: {fileID: 1432563025}
   briefDescriptionText: {fileID: 985916051}
+  buttonsToDisable:
+  - {fileID: 249665668}
+  - {fileID: 1231231811}
+  - {fileID: 1784719223}
+  - {fileID: 738589843}
 --- !u!4 &1051579860
 Transform:
   m_ObjectHideFlags: 0
