@@ -167,15 +167,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2652770533903320806, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6298535034860676126}
-    - targetCorrespondingSourceObject: {fileID: 1438185473616798310, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 840099251951753682}
-    - targetCorrespondingSourceObject: {fileID: 1438185473616798310, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3759843196047368702}
-    - targetCorrespondingSourceObject: {fileID: 1438185473616798310, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1259360778922559296}
     - targetCorrespondingSourceObject: {fileID: 3361768566990974451, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 235977184694912318}
@@ -191,67 +182,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1320900245213157436, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
   m_PrefabInstance: {fileID: 734980747946849422}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1857271990987069160 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1438185473616798310, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
-  m_PrefabInstance: {fileID: 734980747946849422}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &840099251951753682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857271990987069160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267dab55a94efd043966211cdd9c46d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Ultraleap.Tracking.Core::Leap.GrabDetector
-  leapProvider: {fileID: 3705590628578313898}
-  chirality: 0
-  activateStrength: 0.8
-  deactivateStrength: 0.6
---- !u!135 &3759843196047368702
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857271990987069160}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1259360778922559296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857271990987069160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa6a92243a4e4f5d8a2f8697b5d74e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  grabDetector: {fileID: 840099251951753682}
 --- !u!114 &1857271990998323652 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1438185473626580298, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
   m_PrefabInstance: {fileID: 734980747946849422}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857271990987069160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bcd03e00992e084c8be61565d44b8bd, type: 3}
@@ -262,7 +198,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1438185473626510036, guid: 01099db6b5106c14eba4aa9fd3736bbb, type: 3}
   m_PrefabInstance: {fileID: 734980747946849422}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857271990987069160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a04122797dd84ca43a07055f12d91e0f, type: 3}

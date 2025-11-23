@@ -2716,7 +2716,7 @@ GameObject:
   - component: {fileID: 2020370495}
   - component: {fileID: 2020370497}
   - component: {fileID: 2020370496}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: LeapCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

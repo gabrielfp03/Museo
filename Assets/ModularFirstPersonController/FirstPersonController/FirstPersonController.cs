@@ -66,7 +66,7 @@ public class FirstPersonController : MonoBehaviour
     private bool isRotationActivatedByButton = false;
     private float externalYawInput = 0f;  // Para girar el jugador (Eje Y)
     private float externalPitchInput = 0f; // Para rotar la cámara (Eje X)
-    private float buttonRotationSpeed = 0.25f;
+    private float buttonRotationSpeed = 0.15f;
     ///
 
     // Internal Variables
@@ -434,7 +434,7 @@ public class FirstPersonController : MonoBehaviour
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
-            if ((targetVelocity.x != 0 || targetVelocity.z != 0) && isGrounded)
+            if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
             }
@@ -485,10 +485,11 @@ public class FirstPersonController : MonoBehaviour
                 }
 
                 targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
+                targetVelocity.y = 0;
 
                 // Apply a force that attempts to reach our target velocity
                 Vector3 velocity = rb.linearVelocity;
-                Vector3 velocityChange = (targetVelocity - velocity);
+                Vector3 velocityChange = targetVelocity - velocity;
                 velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
                 velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
                 velocityChange.y = 0;
@@ -498,26 +499,6 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #endregion
-        bool isInputActive = isMovementActivatedByButton;
-
-        if (!isInputActive && isGrounded)
-        {
-            if (rb.linearVelocity.sqrMagnitude > 0.01f) // Si aún hay alguna velocidad residual
-            {
-                // Aplicar una fuerza opuesta (frenado)
-                Vector3 brakeForce = -rb.linearVelocity.normalized * maxVelocityChange;
-                rb.AddForce(brakeForce, ForceMode.Acceleration);
-                
-                // Si es muy pequeña, forzar a cero
-                if (rb.linearVelocity.magnitude < 0.1f)
-                {
-                    rb.linearVelocity = Vector3.zero;
-                }
-            }
-            // Detener el giro residual si el personaje se quedó rotando por el choque
-            rb.angularVelocity = Vector3.zero; 
-        }
-
     }
 
     // Sets isGrounded based on a raycast sent straigth down from the player object
@@ -526,7 +507,6 @@ public class FirstPersonController : MonoBehaviour
         Vector3 origin = new Vector3(transform.position.x, transform.position.y - (transform.localScale.y * .5f), transform.position.z);
         Vector3 direction = transform.TransformDirection(Vector3.down);
         float distance = .75f;
-
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {
             Debug.DrawRay(origin, direction * distance, Color.red);
@@ -624,11 +604,9 @@ public class FirstPersonController : MonoBehaviour
         isMovementActivatedByButton = false;
         externalHorizontalInput = 0f;
         externalVerticalInput = 0f;
-        externalYawInput = 0f;
-        externalPitchInput = 0f;
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        isWalking = false;
+        // rb.linearVelocity = Vector3.zero;
+        // rb.angularVelocity = Vector3.zero;
+        // isWalking = false;
     }
 
     public void MoveForward()

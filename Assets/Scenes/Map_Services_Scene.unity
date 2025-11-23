@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 489016223}
   - component: {fileID: 489016225}
   - component: {fileID: 489016224}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: LeapCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
