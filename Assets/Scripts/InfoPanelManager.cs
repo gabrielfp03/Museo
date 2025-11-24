@@ -16,6 +16,10 @@ public class InfoPanelManager : MonoBehaviour
     public Button botonAudio;
     public AudioSource fuenteAudio;
 
+    [Header("Configuración de Posición")]
+    public float distanciaDelJugador = 0.5f; // A qué distancia aparece (metros)
+    public float alturaOffset = 0.0f;        // Ajuste de altura si es necesario
+
     // [Header("COSAS A DESACTIVAR (Arrastra aquí)")]
     // public GameObject interfazMovilRoja; // Arrastra el canvas de las flechas rojas
     // public GameObject jugador; // Arrastra tu objeto "FirstPersonController" o "PlayerCapsule"
@@ -44,6 +48,35 @@ public class InfoPanelManager : MonoBehaviour
     {
         infoActual = info;
         tituloText.text = info.nombreObjeto;
+
+        // ---------------------------------------------------------
+        // Reposicionar el Panel
+        // ---------------------------------------------------------
+        if (Camera.main != null)
+        {
+            Transform camaraTransform = Camera.main.transform;
+
+            // CALCULAR POSICIÓN:
+            // Toma la posición de la cámara y suma un vector hacia adelante multiplicada por la distancia
+            Vector3 nuevaPosicion = camaraTransform.position + (camaraTransform.forward * distanciaDelJugador);
+            
+            // (Opcional) Si quieres que siempre aparezca a la misma altura vertical aunque mires al suelo:
+            // nuevaPosicion.y = camaraTransform.position.y + alturaOffset; 
+
+            panelContenedor.transform.position = nuevaPosicion;
+
+            // CALCULAR ROTACIÓN:
+            // Hacemos que el panel mire hacia la cámara.
+            // LookAt hace que el eje Z del objeto apunte al objetivo. 
+            // En UI WorldSpace, a veces esto hace que el texto se vea al revés (espejo).
+            // Si te sale al revés, usa la "Opción B" abajo comentada.
+            
+            // Opción A (Estándar):
+            panelContenedor.transform.LookAt(panelContenedor.transform.position + camaraTransform.rotation * Vector3.forward, camaraTransform.rotation * Vector3.up);
+            
+            // Opción B (Si el texto sale al revés):
+            // panelContenedor.transform.rotation = Quaternion.LookRotation(panelContenedor.transform.position - camaraTransform.position);
+        }
         
         // 1. ABRIR PANEL
         panelContenedor.SetActive(true);
