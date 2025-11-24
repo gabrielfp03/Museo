@@ -1832,9 +1832,9 @@ MonoBehaviour:
   OnButtonPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1831979055}
-        m_TargetAssemblyTypeName: InspectableObject, Assembly-CSharp
-        m_MethodName: SetInteractionActive
+      - m_Target: {fileID: 1831979051}
+        m_TargetAssemblyTypeName: HandMaterialChanger, Assembly-CSharp
+        m_MethodName: SetMaterialChangeEnabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1844,7 +1844,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 859992939}
+      - m_Target: {fileID: 859992941}
         m_TargetAssemblyTypeName: CanvasToggle, Assembly-CSharp
         m_MethodName: OpenMenu
         m_Mode: 1
@@ -1855,18 +1855,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1539557468}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
   OnButtonRelease:
     m_PersistentCalls:
@@ -8838,6 +8826,17 @@ Transform:
   - {fileID: 928637948}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &651818107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1857271990998394458, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+  m_PrefabInstance: {fileID: 962506402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04122797dd84ca43a07055f12d91e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &654967642
 GameObject:
   m_ObjectHideFlags: 0
@@ -11790,7 +11789,6 @@ Transform:
   m_Children:
   - {fileID: 609145871}
   - {fileID: 1777786211}
-  - {fileID: 1618898764}
   - {fileID: 1539557472}
   - {fileID: 1831979048}
   m_Father: {fileID: 646953279}
@@ -15953,10 +15951,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetExploder: {fileID: 1796981615}
-  handModel: {fileID: 79321136}
+  leftHandModel: {fileID: 651818107}
+  rightHandModel: {fileID: 79321136}
   interactionController: {fileID: 1796981616}
-  minPinchStart: 0.1
-  maxPinchEnd: 0.9
+  clapThreshold: 0.1
+  maxSeparationDistance: 0.5
+  assemblySpeed: 5
+  enableRotation: 1
 --- !u!1001 &1386059577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18967,55 +18968,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1618898763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1618898764}
-  - component: {fileID: 1618898765}
-  m_Layer: 0
-  m_Name: LeapPinch
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1618898764
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618898763}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 232.30011, y: 52.499996, z: -251.50015}
-  m_LocalScale: {x: 30, y: 30, z: 30}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 928637948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1618898765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618898763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7faa4e573bd144f4b3c21685f833da7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  targetExploder: {fileID: 0}
-  handModel: {fileID: 79321136}
-  interactionController: {fileID: 0}
-  minPinchStart: 0.1
-  maxPinchEnd: 0.9
 --- !u!1 &1626633508
 GameObject:
   m_ObjectHideFlags: 0
@@ -19112,9 +19064,9 @@ MonoBehaviour:
   OnButtonPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1831979055}
-        m_TargetAssemblyTypeName: InspectableObject, Assembly-CSharp
-        m_MethodName: SetInteractionActive
+      - m_Target: {fileID: 1831979051}
+        m_TargetAssemblyTypeName: HandMaterialChanger, Assembly-CSharp
+        m_MethodName: SetMaterialChangeEnabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19124,22 +19076,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 859992939}
+      - m_Target: {fileID: 859992941}
         m_TargetAssemblyTypeName: CanvasToggle, Assembly-CSharp
         m_MethodName: CloseMenu
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1539557468}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21581,7 +21521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.1
+      value: 34.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21684,15 +21624,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1831979052}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1831979055}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1831979056}
     - targetCorrespondingSourceObject: {fileID: 8487167654232718067, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1831979051}
+    - targetCorrespondingSourceObject: {fileID: 8487167654232718067, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1831979055}
   m_SourcePrefab: {fileID: 100100000, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
 --- !u!4 &1831979048 stripped
 Transform:
@@ -21721,6 +21658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7adc3120fce514144ad921248bb2ce55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  isMaterialChangeEnabled: 0
   leapProvider: {fileID: 962506406}
   availableMaterials:
   - {fileID: -3379534873470636519, guid: 54ddfac90dd5e48f0962fb34aeddeaf6, type: 3}
@@ -21729,7 +21667,8 @@ MonoBehaviour:
   - {fileID: 8347576448117783026, guid: 3078ffde4f92d844e9bb1cef3fbc740c, type: 3}
   - {fileID: -2315404422835026341, guid: 51d55a3cdc49074449ab1d58b5dddafc, type: 3}
   proximityThreshold: 50
-  minSwipeVelocity: 100
+  minSwipeVelocity: 50
+  minSwipeDistance: 100
 --- !u!65 &1831979052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21826,25 +21765,13 @@ MonoBehaviour:
     Marquis d\u2019Arlandes. Their public demonstration boosted scientific study
     of air temperature, aerostatic lift, and heat-resistant envelope design."
   audioEN_Experto: {fileID: 0}
---- !u!114 &1831979055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831979050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 155079dd3e7684b9cb91991a6650edba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
---- !u!54 &1831979056
+--- !u!54 &1831979055
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831979050}
+  m_GameObject: {fileID: 1831979049}
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
