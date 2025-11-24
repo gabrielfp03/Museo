@@ -224,6 +224,11 @@
 // //         InitializeParts();
 // //     }
 // // }
+
+
+
+
+
 // using System.Collections;
 // using System.Collections.Generic;
 // using UnityEngine;
@@ -620,6 +625,8 @@
 //     }
 // }
 
+
+// ------ ARMADO Y DESPIECE CONTINUO BASADO EN PINCH STRENGTH ------
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
