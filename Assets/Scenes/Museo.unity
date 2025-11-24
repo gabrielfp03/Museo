@@ -4077,6 +4077,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &356972593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9108764178984711944, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+  m_PrefabInstance: {fileID: 962506402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &384303152
 GameObject:
   m_ObjectHideFlags: 0
@@ -12064,7 +12069,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2635814883396464527, guid: 252084bab20e347328346a19bc2441c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430618450}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9108764178984711944, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 962506412}
   m_SourcePrefab: {fileID: 100100000, guid: 252084bab20e347328346a19bc2441c9, type: 3}
 --- !u!4 &962506403 stripped
 Transform:
@@ -12102,6 +12110,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9108764178984711949, guid: 252084bab20e347328346a19bc2441c9, type: 3}
   m_PrefabInstance: {fileID: 962506402}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &962506412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356972593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: decbe7c0c18171b4c9ef513b188d5093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  distanciaInteraccion: 5
+  capasInteractuables:
+    serializedVersion: 2
+    m_Bits: 0
+  punteroMire: {fileID: 0}
 --- !u!1 &971834738
 GameObject:
   m_ObjectHideFlags: 0
@@ -19706,7 +19731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0003066631, y: -0.00093442434}
+  m_AnchoredPosition: {x: -0.0003066631, y: -0.0016832668}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1689313328
