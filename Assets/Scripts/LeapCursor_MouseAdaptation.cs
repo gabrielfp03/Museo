@@ -67,15 +67,7 @@ public class LeapCursor_MouseAdaptation : MonoBehaviour
         float distance;
         
         // Check if the ray intersects the plane
-        if (targetPlane.Raycast(ray, out distance))
-        {
-            // Calculate the exact world point on the plane
-            Vector3 newCursorPosition = ray.GetPoint(distance);
-            
-            // Move the cursor object to that position
-            transform.position = newCursorPosition;
-        }
-
+        targetPlane.Raycast(ray, out distance);
 
 
         RaycastHit hit;
