@@ -1,10 +1,12 @@
 using UnityEngine;
 using Leap;            // Necesario para acceder a los datos de Leap
+using UnityEngine.Events;
 
 public class LeapSwipeDetector : MonoBehaviour
 {
-    public GestorDeSalas gestor; // Arrastra aquí tu script del museo
     public LeapProvider leapProvider; // Arrastra aquí tu LeapServiceProvider
+    public UnityEvent OnRightSwipe = new UnityEvent();
+    public UnityEvent OnLeftSwipe = new UnityEvent();
 
     [Header("Configuración del Gesto")]
     public float velocidadMinima = 1000f; // Qué tan rápido hay que mover la mano
@@ -30,8 +32,8 @@ public class LeapSwipeDetector : MonoBehaviour
                 // Imagina mover la mano para pasar página hacia la izquierda (Siguiente)
                 if (mano.PalmVelocity.x < -velocidadMinima)
                 {
-                    Debug.Log("Swipe Izquierda -> Siguiente");
-                    gestor.SiguienteSala();
+                    Debug.Log("Swipe Izquierda");
+                    OnLeftSwipe.Invoke();
                     ultimoSwipeTime = Time.time;
                 }
                 
@@ -39,8 +41,8 @@ public class LeapSwipeDetector : MonoBehaviour
                 // Mover la mano hacia la derecha (Anterior)
                 else if (mano.PalmVelocity.x > velocidadMinima)
                 {
-                    Debug.Log("Swipe Derecha -> Anterior");
-                    gestor.SalaAnterior();
+                    Debug.Log("Swipe Derecha");
+                    OnRightSwipe.Invoke();
                     ultimoSwipeTime = Time.time;
                 }
             }
