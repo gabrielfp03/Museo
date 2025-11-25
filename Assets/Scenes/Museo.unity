@@ -14863,10 +14863,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 530784030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -25}
-  m_SizeDelta: {x: 1020, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016039229
 MonoBehaviour:
@@ -24917,8 +24917,8 @@ MonoBehaviour:
   handToControl: 1
   smoothFactor: 10
   explosionType: 3
-  explosionDistance: 350
-  explosionSpacing: 500
+  explosionDistance: 250
+  explosionSpacing: 350
   isExploded: 0
 --- !u!1 &1811165785
 GameObject:
