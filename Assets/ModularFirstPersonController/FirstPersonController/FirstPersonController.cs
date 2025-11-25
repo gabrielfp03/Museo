@@ -425,7 +425,56 @@ public class FirstPersonController : MonoBehaviour
                 hInput = Input.GetAxis("Horizontal");
                 vInput = Input.GetAxis("Vertical");
             }
-            
+            float deadzone = 0.1f;
+
+            if (Mathf.Abs(hInput) < deadzone) hInput = 0;
+            if (Mathf.Abs(vInput) < deadzone) vInput = 0;
+
+            // NO HAY INPUT REAL
+            if (Mathf.Approximately(hInput, 0f) && Mathf.Approximately(vInput, 0f))
+            {
+                Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+
+                if (horizontalVelocity.sqrMagnitude > 0.0001f)
+                    rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+
+                isWalking = false;
+                return;
+            }
+            // Si no hay input de movimiento (excepto el eje Y, que es controlado por gravedad/salto)
+            // if (hInput == 0f && vInput == 0f)
+            // {
+            //     // Vector de velocidad actual, ignorando el eje Y
+            //     Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+
+            //     // Si hay velocidad residual, la anulamos.
+            //     if (horizontalVelocity.magnitude > 0.01f) // Comprobación de flotante para evitar aplicar fricción innecesaria.
+            //     {
+            //         // Aplicar una fuerza en dirección opuesta (Frenado) para detener el movimiento.
+            //         // Opcionalmente, puedes usar rb.AddForce(-horizontalVelocity, ForceMode.VelocityChange);
+                    
+            //         // Pero lo más simple y directo es forzar la velocidad a cero si no hay input.
+            //         rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0); 
+                    
+            //         // Ya que estás usando ForceMode.VelocityChange en el movimiento,
+            //         // forzar la velocidad a cero aquí es la forma más efectiva de "frenar".
+            //     }
+                
+            //     // Si no hay input, no necesitamos calcular targetVelocity ni añadir fuerzas.
+            //     // Es crucial salir de la sección de movimiento para que no se apliquen fuerzas residuales.
+            //     isWalking = false;
+            //     return; // Salimos de la función FixedUpdate si no hay input de movimiento.
+            // }
+            if (Mathf.Approximately(hInput, 0f) && Mathf.Approximately(vInput, 0f))
+            {
+                Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+
+                if (horizontalVelocity.sqrMagnitude > 0.0001f)
+                    rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+
+                isWalking = false;
+                return;
+            }
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(hInput, 0, vInput);
 
@@ -434,7 +483,7 @@ public class FirstPersonController : MonoBehaviour
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
-            if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
+            if ((targetVelocity.x != 0 || targetVelocity.z != 0) && isGrounded)
             {
                 isWalking = true;
             }
@@ -604,6 +653,8 @@ public class FirstPersonController : MonoBehaviour
         isMovementActivatedByButton = false;
         externalHorizontalInput = 0f;
         externalVerticalInput = 0f;
+        rb.linearVelocity = new Vector3(0, 0, 0);
+        
         // rb.linearVelocity = Vector3.zero;
         // rb.angularVelocity = Vector3.zero;
         // isWalking = false;

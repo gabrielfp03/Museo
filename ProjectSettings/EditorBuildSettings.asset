@@ -27,6 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Museo.unity
     guid: 4d42116948ddd466fa576ae122ccedd2
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 18cb40ac8770e4ad5a293cc66622122f, type: 2}
   m_UseUCBPForAssetBundles: 0

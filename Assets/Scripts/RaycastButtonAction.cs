@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEngine.EventSystems;
+using TMPro;
 
 public class RaycastButtonAction : MonoBehaviour
 {
@@ -25,6 +27,8 @@ public class RaycastButtonAction : MonoBehaviour
     private float pressTimer = 0f;    
     private Coroutine actionCoroutine; 
     private bool isHovering = false; // El raycast del dedo está sobre el botón
+    // public TMP_Dropdown targetDropdown;
+
     void Start()
     {
         buttonImage = GetComponent<Image>();

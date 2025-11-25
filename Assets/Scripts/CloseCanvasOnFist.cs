@@ -1,5 +1,6 @@
 using UnityEngine;
-using Leap;       // Y el namespace principal de Leap
+using Leap;
+using UnityEngine.Events;       // Y el namespace principal de Leap
 
 public class CloseCanvasOnFist : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class CloseCanvasOnFist : MonoBehaviour
     [Header("Estado Interno")]
     private bool isFistDetected = false;
     private float fistTimer = 0f;
+    public UnityEvent OnCanvasClosed;
 
     void Update()
     {
@@ -74,5 +76,6 @@ public class CloseCanvasOnFist : MonoBehaviour
         // Reseteamos el estado para que el puño cerrado no lo abra de nuevo inmediatamente
         isFistDetected = false;
         fistTimer = 0f;
+        OnCanvasClosed.Invoke();
     }
 }
