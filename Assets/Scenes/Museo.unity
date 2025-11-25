@@ -6553,7 +6553,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00048819472, y: 0.00033121224}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &530784031
 MonoBehaviour:
@@ -11177,7 +11177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816646416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13174,6 +13174,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2635814883396464527, guid: 252084bab20e347328346a19bc2441c9, type: 3}
   m_PrefabInstance: {fileID: 962506402}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &962506404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9108764180275436946, guid: 252084bab20e347328346a19bc2441c9, type: 3}
+  m_PrefabInstance: {fileID: 962506402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &962506405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1758632422300675250, guid: 252084bab20e347328346a19bc2441c9, type: 3}
@@ -13358,6 +13363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971834740}
   - component: {fileID: 971834739}
+  - component: {fileID: 971834741}
   m_Layer: 0
   m_Name: Game_Movement
   m_TagString: Untagged
@@ -13392,6 +13398,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &971834741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971834738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb03ff4ae7515458429672e748c172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorMuseo
+  jugador: {fileID: 962506404}
+  velocidad: 5
 --- !u!1 &975564855
 GameObject:
   m_ObjectHideFlags: 0
@@ -14232,10 +14252,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 530784030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 510, y: -25}
+  m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016039229
 MonoBehaviour:
@@ -26707,7 +26727,7 @@ MonoBehaviour:
   OnButtonPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971834739}
+      - m_Target: {fileID: 971834741}
         m_TargetAssemblyTypeName: ControladorMuseo, Assembly-CSharp
         m_MethodName: LoadMuseumMainScene
         m_Mode: 1
@@ -27326,7 +27346,7 @@ MonoBehaviour:
   requiredPressDuration: 0.5
   actionDelay: 0.3
   normalColor: {r: 0, g: 0, b: 0, a: 1}
-  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  pressedColor: {r: 1, g: 0.2705882, b: 0, a: 1}
   OnButtonPress:
     m_PersistentCalls:
       m_Calls:

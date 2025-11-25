@@ -1975,7 +1975,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1521881113}
         m_TargetAssemblyTypeName: SceneDataTransfer, Assembly-CSharp
-        m_MethodName: GoToAseos1
+        m_MethodName: GoToAseos2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
