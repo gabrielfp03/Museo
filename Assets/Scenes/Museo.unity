@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 19861881}
   - component: {fileID: 19861880}
   - component: {fileID: 19861879}
+  - component: {fileID: 19861884}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -166,7 +167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19861877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -296,6 +297,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19861877}
   m_CullTransparentMesh: 1
+--- !u!114 &19861884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19861877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 48979896}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &20950997 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8487167654232718067, guid: 9cacbf08e5a59492f9f85bcf58a6935d, type: 3}
@@ -1719,68 +1755,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97360861}
   m_CullTransparentMesh: 1
---- !u!1001 &104356858
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 655.26794
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -285.06204
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_Name
-      value: Wright_flyer
-      objectReference: {fileID: 0}
-    - target: {fileID: 3078023919453430577, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27876.326
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 951011102456138778, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ff2bf1aeeaef747988ac5d928f275a0d, type: 3}
 --- !u!1 &113022754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,6 +2703,7 @@ GameObject:
   - component: {fileID: 234589356}
   - component: {fileID: 234589355}
   - component: {fileID: 234589354}
+  - component: {fileID: 234589359}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -2762,7 +2737,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234589352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -2892,6 +2867,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234589352}
   m_CullTransparentMesh: 1
+--- !u!114 &234589359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234589352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1757127864}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &246547088
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,6 +3421,7 @@ GameObject:
   - component: {fileID: 270866274}
   - component: {fileID: 270866273}
   - component: {fileID: 270866272}
+  - component: {fileID: 270866277}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -3444,7 +3455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270866270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -3574,6 +3585,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270866270}
   m_CullTransparentMesh: 1
+--- !u!114 &270866277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270866270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1788166574}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &282070766
 GameObject:
   m_ObjectHideFlags: 0
@@ -5278,7 +5324,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404970751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -9022,6 +9068,7 @@ GameObject:
   - component: {fileID: 609311864}
   - component: {fileID: 609311863}
   - component: {fileID: 609311862}
+  - component: {fileID: 609311867}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -9055,7 +9102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609311860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -9185,6 +9232,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609311860}
   m_CullTransparentMesh: 1
+--- !u!114 &609311867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609311860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 530886674}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &614002136
 GameObject:
   m_ObjectHideFlags: 0
@@ -9270,6 +9352,7 @@ GameObject:
   - component: {fileID: 615910137}
   - component: {fileID: 615910136}
   - component: {fileID: 615910135}
+  - component: {fileID: 615910140}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -9303,7 +9386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615910133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -9433,6 +9516,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615910133}
   m_CullTransparentMesh: 1
+--- !u!114 &615910140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615910133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1785200578}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &622203236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12118,8 +12236,6 @@ MonoBehaviour:
   dropdownNivel: {fileID: 413083690}
   botonAudio: {fileID: 2022436647}
   fuenteAudio: {fileID: 859992936}
-  distanciaDelJugador: 1.5
-  alturaOffset: 0
 --- !u!1 &826734552
 GameObject:
   m_ObjectHideFlags: 0
@@ -12802,8 +12918,6 @@ MonoBehaviour:
   dropdownNivel: {fileID: 835887693}
   botonAudio: {fileID: 1145532398}
   fuenteAudio: {fileID: 859992936}
-  distanciaDelJugador: 1.5
-  alturaOffset: 0
 --- !u!114 &859992941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14502,8 +14616,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.004919897, y: 0.008600001, z: 0.0047499933}
-  m_Center: {x: -0.000000002561137, y: -0.0022000023, z: -0.0006150026}
+  m_Size: {x: 0.004919897, y: 0.0086441515, z: 0.0047499943}
+  m_Center: {x: -0.0000000026771394, y: -0.002177938, z: -0.00061500253}
 --- !u!1 &1014936653
 GameObject:
   m_ObjectHideFlags: 0
@@ -14518,6 +14632,7 @@ GameObject:
   - component: {fileID: 1014936657}
   - component: {fileID: 1014936656}
   - component: {fileID: 1014936655}
+  - component: {fileID: 1014936660}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -14551,7 +14666,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014936653}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -14681,6 +14796,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014936653}
   m_CullTransparentMesh: 1
+--- !u!114 &1014936660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014936653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 47663257}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1016039227
 GameObject:
   m_ObjectHideFlags: 0
@@ -14713,10 +14863,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 530784030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 510, y: -25}
+  m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016039229
 MonoBehaviour:
@@ -14967,6 +15117,7 @@ GameObject:
   - component: {fileID: 1071001276}
   - component: {fileID: 1071001275}
   - component: {fileID: 1071001274}
+  - component: {fileID: 1071001279}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -15000,7 +15151,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071001272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -15130,6 +15281,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071001272}
   m_CullTransparentMesh: 1
+--- !u!114 &1071001279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071001272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1462028524}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1082018779
 GameObject:
   m_ObjectHideFlags: 0
@@ -17020,6 +17206,7 @@ GameObject:
   - component: {fileID: 1196633584}
   - component: {fileID: 1196633583}
   - component: {fileID: 1196633582}
+  - component: {fileID: 1196633587}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -17053,7 +17240,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196633580}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -17183,6 +17370,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196633580}
   m_CullTransparentMesh: 1
+--- !u!114 &1196633587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196633580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 571039253}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1205135728
 GameObject:
   m_ObjectHideFlags: 0
@@ -19194,6 +19416,7 @@ GameObject:
   - component: {fileID: 1435027094}
   - component: {fileID: 1435027093}
   - component: {fileID: 1435027091}
+  - component: {fileID: 1435027097}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -19227,7 +19450,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435027089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -19357,6 +19580,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435027089}
   m_CullTransparentMesh: 1
+--- !u!114 &1435027097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435027089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 889633828}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1446850497
 GameObject:
   m_ObjectHideFlags: 0
@@ -21740,6 +21998,7 @@ GameObject:
   - component: {fileID: 1602048294}
   - component: {fileID: 1602048293}
   - component: {fileID: 1602048292}
+  - component: {fileID: 1602048297}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -21773,7 +22032,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602048290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -21903,6 +22162,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602048290}
   m_CullTransparentMesh: 1
+--- !u!114 &1602048297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602048290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1587303527}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1613509436
 GameObject:
   m_ObjectHideFlags: 0
@@ -22824,6 +23118,7 @@ GameObject:
   - component: {fileID: 1744581040}
   - component: {fileID: 1744581039}
   - component: {fileID: 1744581038}
+  - component: {fileID: 1744581043}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -22857,7 +23152,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744581036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -22987,6 +23282,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744581036}
   m_CullTransparentMesh: 1
+--- !u!114 &1744581043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744581036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1840613869}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1744940678
 GameObject:
   m_ObjectHideFlags: 0
@@ -25987,6 +26317,7 @@ GameObject:
   - component: {fileID: 1898323001}
   - component: {fileID: 1898323000}
   - component: {fileID: 1898322999}
+  - component: {fileID: 1898323004}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -26020,7 +26351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898322997}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -26150,6 +26481,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898322997}
   m_CullTransparentMesh: 1
+--- !u!114 &1898323004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898322997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1578909950}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1903047174
 GameObject:
   m_ObjectHideFlags: 0
@@ -29055,6 +29421,7 @@ GameObject:
   - component: {fileID: 2079732937}
   - component: {fileID: 2079732936}
   - component: {fileID: 2079732935}
+  - component: {fileID: 2079732940}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -29088,7 +29455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079732933}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -29218,6 +29585,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079732933}
   m_CullTransparentMesh: 1
+--- !u!114 &2079732940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079732933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 590486814}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2083917569
 GameObject:
   m_ObjectHideFlags: 0
@@ -29769,6 +30171,7 @@ GameObject:
   - component: {fileID: 2115242800}
   - component: {fileID: 2115242799}
   - component: {fileID: 2115242797}
+  - component: {fileID: 2115242803}
   m_Layer: 5
   m_Name: BTN_INFO
   m_TagString: Untagged
@@ -29802,7 +30205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115242795}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f66f175e6484db2a9812e900751e7b, type: 3}
   m_Name: 
@@ -29932,6 +30335,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115242795}
   m_CullTransparentMesh: 1
+--- !u!114 &2115242803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115242795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dfe049fb35b410d8902195190c0289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushButtonAction
+  requiredRaycasterTag: PalmRaycast
+  requiredPressDuration: 0.5
+  actionDelay: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859992940}
+        m_TargetAssemblyTypeName: InfoPanelManager, Assembly-CSharp
+        m_MethodName: AbrirPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 407686681}
+          m_ObjectArgumentAssemblyTypeName: InfoObraMuseo, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2127581923
 GameObject:
   m_ObjectHideFlags: 0
@@ -30164,5 +30602,4 @@ SceneRoots:
   - {fileID: 1171611657}
   - {fileID: 1119979736}
   - {fileID: 971834740}
-  - {fileID: 104356858}
   - {fileID: 588779874}
