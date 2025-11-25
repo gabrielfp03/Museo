@@ -104,6 +104,7 @@ public class InfoPanelManager : MonoBehaviour
     public GameObject panelContenedor; 
     public GameObject panelIdioma;
     public GameObject panelNivel;
+    public GameObject panelNivelIngles;
     public GameObject panelInformacionFinal;
 
     // --- Elementos de UI del Panel Final ---
@@ -124,7 +125,10 @@ public class InfoPanelManager : MonoBehaviour
     public Button botonNivelNino;
     public Button botonNivelCasual;
     public Button botonNivelExperto;
-    
+    public Button botonNivelNinoEN;
+    public Button botonNivelCasualEN;
+    public Button botonNivelExpertoEN;
+
     // --- Variables de Estado Internas ---
     private InfoObraMuseo infoActual; 
     private int idiomaSeleccionado = 0; // 0 = Español, 1 = Inglés
@@ -154,6 +158,11 @@ public class InfoPanelManager : MonoBehaviour
 
         // Audio (Panel 3)
         if (botonAudio != null) botonAudio.onClick.AddListener(ReproducirAudio);
+
+        // Nivel Inglés (Panel 2 en Inglés)
+        if (botonNivelNinoEN != null) botonNivelNinoEN.onClick.AddListener(OnPress_NivelNino);
+        if (botonNivelCasualEN != null) botonNivelCasualEN.onClick.AddListener(OnPress_NivelCasual);
+        if (botonNivelExpertoEN != null) botonNivelExpertoEN.onClick.AddListener(OnPress_NivelExperto);
     }
 
     // ==========================================================
@@ -183,6 +192,7 @@ public class InfoPanelManager : MonoBehaviour
         
         // 2. Muestra solo el Panel de Idioma e inicia el flujo
         panelNivel.SetActive(false);
+        panelNivelIngles.SetActive(false);
         panelInformacionFinal.SetActive(false);
         panelIdioma.SetActive(true);
     }
@@ -198,6 +208,7 @@ public class InfoPanelManager : MonoBehaviour
         // Vuelve al Panel 1 (limpia la pantalla de información)
         panelInformacionFinal.SetActive(false);
         panelNivel.SetActive(false);
+        panelNivelIngles.SetActive(false);
         panelIdioma.SetActive(true);
         fuenteAudio.Stop();
     }
@@ -211,9 +222,17 @@ public class InfoPanelManager : MonoBehaviour
         idiomaSeleccionado = idioma;
         ActualizarAparienciaBotonesIdioma();
         
-        // TRANSICIÓN: Oculta idioma, Muestra Nivel
         panelIdioma.SetActive(false);
-        panelNivel.SetActive(true);
+        if (idiomaSeleccionado == 0) // Español
+        {
+            panelNivel.SetActive(true);
+            panelNivelIngles.SetActive(false);
+        }
+        else // Inglés
+        {
+            panelNivel.SetActive(false);
+            panelNivelIngles.SetActive(true);
+        }
     }
 
     public void SeleccionarNivel(int nivel)
@@ -226,6 +245,7 @@ public class InfoPanelManager : MonoBehaviour
 
         // 2. TRANSICIÓN: Oculta nivel, Muestra Información Final
         panelNivel.SetActive(false);
+        panelNivelIngles.SetActive(false);
         panelInformacionFinal.SetActive(true);
     }
 
@@ -299,9 +319,16 @@ public class InfoPanelManager : MonoBehaviour
 
     private void ActualizarAparienciaBotonesNivel()
     {
-        // Ejemplo de retroalimentación visual (cambio a Amarillo/Blanco)
-        botonNivelNino.image.color = (nivelSeleccionado == 0) ? Color.yellow : Color.white;
-        botonNivelCasual.image.color = (nivelSeleccionado == 1) ? Color.yellow : Color.white;
-        botonNivelExperto.image.color = (nivelSeleccionado == 2) ? Color.yellow : Color.white;
+        if (idiomaSeleccionado == 1)
+        {
+            botonNivelNinoEN.image.color = (nivelSeleccionado == 0) ? Color.yellow : Color.white;
+            botonNivelCasualEN.image.color = (nivelSeleccionado == 1) ? Color.yellow : Color.white;
+            botonNivelExpertoEN.image.color = (nivelSeleccionado == 2) ? Color.yellow : Color.white;
+        }else
+        {
+            botonNivelNino.image.color = (nivelSeleccionado == 0) ? Color.yellow : Color.white;
+            botonNivelCasual.image.color = (nivelSeleccionado == 1) ? Color.yellow : Color.white;
+            botonNivelExperto.image.color = (nivelSeleccionado == 2) ? Color.yellow : Color.white;
+        }
     }
 }
