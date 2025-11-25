@@ -16,19 +16,6 @@ public class SceneLoader : MonoBehaviour
         // El nombre debe coincidir EXACTAMENTE con el nombre de tu archivo .unity
         LoadMuseumScene("Museo"); 
     }
-
-    /*
-    public void GoToPlaneadores()
-    {
-        LoadMuseumScene("Sala_Planeadores");
-    }
-    
-    public void GoToAvionesGuerra()
-    {
-        LoadMuseumScene("Sala_AvionesGuerra");
-    }
-
-    // Y así para el resto de tus salas...*/
     
     public void ExitGame()
     {
