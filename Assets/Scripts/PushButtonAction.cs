@@ -45,7 +45,7 @@ public class PushButtonAction : MonoBehaviour
 
     public void OnRaycastEnter(GameObject raycaster)
     {
-        // 🛑 COMPROBACIÓN CLAVE: Si el objeto no tiene la etiqueta correcta, ignorar.
+        // Si el objeto no tiene la etiqueta correcta, ignorar.
         if (!raycaster.CompareTag(requiredRaycasterTag))
         {
             return;
